@@ -1,0 +1,6 @@
+[submodule "RxJava"]
+	path = RxJava
+	url = https://github.com/ReactiveX/RxJava.git
+[submodule "dagger"]
+	path = dagger
+	url = https://github.com/square/dagger.git
