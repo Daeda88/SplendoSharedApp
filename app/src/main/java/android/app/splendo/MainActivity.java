@@ -1,6 +1,6 @@
 package android.app.splendo;
 
-import android.app.splendo.viewmodel.AndroidMainViewModel;
+import android.app.splendo.viewmodel.MainViewModel;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        AndroidMainViewModel model = new AndroidMainViewModel();
-        model.instantiateModel();
-        binding.setViewModel(model);
+        binding.setViewModel(new MainViewModel());
     }
 }
