@@ -1,4 +1,4 @@
-package com.splendo.sharedapp.com;
+package android.app.splendo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

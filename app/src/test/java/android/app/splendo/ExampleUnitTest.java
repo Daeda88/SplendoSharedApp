@@ -1,4 +1,4 @@
-package com.splendo.sharedapp.com;
+package android.app.splendo;
 
 import org.junit.Test;
 
