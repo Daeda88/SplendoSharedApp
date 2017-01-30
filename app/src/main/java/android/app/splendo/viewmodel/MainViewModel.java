@@ -1,7 +1,7 @@
 package android.app.splendo.viewmodel;
 
-import android.databinding.ObservableField;
-
+import android.app.splendo.ObservableBuilder;
+import android.app.splendo.SharedObservable;
 import android.app.splendo.model.MainModel;
 
 /**
@@ -9,12 +9,13 @@ import android.app.splendo.model.MainModel;
  */
 public class MainViewModel {
 
-    public final ObservableField<String> labelText =
-            new ObservableField<>();
+    public final SharedObservable<String> labelText;
 
     private MainModel model = new MainModel();
 
-    public MainViewModel() {
+    public MainViewModel(ObservableBuilder observableBuilder) {
+        labelText = observableBuilder.getStringObservable();
+
         updateLabelText();
     }
 

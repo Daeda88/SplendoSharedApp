@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setViewModel(new MainViewModel());
+        binding.setViewModel(new MainViewModel(new AndroidObservableBuilder()));
     }
 }
