@@ -1,12 +1,40 @@
 PODS:
+  - Bond (6.0.0):
+    - Diff (~> 0.4)
+    - ReactiveKit (~> 3.3)
+  - Diff (0.5.0)
+  - J2ObjC-Framework (1.2)
   - KVOController (1.2.0)
+  - ReactiveKit (3.3.0)
+  - SharedLibrary (1.0):
+    - J2ObjC-Framework
 
 DEPENDENCIES:
+  - Bond (~> 6.0)
+  - J2ObjC-Framework (from `https://github.com/Daeda88/J2ObjC-Framework.git`, branch `v1.2`)
   - KVOController
+  - SharedLibrary (from `./generated`)
+
+EXTERNAL SOURCES:
+  J2ObjC-Framework:
+    :branch: v1.2
+    :git: https://github.com/Daeda88/J2ObjC-Framework.git
+  SharedLibrary:
+    :path: ./generated
+
+CHECKOUT OPTIONS:
+  J2ObjC-Framework:
+    :commit: a32efeb5b8ff6427d6ccd77c976002b541ac0308
+    :git: https://github.com/Daeda88/J2ObjC-Framework.git
 
 SPEC CHECKSUMS:
+  Bond: d34e0c37e829c991d3ef80aa860f647d677e7801
+  Diff: eceb93a3adf508574ba9b8560da185ace83de055
+  J2ObjC-Framework: 12869e55feacf403d6d79aef1cdfae3fb46aa8d2
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  ReactiveKit: 56a5b949847ba137da40045149785e569f292e07
+  SharedLibrary: b117f23ce1c6bbf57b324eb87e51bdecd7cddea6
 
-PODFILE CHECKSUM: 54f16c6dae5c929056091e0b786310188bd9d588
+PODFILE CHECKSUM: 82a60ea76782658aa12458c2a336b9e616d170e1
 
 COCOAPODS: 1.2.0.beta.1

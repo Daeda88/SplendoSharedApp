@@ -1,5 +1,7 @@
 package shared.app.splendo.viewmodel;
 
+import shared.app.splendo.ObservableBuilder;
+import shared.app.splendo.SharedObservable;
 import shared.app.splendo.model.MainModel;
 
 /**
@@ -7,14 +9,18 @@ import shared.app.splendo.model.MainModel;
  */
 public class MainViewModel {
 
-    public final shared.app.splendo.SharedObservable<String> labelText;
+    private SharedObservable<String> labelText;
 
     private MainModel model = new MainModel();
 
-    public MainViewModel(shared.app.splendo.ObservableBuilder observableBuilder) {
+    public MainViewModel(ObservableBuilder observableBuilder) {
         labelText = observableBuilder.getStringObservable();
 
         updateLabelText();
+    }
+
+    public SharedObservable<String> getLabelText() {
+        return labelText;
     }
 
     private void updateLabelText() {

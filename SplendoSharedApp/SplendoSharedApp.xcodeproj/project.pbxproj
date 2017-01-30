@@ -14,8 +14,8 @@
 		207233581E3B8B25000AEF23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207233561E3B8B25000AEF23 /* LaunchScreen.storyboard */; };
 		207233631E3B8B25000AEF23 /* SplendoSharedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207233621E3B8B25000AEF23 /* SplendoSharedAppTests.swift */; };
 		2072336E1E3B8B25000AEF23 /* SplendoSharedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072336D1E3B8B25000AEF23 /* SplendoSharedAppUITests.swift */; };
-		2072337E1E3B9354000AEF23 /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2072337D1E3B9354000AEF23 /* MainViewModel.m */; };
-		207233811E3B9B88000AEF23 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 207233801E3B9B88000AEF23 /* MainModel.m */; };
+		207233841E3F5F42000AEF23 /* IOSObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207233831E3F5F42000AEF23 /* IOSObservable.swift */; };
+		207233861E3F678D000AEF23 /* IOSObservableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207233851E3F678D000AEF23 /* IOSObservableBuilder.swift */; };
 		30806761F5B57E54163E3C03 /* Pods_SplendoSharedAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D978F3803D30376ABF4BEE /* Pods_SplendoSharedAppUITests.framework */; };
 		73CD56521A27353BE46F7E47 /* Pods_SplendoSharedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF0DBC838FD8E409C846AD2 /* Pods_SplendoSharedApp.framework */; };
 		AE724777ACEB6A3AE8765D41 /* Pods_SplendoSharedAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1C2D24D0A1C592AC10BD7E /* Pods_SplendoSharedAppTests.framework */; };
@@ -53,11 +53,9 @@
 		207233691E3B8B25000AEF23 /* SplendoSharedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplendoSharedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2072336D1E3B8B25000AEF23 /* SplendoSharedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplendoSharedAppUITests.swift; sourceTree = "<group>"; };
 		2072336F1E3B8B25000AEF23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2072337B1E3B9280000AEF23 /* MainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		2072337C1E3B9354000AEF23 /* SplendoSharedApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplendoSharedApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		2072337D1E3B9354000AEF23 /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
-		2072337F1E3B9B47000AEF23 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
-		207233801E3B9B88000AEF23 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		207233831E3F5F42000AEF23 /* IOSObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSObservable.swift; sourceTree = "<group>"; };
+		207233851E3F678D000AEF23 /* IOSObservableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSObservableBuilder.swift; sourceTree = "<group>"; };
 		24075B72D4909466CA31F77F /* Pods-SplendoSharedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A37ACDD31C9389EFF48174C /* Pods-SplendoSharedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig"; sourceTree = "<group>"; };
 		45D978F3803D30376ABF4BEE /* Pods_SplendoSharedAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplendoSharedAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,11 +125,9 @@
 				207233541E3B8B25000AEF23 /* Assets.xcassets */,
 				207233561E3B8B25000AEF23 /* LaunchScreen.storyboard */,
 				207233591E3B8B25000AEF23 /* Info.plist */,
-				2072337B1E3B9280000AEF23 /* MainViewModel.h */,
-				2072337D1E3B9354000AEF23 /* MainViewModel.m */,
 				2072337C1E3B9354000AEF23 /* SplendoSharedApp-Bridging-Header.h */,
-				2072337F1E3B9B47000AEF23 /* MainModel.h */,
-				207233801E3B9B88000AEF23 /* MainModel.m */,
+				207233831E3F5F42000AEF23 /* IOSObservable.swift */,
+				207233851E3F678D000AEF23 /* IOSObservableBuilder.swift */,
 			);
 			path = SplendoSharedApp;
 			sourceTree = "<group>";
@@ -459,10 +455,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207233811E3B9B88000AEF23 /* MainModel.m in Sources */,
-				2072337E1E3B9354000AEF23 /* MainViewModel.m in Sources */,
+				207233861E3F678D000AEF23 /* IOSObservableBuilder.swift in Sources */,
 				207233501E3B8B24000AEF23 /* ViewController.swift in Sources */,
 				2072334E1E3B8B24000AEF23 /* AppDelegate.swift in Sources */,
+				207233841E3F5F42000AEF23 /* IOSObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

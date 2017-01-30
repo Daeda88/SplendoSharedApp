@@ -7,21 +7,20 @@
 //
 
 import UIKit
-import KVOController
+import Bond
+import SharedLibrary
 
 class ViewController: UIViewController {
     
     @IBOutlet public var label: UILabel!
     @IBOutlet public var button: UIButton!
     
-    private let viewModel: MainViewModel = MainViewModel.init()
+    private let viewModel: SharedAppSplendoViewmodelMainViewModel = SharedAppSplendoViewmodelMainViewModel.init(sharedAppSplendoObservableBuilder: IOSObservableBuilder.init())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        kvoController.observe(viewModel, keyPath: "labelText", options: [.initial, .new]) { (viewController, viewModel, change) in
-            self.label.text = self.viewModel.labelText
-        }
+        (viewModel.getLabelText() as! IOSObservable<String>).value.bind(to: label)
         
         button.addTarget(viewModel, action: #selector(viewModel.onButtonClicked), for: .touchUpInside)
     }

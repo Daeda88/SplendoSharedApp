@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 *.ap_
+.DS_Store
 
 # Files for the Dalvik VM
 *.dex
@@ -30,3 +31,7 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+SplendoSharedApp/Pods/
+
+shared/src/main/java/shared/app/splendo/\.DS_Store

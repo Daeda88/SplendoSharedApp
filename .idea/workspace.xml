@@ -10,24 +10,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/shared.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/ObservableBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/ObservableBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/SharedObservable.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/model/MainModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/model/MainModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/viewmodel/MainViewModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservable.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservableBuilder.swift" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainModel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainModel.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainViewModel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainViewModel.m" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Podfile" afterPath="$PROJECT_DIR$/SplendoSharedApp/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" afterPath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/Pods-SplendoSharedApp.xcscheme" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/Pods-SplendoSharedApp.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/KVOController/KVOController.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/KVOController/KVOController.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.markdown" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.plist" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-frameworks.sh" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-frameworks.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservableBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservableBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/build.gradle" afterPath="$PROJECT_DIR$/shared/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/shared.iml" afterPath="$PROJECT_DIR$/shared/shared.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,12 +100,22 @@
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9433962">
+              <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shared/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4150944">
-              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.25375938">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -157,15 +182,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#165#166#0" expanded="false" />
+                <element signature="e#195#196#0" expanded="false" />
+                <element signature="e#229#230#0" expanded="false" />
+                <element signature="e#254#255#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedObservable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SharedObservable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23622048">
+            <state vertical-scroll-proportion="0.0">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
@@ -1789,7 +1819,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5942834123000" />
+        <entry key="$PROJECT_DIR$" value="5943099134000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2307,12 +2337,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shared/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidMainViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/viewmodel/AndroidMainViewModel.java" />
         <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/ViewModelType.java" />
         <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/GenericViewModel.java" />
-        <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/model/MainModel.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/ObservableBuilder.java" />
@@ -2323,7 +2351,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservableBuilder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/shared/build.gradle" />
       </list>
     </option>
   </component>
@@ -2357,7 +2387,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2564,6 +2616,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2574,28 +2682,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2895,12 +2981,12 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.16870415" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.18035714" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08045977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08045977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2909,7 +2995,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.83129585" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.81964284" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2958,14 +3044,100 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/ObservableBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/model/MainModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#165#166#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#229#230#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java">
@@ -3002,7 +3174,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#165#166#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#229#230#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3031,14 +3208,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
@@ -3083,7 +3260,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#165#166#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#229#230#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3091,7 +3273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3181,30 +3362,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4150944">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/model/MainModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#165#166#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#229#230#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3218,8 +3385,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23622048">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9433962">
+          <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25375938">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
