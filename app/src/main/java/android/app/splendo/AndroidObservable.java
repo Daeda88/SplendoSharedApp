@@ -2,6 +2,8 @@ package android.app.splendo;
 
 import android.databinding.ObservableField;
 
+import shared.app.splendo.SharedObservable;
+
 /**
  * Created by gijsvanveen on 30/01/2017.
  */

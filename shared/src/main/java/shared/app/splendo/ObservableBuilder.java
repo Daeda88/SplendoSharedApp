@@ -1,4 +1,4 @@
-package android.app.splendo;
+package shared.app.splendo;
 
 /**
  * Created by gijsvanveen on 30/01/2017.

@@ -1,19 +1,17 @@
-package android.app.splendo.viewmodel;
+package shared.app.splendo.viewmodel;
 
-import android.app.splendo.ObservableBuilder;
-import android.app.splendo.SharedObservable;
-import android.app.splendo.model.MainModel;
+import shared.app.splendo.model.MainModel;
 
 /**
  * Created by gijsvanveen on 26/01/2017.
  */
 public class MainViewModel {
 
-    public final SharedObservable<String> labelText;
+    public final shared.app.splendo.SharedObservable<String> labelText;
 
     private MainModel model = new MainModel();
 
-    public MainViewModel(ObservableBuilder observableBuilder) {
+    public MainViewModel(shared.app.splendo.ObservableBuilder observableBuilder) {
         labelText = observableBuilder.getStringObservable();
 
         updateLabelText();

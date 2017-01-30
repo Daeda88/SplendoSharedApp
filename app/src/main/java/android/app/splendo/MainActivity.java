@@ -1,11 +1,12 @@
 package android.app.splendo;
 
-import android.app.splendo.viewmodel.MainViewModel;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.app.splendo.databinding.ActivityMainBinding;
+
+import shared.app.splendo.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package android.app.splendo.model;
+package shared.app.splendo.model;
 
 /**
  * Created by gijsvanveen on 27/01/2017.

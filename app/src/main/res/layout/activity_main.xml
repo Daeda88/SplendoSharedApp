@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="viewModel" type="android.app.splendo.viewmodel.MainViewModel"/>
+        <variable name="viewModel" type="shared.app.splendo.viewmodel.MainViewModel"/>
     </data>
 
     <LinearLayout

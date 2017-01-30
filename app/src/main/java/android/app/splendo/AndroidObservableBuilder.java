@@ -1,5 +1,8 @@
 package android.app.splendo;
 
+import shared.app.splendo.ObservableBuilder;
+import shared.app.splendo.SharedObservable;
+
 /**
  * Created by gijsvanveen on 30/01/2017.
  */
