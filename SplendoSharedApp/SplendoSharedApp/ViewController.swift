@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet public var label: UILabel!
     @IBOutlet public var button: UIButton!
     
-    private let viewModel: SharedAppSplendoViewmodelMainViewModel = SharedAppSplendoViewmodelMainViewModel.init(sharedAppSplendoObservableBuilder: IOSObservableBuilder.init())
+    private let viewModel: MainViewModel = MainViewModel.init(observableBuilder: IOSObservableBuilder.init())
     
     override func viewDidLoad() {
         super.viewDidLoad()

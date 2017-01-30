@@ -7,7 +7,7 @@ target 'SplendoSharedApp' do
 
   pod 'KVOController'
   pod 'Bond', '~> 6.0'
-  pod 'SharedLibrary', :path => './generated'
+  pod 'SharedLibrary', :path => './'
   pod 'J2ObjC-Framework', :git => 'https://github.com/Daeda88/J2ObjC-Framework.git', :branch => 'v1.2'
 
   target 'SplendoSharedAppTests' do

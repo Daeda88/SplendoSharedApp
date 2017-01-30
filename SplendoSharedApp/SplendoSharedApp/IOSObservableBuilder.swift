@@ -9,25 +9,25 @@
 import Foundation
 import SharedLibrary
 
-class IOSObservableBuilder : NSObject, SharedAppSplendoObservableBuilder {
+class IOSObservableBuilder : NSObject, ObservableBuilder {
     
-    func getIntObservable() -> SharedAppSplendoSharedObservable! {
+    func getIntObservable() -> SharedObservable! {
         return IOSObservable<Int>.init()
     }
     
-    func getDoubleObservable() -> SharedAppSplendoSharedObservable! {
+    func getDoubleObservable() -> SharedObservable! {
         return IOSObservable<Double>.init()
     }
     
-    func getFloatObservable() -> SharedAppSplendoSharedObservable! {
+    func getFloatObservable() -> SharedObservable! {
         return IOSObservable<Float>.init()
     }
     
-    func getStringObservable() -> SharedAppSplendoSharedObservable! {
+    func getStringObservable() -> SharedObservable! {
         return IOSObservable<String>.init()
     }
     
-    func getBooleanObservable() -> SharedAppSplendoSharedObservable! {
+    func getBooleanObservable() -> SharedObservable! {
         return IOSObservable<Bool>.init()
     }
     

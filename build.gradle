@@ -21,3 +21,51 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task deleteGenerated() << {
+    delete "SplendoSharedApp/generated/"
+
+}
+
+task createDirs(dependsOn:deleteGenerated ) << {
+    println "creating dirs"
+    file("SplendoSharedApp/generated/").mkdirs()
+}
+
+task translateShared(type:Exec, dependsOn:createDirs) {
+    FileTree tree = fileTree(dir: 'shared/src/main/java')
+    tree.include '**/*.java'
+
+    executable System.getenv()['J2OBJC_HOME'] + '/j2objc'
+    args '--prefixes', file('SplendoSharedApp/wrapper/prefixes.properties').path
+    //  args '--mapping', file('mapping.properties').path
+    args '--no-package-directories'
+    args '-d', file('SplendoSharedApp/generated/').path
+    args '-sourcepath', tree.dir
+    args '--swift-friendly'
+    args tree
+}
+
+task convert << {
+    FileTree tree = fileTree(dir: 'SplendoSharedApp/generated/')
+    tree.include '**/*.m'
+    tree.include '**/*.mm'
+    tree.include '**/*.h'
+
+        tree.each { File file ->
+            String contents = new File(file.path).getText('UTF-8')
+
+
+            contents = contents.substring(contents.indexOf('\n')+1);
+            contents = contents.substring(contents.indexOf('\n')+1);
+            contents = contents.substring(contents.indexOf('\n')+1);
+            contents = contents.substring(contents.indexOf('\n')+1);
+
+            new File(file.path).write(contents, 'UTF-8')
+
+        }
+}
+
+convert.dependsOn translateShared
+createDirs.mustRunAfter deleteGenerated
+translateShared.shouldRunAfter createDirs

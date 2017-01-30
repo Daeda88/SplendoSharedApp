@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
    		'OTHER_LDFLAGS' => '-lObjC -lc++'
    	}
    	s.requires_arc = false
-	s.source_files = "*.{h,m,mm,c,swift}"
+	s.source_files = "generated/*.{h,m,mm,c,swift}"
 	s.source = { :git => 'https://github.com/Daeda88/SplendoSharedApp.git', :tag => s.version.to_s }
 end

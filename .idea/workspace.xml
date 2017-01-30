@@ -10,39 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservable.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservableBuilder.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainModel.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainModel.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainViewModel.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/MainViewModel.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Podfile" afterPath="$PROJECT_DIR$/SplendoSharedApp/Podfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" afterPath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Manifest.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/Pods-SplendoSharedApp.xcscheme" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/Pods-SplendoSharedApp.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Pods.xcodeproj/xcuserdata/gijsvanveen.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/KVOController/KVOController.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/KVOController/KVOController.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.markdown" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.plist" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-acknowledgements.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-frameworks.sh" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp-frameworks.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.debug.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.debug.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.debug.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.release.xcconfig" afterPath="$PROJECT_DIR$/SplendoSharedApp/Pods/Target Support Files/Pods-SplendoSharedAppUITests/Pods-SplendoSharedAppUITests.release.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/build.gradle" afterPath="$PROJECT_DIR$/shared/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/shared.iml" afterPath="$PROJECT_DIR$/shared/shared.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,7 +83,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shared/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25375938">
+            <state vertical-scroll-proportion="0.26732674">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
@@ -171,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2986,7 +2955,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08045977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08045977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3307,7 +3276,7 @@
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3412,7 +3381,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shared/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25375938">
+        <state vertical-scroll-proportion="0.26732674">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
