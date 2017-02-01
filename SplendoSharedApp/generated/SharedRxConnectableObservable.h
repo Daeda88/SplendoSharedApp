@@ -1,0 +1,29 @@
+
+#include "J2ObjC_header.h"
+
+#pragma push_macro("INCLUDE_ALL_SharedRxConnectableObservable")
+#ifdef RESTRICT_SharedRxConnectableObservable
+#define INCLUDE_ALL_SharedRxConnectableObservable 0
+#else
+#define INCLUDE_ALL_SharedRxConnectableObservable 1
+#endif
+#undef RESTRICT_SharedRxConnectableObservable
+
+#if !defined (SharedAppSplendoSharedrxSharedRxConnectableObservable_) && (INCLUDE_ALL_SharedRxConnectableObservable || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxConnectableObservable))
+#define SharedAppSplendoSharedrxSharedRxConnectableObservable_
+
+#define RESTRICT_SharedRxObservable 1
+#define INCLUDE_SharedAppSplendoSharedrxSharedRxObservable 1
+#include "SharedRxObservable.h"
+
+@protocol SharedAppSplendoSharedrxSharedRxConnectableObservable < SharedAppSplendoSharedrxSharedRxObservable, JavaObject >
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxConnectableObservable)
+
+J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxConnectableObservable)
+
+#endif
+
+#pragma pop_macro("INCLUDE_ALL_SharedRxConnectableObservable")

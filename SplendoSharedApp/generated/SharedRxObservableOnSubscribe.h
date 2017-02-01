@@ -1,0 +1,29 @@
+
+#include "J2ObjC_header.h"
+
+#pragma push_macro("INCLUDE_ALL_SharedRxObservableOnSubscribe")
+#ifdef RESTRICT_SharedRxObservableOnSubscribe
+#define INCLUDE_ALL_SharedRxObservableOnSubscribe 0
+#else
+#define INCLUDE_ALL_SharedRxObservableOnSubscribe 1
+#endif
+#undef RESTRICT_SharedRxObservableOnSubscribe
+
+#if !defined (SharedAppSplendoSharedrxSharedRxObservableOnSubscribe_) && (INCLUDE_ALL_SharedRxObservableOnSubscribe || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxObservableOnSubscribe))
+#define SharedAppSplendoSharedrxSharedRxObservableOnSubscribe_
+
+@protocol SharedAppSplendoSharedrxSharedRxObservableEmitter;
+
+@protocol SharedAppSplendoSharedrxSharedRxObservableOnSubscribe < JavaObject >
+
+- (void)subscribeWithSharedAppSplendoSharedrxSharedRxObservableEmitter:(id<SharedAppSplendoSharedrxSharedRxObservableEmitter>)e;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxObservableOnSubscribe)
+
+J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxObservableOnSubscribe)
+
+#endif
+
+#pragma pop_macro("INCLUDE_ALL_SharedRxObservableOnSubscribe")
