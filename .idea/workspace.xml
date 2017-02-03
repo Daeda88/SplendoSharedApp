@@ -10,34 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxBiFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxBiPredicate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxDisposable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxPredicate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxScheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiPredicate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxPredicate.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxCompletable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxCompletableObserver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxCompletableSource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxEmitter.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxMaybe.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxMaybeSource.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxMaybeobserver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservableEmitter.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxSingle.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxSingleObserver.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxSingleSource.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,11 +68,53 @@
       <file leaf-file-name="Observable.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Observable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.962963">
-              <caret line="9164" column="37" selection-start-line="9164" selection-start-column="37" selection-end-line="9164" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9383" column="47" selection-start-line="9383" selection-start-column="47" selection-end-line="9383" selection-end-column="54" />
               <folding>
-                <element signature="e#0#584#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#5654#5655#0" expanded="false" />
+                <element signature="e#5698#5699#0" expanded="false" />
+                <element signature="e#246320#246321#0" expanded="false" />
+                <element signature="e#246373#246374#0" expanded="false" />
+                <element signature="e#250372#250373#0" expanded="false" />
+                <element signature="e#250432#250433#0" expanded="false" />
+                <element signature="e#252339#252340#0" expanded="false" />
+                <element signature="e#252397#252398#0" expanded="false" />
+                <element signature="e#254285#254286#0" expanded="false" />
+                <element signature="e#254341#254342#0" expanded="false" />
+                <element signature="e#255489#255490#0" expanded="false" />
+                <element signature="e#255550#255551#0" expanded="false" />
+                <element signature="e#255945#255946#0" expanded="false" />
+                <element signature="e#256004#256005#0" expanded="false" />
+                <element signature="e#259946#259947#0" expanded="false" />
+                <element signature="e#259989#259990#0" expanded="false" />
+                <element signature="e#296821#296822#0" expanded="false" />
+                <element signature="e#296870#296871#0" expanded="false" />
+                <element signature="e#374166#374167#0" expanded="false" />
+                <element signature="e#374202#374203#0" expanded="false" />
+                <element signature="e#375091#375092#0" expanded="false" />
+                <element signature="e#375140#375141#0" expanded="false" />
+                <element signature="e#375881#375882#0" expanded="false" />
+                <element signature="e#375924#375925#0" expanded="false" />
+                <element signature="e#410752#410753#0" expanded="false" />
+                <element signature="e#410792#410793#0" expanded="false" />
+                <element signature="e#431255#431256#0" expanded="false" />
+                <element signature="e#431306#431307#0" expanded="false" />
+                <element signature="e#461321#461322#0" expanded="false" />
+                <element signature="e#461374#461375#0" expanded="false" />
+                <element signature="e#471142#471143#0" expanded="false" />
+                <element signature="e#471187#471188#0" expanded="false" />
+                <element signature="e#476524#476525#0" expanded="false" />
+                <element signature="e#476580#476581#0" expanded="false" />
+                <element signature="e#504929#504930#0" expanded="false" />
+                <element signature="e#504997#504998#0" expanded="false" />
+                <element signature="e#507747#507748#0" expanded="false" />
+                <element signature="e#507806#507807#0" expanded="false" />
+                <element signature="e#527511#527512#0" expanded="false" />
+                <element signature="e#527554#527555#0" expanded="false" />
+                <element signature="e#632107#632108#0" expanded="false" />
+                <element signature="e#632140#632141#0" expanded="false" />
+                <element signature="e#650213#650214#0" expanded="false" />
+                <element signature="e#650274#650275#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,67 +123,119 @@
       <file leaf-file-name="AndroidRxObservable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.841518">
-              <caret line="119" column="137" selection-start-line="119" selection-start-column="137" selection-end-line="119" selection-end-column="137" />
+            <state vertical-scroll-proportion="0.7160069">
+              <caret line="218" column="73" selection-start-line="218" selection-start-column="73" selection-end-line="218" selection-end-column="73" />
               <folding>
-                <element signature="e#0#584#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1236#1237#0" expanded="true" />
-                <element signature="e#1280#1281#0" expanded="true" />
-                <element signature="e#1378#1379#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-                <element signature="e#1599#1969#0" expanded="true" />
-                <element signature="e#1968#1969#0" expanded="true" />
-                <element signature="e#2844#3057#0" expanded="true" />
-                <element signature="e#3056#3057#0" expanded="true" />
-                <element signature="e#4873#4882#0" expanded="true" />
-                <element signature="e#5170#5383#0" expanded="true" />
-                <element signature="e#5382#5383#0" expanded="true" />
-                <element signature="e#5919#6286#0" expanded="true" />
-                <element signature="e#6285#6286#0" expanded="true" />
-                <element signature="e#7481#7482#0" expanded="true" />
-                <element signature="e#7508#7509#0" expanded="true" />
-                <element signature="e#7605#7606#0" expanded="true" />
-                <element signature="e#7632#7633#0" expanded="true" />
-                <element signature="e#7698#7699#0" expanded="true" />
-                <element signature="e#7725#7726#0" expanded="true" />
-                <element signature="e#7823#7824#0" expanded="true" />
-                <element signature="e#7850#7851#0" expanded="true" />
-                <element signature="e#7917#7918#0" expanded="true" />
-                <element signature="e#7944#7945#0" expanded="true" />
-                <element signature="e#8011#8012#0" expanded="true" />
-                <element signature="e#8038#8039#0" expanded="true" />
-                <element signature="e#8108#8109#0" expanded="true" />
-                <element signature="e#8135#8136#0" expanded="true" />
-                <element signature="e#8618#8619#0" expanded="true" />
-                <element signature="e#8645#8646#0" expanded="true" />
-                <element signature="e#9279#9280#0" expanded="true" />
-                <element signature="e#9306#9307#0" expanded="true" />
-                <element signature="e#9364#9365#0" expanded="true" />
-                <element signature="e#9391#9392#0" expanded="true" />
-                <element signature="e#9459#9460#0" expanded="true" />
-                <element signature="e#9486#9487#0" expanded="true" />
-                <element signature="e#9776#9777#0" expanded="true" />
-                <element signature="e#9803#9804#0" expanded="true" />
-                <element signature="e#10029#10030#0" expanded="true" />
-                <element signature="e#10056#10057#0" expanded="true" />
-                <element signature="e#10146#10147#0" expanded="true" />
-                <element signature="e#10173#10174#0" expanded="true" />
-                <element signature="e#10404#10405#0" expanded="true" />
-                <element signature="e#10431#10432#0" expanded="true" />
-                <element signature="e#10673#10674#0" expanded="true" />
-                <element signature="e#10700#10701#0" expanded="true" />
-                <element signature="e#11351#11352#0" expanded="true" />
-                <element signature="e#11378#11379#0" expanded="true" />
-                <element signature="e#11477#11478#0" expanded="true" />
-                <element signature="e#11504#11505#0" expanded="true" />
-                <element signature="e#11883#11884#0" expanded="true" />
-                <element signature="e#11910#11911#0" expanded="true" />
-                <element signature="e#11994#11995#0" expanded="true" />
-                <element signature="e#12021#12022#0" expanded="true" />
-                <element signature="e#12086#12087#0" expanded="true" />
+                <element signature="e#6142#6509#0" expanded="true" />
+                <element signature="e#6508#6509#0" expanded="true" />
+                <element signature="e#7628#7865#0" expanded="true" />
+                <element signature="e#7864#7865#0" expanded="true" />
+                <element signature="e#10585#10586#0" expanded="true" />
+                <element signature="e#10612#10613#0" expanded="true" />
+                <element signature="e#11246#11247#0" expanded="true" />
+                <element signature="e#11273#11274#0" expanded="true" />
+                <element signature="e#11331#11332#0" expanded="true" />
+                <element signature="e#11358#11359#0" expanded="true" />
+                <element signature="e#11426#11427#0" expanded="true" />
+                <element signature="e#11453#11454#0" expanded="true" />
+                <element signature="e#11743#11744#0" expanded="true" />
+                <element signature="e#11770#11771#0" expanded="true" />
+                <element signature="e#11996#11997#0" expanded="true" />
+                <element signature="e#12023#12024#0" expanded="true" />
                 <element signature="e#12113#12114#0" expanded="true" />
+                <element signature="e#12140#12141#0" expanded="true" />
+                <element signature="e#12371#12372#0" expanded="true" />
+                <element signature="e#12398#12399#0" expanded="true" />
+                <element signature="e#12640#12641#0" expanded="true" />
+                <element signature="e#12667#12668#0" expanded="true" />
+                <element signature="e#13318#13319#0" expanded="true" />
+                <element signature="e#13345#13346#0" expanded="true" />
+                <element signature="e#13444#13445#0" expanded="true" />
+                <element signature="e#13471#13472#0" expanded="true" />
+                <element signature="e#13850#13851#0" expanded="true" />
+                <element signature="e#13877#13878#0" expanded="true" />
+                <element signature="e#13961#13962#0" expanded="true" />
+                <element signature="e#13988#13989#0" expanded="true" />
+                <element signature="e#14053#14054#0" expanded="true" />
+                <element signature="e#14080#14081#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedRxAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidRxAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#272#405#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidRxObservableSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedObservable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObservableBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/ObservableBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainViewModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidObservable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,8 +243,8 @@
       <file leaf-file-name="SharedRxObservable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8888888">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2389,8 +2465,8 @@
         <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxPredicate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxPredicate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxBiPredicate.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
         <option value="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
       </list>
     </option>
   </component>
@@ -2425,8 +2501,28 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SplendoSharedApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2983,26 +3079,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3304,7 +3380,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315832" sideWeight="0.3220676" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30210015" sideWeight="0.33825943" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -3316,8 +3392,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315832" sideWeight="0.6779324" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17405583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30210015" sideWeight="0.66174054" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21243942" sideWeight="0.4955157" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25201938" sideWeight="0.39960238" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2172524" sideWeight="0.5044843" order="3" side_tool="true" content_ui="tabs" />
@@ -3330,6 +3405,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17405583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3357,46 +3433,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/SingleSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3579952">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/SingleObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42243436">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/observables/ConnectableObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1442786">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/functions/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="23" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38308457">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="48" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3404,7 +3444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2039801">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="48" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3412,7 +3451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3084577">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3420,7 +3458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47263682">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="52" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3428,7 +3465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4278607">
           <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3436,7 +3472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3444,7 +3479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2238806">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="38" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3452,7 +3486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42288557">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3468,7 +3501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07960199">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3476,15 +3508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3233831">
           <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Maybe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3492,7 +3515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326316">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3500,7 +3522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3508,15 +3529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6296296">
           <caret line="1295" column="40" selection-start-line="1295" selection-start-column="34" selection-end-line="1295" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34736842">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3532,10 +3544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#872#873#0" expanded="false" />
-            <element signature="e#900#901#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3543,7 +3551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3551,7 +3558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3571,7 +3577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15789473">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3579,7 +3584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7263158">
           <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3587,7 +3591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4">
           <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3611,7 +3614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34736842">
           <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3635,33 +3637,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15789473">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#272#405#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3677,7 +3657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3685,7 +3664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3733,7 +3711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="30" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3749,7 +3726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25263157">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="27" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3777,16 +3753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8888888">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47368422">
@@ -3797,88 +3763,175 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.962963">
-          <caret line="9164" column="37" selection-start-line="9164" selection-start-column="37" selection-end-line="9164" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9383" column="47" selection-start-line="9383" selection-start-column="47" selection-end-line="9383" selection-end-column="54" />
           <folding>
-            <element signature="e#0#584#0" expanded="true" />
+            <element signature="e#5654#5655#0" expanded="false" />
+            <element signature="e#5698#5699#0" expanded="false" />
+            <element signature="e#246320#246321#0" expanded="false" />
+            <element signature="e#246373#246374#0" expanded="false" />
+            <element signature="e#250372#250373#0" expanded="false" />
+            <element signature="e#250432#250433#0" expanded="false" />
+            <element signature="e#252339#252340#0" expanded="false" />
+            <element signature="e#252397#252398#0" expanded="false" />
+            <element signature="e#254285#254286#0" expanded="false" />
+            <element signature="e#254341#254342#0" expanded="false" />
+            <element signature="e#255489#255490#0" expanded="false" />
+            <element signature="e#255550#255551#0" expanded="false" />
+            <element signature="e#255945#255946#0" expanded="false" />
+            <element signature="e#256004#256005#0" expanded="false" />
+            <element signature="e#259946#259947#0" expanded="false" />
+            <element signature="e#259989#259990#0" expanded="false" />
+            <element signature="e#296821#296822#0" expanded="false" />
+            <element signature="e#296870#296871#0" expanded="false" />
+            <element signature="e#374166#374167#0" expanded="false" />
+            <element signature="e#374202#374203#0" expanded="false" />
+            <element signature="e#375091#375092#0" expanded="false" />
+            <element signature="e#375140#375141#0" expanded="false" />
+            <element signature="e#375881#375882#0" expanded="false" />
+            <element signature="e#375924#375925#0" expanded="false" />
+            <element signature="e#410752#410753#0" expanded="false" />
+            <element signature="e#410792#410793#0" expanded="false" />
+            <element signature="e#431255#431256#0" expanded="false" />
+            <element signature="e#431306#431307#0" expanded="false" />
+            <element signature="e#461321#461322#0" expanded="false" />
+            <element signature="e#461374#461375#0" expanded="false" />
+            <element signature="e#471142#471143#0" expanded="false" />
+            <element signature="e#471187#471188#0" expanded="false" />
+            <element signature="e#476524#476525#0" expanded="false" />
+            <element signature="e#476580#476581#0" expanded="false" />
+            <element signature="e#504929#504930#0" expanded="false" />
+            <element signature="e#504997#504998#0" expanded="false" />
+            <element signature="e#507747#507748#0" expanded="false" />
+            <element signature="e#507806#507807#0" expanded="false" />
+            <element signature="e#527511#527512#0" expanded="false" />
+            <element signature="e#527554#527555#0" expanded="false" />
+            <element signature="e#632107#632108#0" expanded="false" />
+            <element signature="e#632140#632141#0" expanded="false" />
+            <element signature="e#650213#650214#0" expanded="false" />
+            <element signature="e#650274#650275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/ObservableBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/SharedObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Maybe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321859">
+          <caret line="2953" column="31" selection-start-line="2953" selection-start-column="31" selection-end-line="2953" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#461321#461322#0" expanded="true" />
-            <element signature="e#461374#461375#0" expanded="true" />
-            <element signature="e#471142#471143#0" expanded="true" />
-            <element signature="e#471187#471188#0" expanded="true" />
-            <element signature="e#504929#504930#0" expanded="true" />
-            <element signature="e#504997#504998#0" expanded="true" />
-            <element signature="e#507747#507748#0" expanded="true" />
-            <element signature="e#507806#507807#0" expanded="true" />
-            <element signature="e#527511#527512#0" expanded="true" />
-            <element signature="e#527554#527555#0" expanded="true" />
-            <element signature="e#632107#632108#0" expanded="true" />
-            <element signature="e#632140#632141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#405#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.841518">
-          <caret line="119" column="137" selection-start-line="119" selection-start-column="137" selection-end-line="119" selection-end-column="137" />
+        <state vertical-scroll-proportion="0.7160069">
+          <caret line="218" column="73" selection-start-line="218" selection-start-column="73" selection-end-line="218" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1378#1379#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1599#1969#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2844#3057#0" expanded="true" />
-            <element signature="e#3056#3057#0" expanded="true" />
-            <element signature="e#4873#4882#0" expanded="true" />
-            <element signature="e#5170#5383#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5919#6286#0" expanded="true" />
-            <element signature="e#6285#6286#0" expanded="true" />
-            <element signature="e#7481#7482#0" expanded="true" />
-            <element signature="e#7508#7509#0" expanded="true" />
-            <element signature="e#7605#7606#0" expanded="true" />
-            <element signature="e#7632#7633#0" expanded="true" />
-            <element signature="e#7698#7699#0" expanded="true" />
-            <element signature="e#7725#7726#0" expanded="true" />
-            <element signature="e#7823#7824#0" expanded="true" />
-            <element signature="e#7850#7851#0" expanded="true" />
-            <element signature="e#7917#7918#0" expanded="true" />
-            <element signature="e#7944#7945#0" expanded="true" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8038#8039#0" expanded="true" />
-            <element signature="e#8108#8109#0" expanded="true" />
-            <element signature="e#8135#8136#0" expanded="true" />
-            <element signature="e#8618#8619#0" expanded="true" />
-            <element signature="e#8645#8646#0" expanded="true" />
-            <element signature="e#9279#9280#0" expanded="true" />
-            <element signature="e#9306#9307#0" expanded="true" />
-            <element signature="e#9364#9365#0" expanded="true" />
-            <element signature="e#9391#9392#0" expanded="true" />
-            <element signature="e#9459#9460#0" expanded="true" />
-            <element signature="e#9486#9487#0" expanded="true" />
-            <element signature="e#9776#9777#0" expanded="true" />
-            <element signature="e#9803#9804#0" expanded="true" />
-            <element signature="e#10029#10030#0" expanded="true" />
-            <element signature="e#10056#10057#0" expanded="true" />
-            <element signature="e#10146#10147#0" expanded="true" />
-            <element signature="e#10173#10174#0" expanded="true" />
-            <element signature="e#10404#10405#0" expanded="true" />
-            <element signature="e#10431#10432#0" expanded="true" />
-            <element signature="e#10673#10674#0" expanded="true" />
-            <element signature="e#10700#10701#0" expanded="true" />
-            <element signature="e#11351#11352#0" expanded="true" />
-            <element signature="e#11378#11379#0" expanded="true" />
-            <element signature="e#11477#11478#0" expanded="true" />
-            <element signature="e#11504#11505#0" expanded="true" />
-            <element signature="e#11883#11884#0" expanded="true" />
-            <element signature="e#11910#11911#0" expanded="true" />
-            <element signature="e#11994#11995#0" expanded="true" />
-            <element signature="e#12021#12022#0" expanded="true" />
-            <element signature="e#12086#12087#0" expanded="true" />
+            <element signature="e#6142#6509#0" expanded="true" />
+            <element signature="e#6508#6509#0" expanded="true" />
+            <element signature="e#7628#7865#0" expanded="true" />
+            <element signature="e#7864#7865#0" expanded="true" />
+            <element signature="e#10585#10586#0" expanded="true" />
+            <element signature="e#10612#10613#0" expanded="true" />
+            <element signature="e#11246#11247#0" expanded="true" />
+            <element signature="e#11273#11274#0" expanded="true" />
+            <element signature="e#11331#11332#0" expanded="true" />
+            <element signature="e#11358#11359#0" expanded="true" />
+            <element signature="e#11426#11427#0" expanded="true" />
+            <element signature="e#11453#11454#0" expanded="true" />
+            <element signature="e#11743#11744#0" expanded="true" />
+            <element signature="e#11770#11771#0" expanded="true" />
+            <element signature="e#11996#11997#0" expanded="true" />
+            <element signature="e#12023#12024#0" expanded="true" />
             <element signature="e#12113#12114#0" expanded="true" />
+            <element signature="e#12140#12141#0" expanded="true" />
+            <element signature="e#12371#12372#0" expanded="true" />
+            <element signature="e#12398#12399#0" expanded="true" />
+            <element signature="e#12640#12641#0" expanded="true" />
+            <element signature="e#12667#12668#0" expanded="true" />
+            <element signature="e#13318#13319#0" expanded="true" />
+            <element signature="e#13345#13346#0" expanded="true" />
+            <element signature="e#13444#13445#0" expanded="true" />
+            <element signature="e#13471#13472#0" expanded="true" />
+            <element signature="e#13850#13851#0" expanded="true" />
+            <element signature="e#13877#13878#0" expanded="true" />
+            <element signature="e#13961#13962#0" expanded="true" />
+            <element signature="e#13988#13989#0" expanded="true" />
+            <element signature="e#14053#14054#0" expanded="true" />
+            <element signature="e#14080#14081#0" expanded="true" />
           </folding>
         </state>
       </provider>

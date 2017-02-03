@@ -1,13 +1,19 @@
 package android.app.splendo.rx;
 
+import android.support.annotation.NonNull;
+
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
+import io.reactivex.functions.BiFunction;
+import io.reactivex.functions.BiPredicate;
 import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 import shared.app.splendo.sharedrx.SharedRxAction;
 import shared.app.splendo.sharedrx.SharedRxBiFunction;
 import shared.app.splendo.sharedrx.SharedRxBiPredicate;
@@ -35,6 +41,7 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
 
     @Override
     public SharedRxObservable<T> create(SharedRxObservableOnSubscribe<T> source) {
+        // TODO: Add this
         return null;
     }
 
@@ -130,76 +137,86 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
 
     @Override
     public <K> SharedRxObservable<SharedRxGroupedObservable<K, T>> groupBy(SharedRxFunction<? super T, ? extends K> keySelector) {
+        // TODO: Add this
         return null;
     }
 
     @Override
     public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper) {
-        return null;
+       return new AndroidRxObservable<R>(observable.map(((AndroidRxFunction<? super T, ? extends R>) mapper).function));
     }
 
     @Override
     public <R> SharedRxObservable<R> scan(R initialValue, SharedRxBiFunction<R, ? super T, R> accumulator) {
-        return null;
+        return new AndroidRxObservable<R>(observable.scan(initialValue, ((AndroidRxBiFunction<R, ? super T, R>)accumulator).biFunction));
     }
 
     @Override
     public SharedRxObservable<SharedRxObservable<T>> window(Double timespan, SharedRxScheduler scheduler, long count) {
-        return null;
+        return  new AndroidRxObservable<SharedRxObservable<T>>(observable.window((long)(timespan * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler, count)
+                .map(new Function<Observable<T>, SharedRxObservable<T>>() {
+            @Override
+            public SharedRxObservable<T> apply(Observable<T> o) throws Exception {
+                return new AndroidRxObservable<T>(o);
+            }
+        }));
     }
 
     @Override
     public SharedRxObservable<T> debounce(Double timeout, SharedRxScheduler scheduler) {
-        return null;
+        return new AndroidRxObservable<T>(observable.debounce((long) (timeout * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler));
     }
 
     @Override
     public SharedRxObservable<T> throttleWithTimeout(Double timeout, SharedRxScheduler scheduler) {
-        return null;
+        return new AndroidRxObservable<T>(observable.throttleWithTimeout((long) (timeout * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler));
     }
 
     @Override
     public SharedRxObservable<T> distinctUntilChanged(SharedRxBiPredicate<? super T, ? super T> comparer) {
-        return null;
+        BiPredicate<? super T, ? super T> biPredicate = ((AndroidRxBiPredicate<? super T, ? super T>) comparer).biPredicate;
+        return new AndroidRxObservable<T>(observable.distinctUntilChanged(biPredicate));
     }
 
     @Override
     public SharedRxObservable<T> elementAt(long index) {
-        return null;
+        return new AndroidRxObservable<T>(observable.elementAt(index).toObservable());
     }
 
     @Override
     public SharedRxObservable<T> filter(SharedRxPredicate<? super T> predicate) {
-        return null;
+        Predicate<? super T> rxPredicate = ((AndroidRxPredicate<? super T>) predicate).predicate;
+        return new AndroidRxObservable<T>(observable.filter(rxPredicate));
     }
 
     @Override
     public SharedRxObservable<T> singleOrError() {
-        return null;
+        return new AndroidRxObservable<T>(observable.singleOrError().toObservable());
     }
 
     @Override
     public <U> SharedRxObservable<T> sample(SharedRxObservableSource<U> sampler) {
-        return null;
+        return new AndroidRxObservable<T>(observable.sample(((AndroidRxObservableSource<U>) sampler).observableSource));
     }
 
     @Override
     public SharedRxObservable<T> skip(long count) {
-        return null;
+        return new AndroidRxObservable<T>(observable.skip(count));
     }
 
     @Override
     public SharedRxObservable<T> take(long count) {
-        return null;
+        return new AndroidRxObservable<T>(observable.take(count));
     }
 
     @Override
     public SharedRxObservable<T> takeLast(int count) {
-        return null;
+        return new AndroidRxObservable<T>(observable.takeLast(count));
     }
 
     @Override
-    public <R> SharedRxObservable<R> combineLatest(Collection<? extends SharedRxObservableSource<? extends T>> sharedRxObservableSources, SharedRxFunction<? super Object[], ? extends R> combiner) {
+    public <R> SharedRxObservable<R> combineLatest(final Collection<? extends SharedRxObservableSource<? extends T>> sharedRxObservableSources, SharedRxFunction<? super Object[], ? extends R> combiner) {
+        Collection<? extends ObservableSource<? extends T>> collection = ;
         return null;
     }
 
