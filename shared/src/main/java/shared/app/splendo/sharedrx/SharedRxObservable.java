@@ -48,10 +48,10 @@ public interface SharedRxObservable<T> extends SharedRxObservableSource<T> {
     // Combining
 
     public <R> SharedRxObservable<R> combineLatest(Collection<? extends SharedRxObservableSource<? extends T>> sources, SharedRxFunction<? super Object[], ? extends R> combiner);
-    public SharedRxObservable<T> merge(SharedRxObservableSource<? extends SharedRxObservableSource<? extends T>> sources);
+    public SharedRxObservable<T> merge(SharedRxObservable<? extends SharedRxObservableSource<? extends T>> sources);
     public SharedRxObservable<T> startWithArray(T... items);
     public SharedRxObservable<T> switchIfEmpty(SharedRxObservableSource<? extends T> other);
-    public <R> SharedRxObservable<R> zip(Iterable<? extends SharedRxObservableSource<? extends T>> sources, SharedRxFunction<? super Object[], ? extends R> zipper);
+    public <R> SharedRxObservable<R> zip(Collection<? extends SharedRxObservableSource<? extends T>> sources, SharedRxFunction<? super Object[], ? extends R> zipper);
 
     // Catch
 
@@ -67,12 +67,12 @@ public interface SharedRxObservable<T> extends SharedRxObservableSource<T> {
     public SharedRxObservable<T> delaySubscription(Double delay, SharedRxScheduler scheduler);
     public SharedRxObservable<T> doOnDispose(SharedRxAction onDispose);
     public SharedRxObservable<T> doOnComplete(SharedRxAction onComplete);
-    public SharedRxObservable<T> doOnError(SharedRxObservable<? super Throwable> onError);
-    public SharedRxObservable<T> doOnNext(SharedRxObservable<? super T> onNext);
-    public SharedRxObservable<T> doOnSubscribe(SharedRxObservable<? super SharedRxDisposable> onSubscribe);
+    public SharedRxObservable<T> doOnError(SharedRxConsumer<? super Throwable> onError);
+    public SharedRxObservable<T> doOnNext(SharedRxConsumer<? super T> onNext);
+    public SharedRxObservable<T> doOnSubscribe(SharedRxConsumer<? super SharedRxDisposable> onSubscribe);
     public SharedRxObservable<T> subscribeOn(SharedRxScheduler scheduler);
     public SharedRxObservable<T> timeout(Double timeout, SharedRxScheduler scheduler);
-    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, SharedRxFunction<? super D, ? extends SharedRxObservableSource<? extends T>> sourceSupplier, SharedRxObservable<? super D> disposer);
+    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, SharedRxFunction<? super D, ? extends SharedRxObservableSource<? extends T>> sourceSupplier, SharedRxConsumer<? super D> disposer);
 
     // Conditional
 
@@ -82,7 +82,7 @@ public interface SharedRxObservable<T> extends SharedRxObservableSource<T> {
 
     // Aggregate
 
-    public SharedRxObservable<T> concat(SharedRxObservableSource<? extends SharedRxObservableSource<? extends T>> sources);
+    public SharedRxObservable<T> concat(SharedRxObservable<? extends SharedRxObservableSource<? extends T>> sources);
     public <R> SharedRxObservable<R> reduce(R seed, SharedRxBiFunction<R, ? super T, R> reducer);
 
     // Connect

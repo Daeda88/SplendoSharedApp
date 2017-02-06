@@ -5,6 +5,4 @@ package shared.app.splendo.sharedrx;
  */
 public interface SharedRxConnectableObservable<T> extends SharedRxObservable<T> {
 
-
-
 }

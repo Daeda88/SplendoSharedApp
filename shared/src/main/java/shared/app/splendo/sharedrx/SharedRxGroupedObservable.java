@@ -5,6 +5,4 @@ package shared.app.splendo.sharedrx;
  */
 public interface SharedRxGroupedObservable<K, T> extends SharedRxObservable<T> {
 
-
-
 }
