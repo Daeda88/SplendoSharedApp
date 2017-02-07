@@ -32,11 +32,12 @@ import shared.app.splendo.sharedrx.SharedRxScheduler;
 /**
  * Created by gijsvanveen on 02/02/2017.
  */
-public class AndroidRxObservable<T> implements SharedRxObservable<T> {
+public class AndroidRxObservable<T> extends AndroidRxObservableSource<T> implements SharedRxObservable<T> {
 
     public final Observable<T> observable;
 
     public AndroidRxObservable(Observable<T> observable) {
+        super(observable);
         this.observable = observable;
     }
 
