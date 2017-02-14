@@ -9,18 +9,20 @@
 #endif
 #undef RESTRICT_SharedRxAction
 
-#if !defined (SharedAppSplendoSharedrxSharedRxAction_) && (INCLUDE_ALL_SharedRxAction || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxAction))
-#define SharedAppSplendoSharedrxSharedRxAction_
+#if !defined (SharedRxAction_) && (INCLUDE_ALL_SharedRxAction || defined(INCLUDE_SharedRxAction))
+#define SharedRxAction_
 
-@protocol SharedAppSplendoSharedrxSharedRxAction < JavaObject >
+@protocol SharedRxAction < JavaObject >
 
 - (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxAction)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxAction)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxAction)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxAction)
+
+#define SharedAppSplendoSharedrxSharedRxAction SharedRxAction
 
 #endif
 

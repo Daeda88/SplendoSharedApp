@@ -9,14 +9,14 @@
 #endif
 #undef RESTRICT_SharedRxObserver
 
-#if !defined (SharedAppSplendoSharedrxSharedRxObserver_) && (INCLUDE_ALL_SharedRxObserver || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxObserver))
-#define SharedAppSplendoSharedrxSharedRxObserver_
+#if !defined (SharedRxObserver_) && (INCLUDE_ALL_SharedRxObserver || defined(INCLUDE_SharedRxObserver))
+#define SharedRxObserver_
 
-@protocol SharedAppSplendoSharedrxSharedRxDisposable;
+@protocol SharedRxDisposable;
 
-@protocol SharedAppSplendoSharedrxSharedRxObserver < JavaObject >
+@protocol SharedRxObserver < JavaObject >
 
-- (void)onSubscribeWithSharedAppSplendoSharedrxSharedRxDisposable:(id<SharedAppSplendoSharedrxSharedRxDisposable>)d;
+- (void)onSubscribeWithSharedRxDisposable:(id<SharedRxDisposable>)d;
 
 - (void)onNextWithId:(id)value;
 
@@ -26,9 +26,11 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxObserver)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxObserver)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxObserver)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxObserver)
+
+#define SharedAppSplendoSharedrxSharedRxObserver SharedRxObserver
 
 #endif
 

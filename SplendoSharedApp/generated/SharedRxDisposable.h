@@ -9,10 +9,10 @@
 #endif
 #undef RESTRICT_SharedRxDisposable
 
-#if !defined (SharedAppSplendoSharedrxSharedRxDisposable_) && (INCLUDE_ALL_SharedRxDisposable || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxDisposable))
-#define SharedAppSplendoSharedrxSharedRxDisposable_
+#if !defined (SharedRxDisposable_) && (INCLUDE_ALL_SharedRxDisposable || defined(INCLUDE_SharedRxDisposable))
+#define SharedRxDisposable_
 
-@protocol SharedAppSplendoSharedrxSharedRxDisposable < JavaObject >
+@protocol SharedRxDisposable < JavaObject >
 
 - (void)dispose;
 
@@ -20,9 +20,11 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxDisposable)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxDisposable)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxDisposable)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxDisposable)
+
+#define SharedAppSplendoSharedrxSharedRxDisposable SharedRxDisposable
 
 #endif
 

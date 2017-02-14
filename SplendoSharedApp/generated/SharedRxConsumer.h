@@ -9,18 +9,20 @@
 #endif
 #undef RESTRICT_SharedRxConsumer
 
-#if !defined (SharedAppSplendoSharedrxSharedRxConsumer_) && (INCLUDE_ALL_SharedRxConsumer || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxConsumer))
-#define SharedAppSplendoSharedrxSharedRxConsumer_
+#if !defined (SharedRxConsumer_) && (INCLUDE_ALL_SharedRxConsumer || defined(INCLUDE_SharedRxConsumer))
+#define SharedRxConsumer_
 
-@protocol SharedAppSplendoSharedrxSharedRxConsumer < JavaObject >
+@protocol SharedRxConsumer < JavaObject >
 
 - (void)acceptWithId:(id)t;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxConsumer)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxConsumer)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxConsumer)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxConsumer)
+
+#define SharedAppSplendoSharedrxSharedRxConsumer SharedRxConsumer
 
 #endif
 

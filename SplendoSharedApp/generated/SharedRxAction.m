@@ -2,11 +2,11 @@
 #include "J2ObjC_source.h"
 #include "SharedRxAction.h"
 
-@interface SharedAppSplendoSharedrxSharedRxAction : NSObject
+@interface SharedRxAction : NSObject
 
 @end
 
-@implementation SharedAppSplendoSharedrxSharedRxAction
+@implementation SharedRxAction
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
@@ -17,10 +17,10 @@
   methods[0].selector = @selector(run);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LJavaLangException;" };
-  static const J2ObjcClassInfo _SharedAppSplendoSharedrxSharedRxAction = { "SharedRxAction", "shared.app.splendo.sharedrx", ptrTable, methods, NULL, 7, 0x609, 1, 0, -1, -1, -1, -1, -1 };
-  return &_SharedAppSplendoSharedrxSharedRxAction;
+  static const J2ObjcClassInfo _SharedRxAction = { "SharedRxAction", "shared.app.splendo.sharedrx", ptrTable, methods, NULL, 7, 0x609, 1, 0, -1, -1, -1, -1, -1 };
+  return &_SharedRxAction;
 }
 
 @end
 
-J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(SharedAppSplendoSharedrxSharedRxAction)
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(SharedRxAction)

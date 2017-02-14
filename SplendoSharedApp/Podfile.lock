@@ -1,11 +1,11 @@
 PODS:
-  - Bond (6.0.0):
+  - Bond (6.0.1):
     - Diff (~> 0.4)
     - ReactiveKit (~> 3.3)
   - Diff (0.5.0)
   - J2ObjC-Framework (1.2)
   - KVOController (1.2.0)
-  - ReactiveKit (3.3.0)
+  - ReactiveKit (3.3.1)
   - SharedLibrary (1.0):
     - J2ObjC-Framework
 
@@ -28,11 +28,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Daeda88/J2ObjC-Framework.git
 
 SPEC CHECKSUMS:
-  Bond: d34e0c37e829c991d3ef80aa860f647d677e7801
+  Bond: 22deecec4f4e9dcbd68a8b494642dc3046701183
   Diff: eceb93a3adf508574ba9b8560da185ace83de055
   J2ObjC-Framework: 12869e55feacf403d6d79aef1cdfae3fb46aa8d2
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
-  ReactiveKit: 56a5b949847ba137da40045149785e569f292e07
+  ReactiveKit: 27df79c2e2f0771aef1061551fcd7e82b92066e9
   SharedLibrary: b8de919adcc640b0560313c230c257cfcbf2ff7b
 
 PODFILE CHECKSUM: a1dba246f4028e3f02782848d92501a48ac29833

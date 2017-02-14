@@ -9,207 +9,162 @@
 #endif
 #undef RESTRICT_SharedRxObservable
 
-#if !defined (SharedAppSplendoSharedrxSharedRxObservable_) && (INCLUDE_ALL_SharedRxObservable || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxObservable))
-#define SharedAppSplendoSharedrxSharedRxObservable_
-
-#define RESTRICT_SharedRxObservableSource 1
-#define INCLUDE_SharedAppSplendoSharedrxSharedRxObservableSource 1
-#include "SharedRxObservableSource.h"
+#if !defined (SharedRxObservable_) && (INCLUDE_ALL_SharedRxObservable || defined(INCLUDE_SharedRxObservable))
+#define SharedRxObservable_
 
 @class IOSObjectArray;
-@class JavaLangLong;
-@class JavaUtilArrayList;
-@class JavaUtilConcurrentTimeUnit;
-@protocol JavaLangIterable;
+@class JavaLangDouble;
 @protocol JavaUtilCollection;
 @protocol JavaUtilConcurrentCallable;
-@protocol JavaUtilConcurrentFuture;
-@protocol JavaUtilFunctionBiFunction;
-@protocol JavaUtilFunctionBiPredicate;
-@protocol JavaUtilFunctionFunction;
-@protocol JavaUtilFunctionPredicate;
 @protocol JavaUtilList;
-@protocol SharedAppSplendoSharedrxSharedRxAction;
-@protocol SharedAppSplendoSharedrxSharedRxCompletable;
-@protocol SharedAppSplendoSharedrxSharedRxConnectableObservable;
-@protocol SharedAppSplendoSharedrxSharedRxConsumer;
-@protocol SharedAppSplendoSharedrxSharedRxMaybe;
-@protocol SharedAppSplendoSharedrxSharedRxObservableOnSubscribe;
-@protocol SharedAppSplendoSharedrxSharedRxScheduler;
-@protocol SharedAppSplendoSharedrxSharedRxSingle;
+@protocol SharedRxAction;
+@protocol SharedRxBiFunction;
+@protocol SharedRxBiPredicate;
+@protocol SharedRxConnectableObservable;
+@protocol SharedRxConsumer;
+@protocol SharedRxFunction;
+@protocol SharedRxObservableOnSubscribe;
+@protocol SharedRxObserver;
+@protocol SharedRxPredicate;
+@protocol SharedRxScheduler;
 
-@protocol SharedAppSplendoSharedrxSharedRxObservable < SharedAppSplendoSharedrxSharedRxObservableSource, JavaObject >
+@protocol SharedRxObservable < JavaObject >
 
-- (id<SharedAppSplendoSharedrxSharedRxSingle>)reduceWithId:(id)seed
-                            withJavaUtilFunctionBiFunction:(id<JavaUtilFunctionBiFunction>)reducer;
+- (id<SharedRxObservable>)createWithSharedRxObservableOnSubscribe:(id<SharedRxObservableOnSubscribe>)source;
 
-- (id<SharedAppSplendoSharedrxSharedRxSingle>)toList;
+- (id<SharedRxObservable>)deferWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)supplier;
 
-- (id<SharedAppSplendoSharedrxSharedRxConnectableObservable>)publish;
+- (id<SharedRxObservable>)empty;
 
-- (id<SharedAppSplendoSharedrxSharedRxConnectableObservable>)replayWithInt:(jint)bufferSize;
+- (id<SharedRxObservable>)never;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)share;
+- (id<SharedRxObservable>)errorWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)errorSupplier;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)observeOnWithSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
+- (id<SharedRxObservable>)fromArrayWithNSObjectArray:(IOSObjectArray *)items;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)subscribeOnWithSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
+- (id<SharedRxObservable>)intervalWithJavaLangDouble:(JavaLangDouble *)period
+                               withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)createWithSharedAppSplendoSharedrxSharedRxObservableOnSubscribe:(id<SharedAppSplendoSharedrxSharedRxObservableOnSubscribe>)source;
+- (id<SharedRxObservable>)justWithJavaUtilList:(id<JavaUtilList>)items;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)empty;
+- (id<SharedRxObservable>)rangeWithInt:(jint)start
+                               withInt:(jint)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)never;
+- (id<SharedRxObservable>)timerWithJavaLangDouble:(JavaLangDouble *)delay
+                            withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)justWithJavaUtilArrayList:(JavaUtilArrayList *)items;
+- (id<SharedRxObservable>)bufferWithJavaLangDouble:(JavaLangDouble *)timespan
+                             withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
+                                           withInt:(jint)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)errorWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)errorSupplier;
+- (id<SharedRxObservable>)flatMapWithSharedRxFunction:(id<SharedRxFunction>)mapper;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)deferWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)supplier;
+- (id<SharedRxObservable>)groupByWithSharedRxFunction:(id<SharedRxFunction>)keySelector;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)generateWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)initialState
-                                                          withJavaUtilFunctionBiFunction:(id<JavaUtilFunctionBiFunction>)generator;
+- (id<SharedRxObservable>)mapWithSharedRxFunction:(id<SharedRxFunction>)mapper;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)using__WithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)resourceSupplier
-                                                           withJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)sourceSupplier
-                                           withSharedAppSplendoSharedrxSharedRxConsumer:(id<SharedAppSplendoSharedrxSharedRxConsumer>)disposer;
+- (id<SharedRxObservable>)scanWithId:(id)initialValue
+              withSharedRxBiFunction:(id<SharedRxBiFunction>)accumulator;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)rangeWithInt:(jint)start
-                                                       withInt:(jint)count;
+- (id<SharedRxObservable>)windowWithJavaLangDouble:(JavaLangDouble *)timespan
+                             withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
+                                          withLong:(jlong)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)fromArrayWithNSObjectArray:(IOSObjectArray *)items;
+- (id<SharedRxObservable>)debounceWithJavaLangDouble:(JavaLangDouble *)timeout
+                               withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)fromCallableWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)supplier;
+- (id<SharedRxObservable>)throttleWithTimeoutWithJavaLangDouble:(JavaLangDouble *)timeout
+                                          withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)fromFutureWithJavaUtilConcurrentFuture:(id<JavaUtilConcurrentFuture>)future;
+- (id<SharedRxObservable>)distinctUntilChangedWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)comparer;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)combineLatestWithJavaUtilCollection:(id<JavaUtilCollection>)sources
-                                                         withJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)combiner;
+- (id<SharedRxObservable>)elementAtWithLong:(jlong)index;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)zipWithJavaLangIterable:(id<JavaLangIterable>)sources
-                                             withJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)zipper;
+- (id<SharedRxObservable>)filterWithSharedRxPredicate:(id<SharedRxPredicate>)predicate;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)switchIfEmptyWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)other;
+- (id<SharedRxObservable>)singleOrError;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)concatWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)sources;
+- (id<SharedRxObservable>)sampleWithSharedRxObservable:(id<SharedRxObservable>)sampler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)mergeWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)sources;
+- (id<SharedRxObservable>)skipWithLong:(jlong)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)onErrorResumeNextWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)resumeFunction;
+- (id<SharedRxObservable>)takeWithLong:(jlong)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)onErrorReturnItemWithId:(id)item;
+- (id<SharedRxObservable>)takeLastWithInt:(jint)count;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)takeUntilWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)other;
+- (id<SharedRxObservable>)combineLatestWithJavaUtilCollection:(id<JavaUtilCollection>)sources
+                                         withSharedRxFunction:(id<SharedRxFunction>)combiner;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)skipUntilWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)other;
+- (id<SharedRxObservable>)mergeWithSharedRxObservable:(id<SharedRxObservable>)sources;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)ambWithJavaUtilList:(id<JavaUtilList>)sources;
+- (id<SharedRxObservable>)startWithArrayWithNSObjectArray:(IOSObjectArray *)items;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)distinct;
+- (id<SharedRxObservable>)switchIfEmptyWithSharedRxObservable:(id<SharedRxObservable>)other;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)distinctWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)keySelector;
+- (id<SharedRxObservable>)zipWithJavaUtilCollection:(id<JavaUtilCollection>)sources
+                               withSharedRxFunction:(id<SharedRxFunction>)zipper;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)distinctUntilChangedWithJavaUtilFunctionBiPredicate:(id<JavaUtilFunctionBiPredicate>)comparer;
+- (id<SharedRxObservable>)onErrorResumeNextWithSharedRxFunction:(id<SharedRxFunction>)resumeFunction;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)doOnDisposeWithSharedAppSplendoSharedrxSharedRxAction:(id<SharedAppSplendoSharedrxSharedRxAction>)onDispose;
+- (id<SharedRxObservable>)onErrorReturnItemWithId:(id)item;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)doOnCompleteWithSharedAppSplendoSharedrxSharedRxAction:(id<SharedAppSplendoSharedrxSharedRxAction>)onComplete;
+- (id<SharedRxObservable>)retry;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)doOnErrorWithSharedAppSplendoSharedrxSharedRxConsumer:(id<SharedAppSplendoSharedrxSharedRxConsumer>)onError;
+- (id<SharedRxObservable>)retryWithLong:(jlong)times;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)doOnNextWithSharedAppSplendoSharedrxSharedRxConsumer:(id<SharedAppSplendoSharedrxSharedRxConsumer>)onNext;
+- (id<SharedRxObservable>)retryWhenWithSharedRxFunction:(id<SharedRxFunction>)handler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)doOnSubscribeWithSharedAppSplendoSharedrxSharedRxConsumer:(id<SharedAppSplendoSharedrxSharedRxConsumer>)onSubscribe;
+- (id<SharedRxObservable>)delayWithJavaLangDouble:(JavaLangDouble *)delay
+                            withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)startWithArrayWithNSObjectArray:(IOSObjectArray *)items;
+- (id<SharedRxObservable>)delaySubscriptionWithJavaLangDouble:(JavaLangDouble *)delay
+                                        withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)retry;
+- (id<SharedRxObservable>)doOnDisposeWithSharedRxAction:(id<SharedRxAction>)onDispose;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)retryWithLong:(jlong)times;
+- (id<SharedRxObservable>)doOnCompleteWithSharedRxAction:(id<SharedRxAction>)onComplete;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)retryWhenWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)handler;
+- (id<SharedRxObservable>)doOnErrorWithSharedRxConsumer:(id<SharedRxConsumer>)onError;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)scanWithId:(id)initialValue
-                              withJavaUtilFunctionBiFunction:(id<JavaUtilFunctionBiFunction>)accumulator;
+- (id<SharedRxObservable>)doOnNextWithSharedRxConsumer:(id<SharedRxConsumer>)onNext;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)defaultIfEmptyWithId:(id)defaultItem;
+- (id<SharedRxObservable>)doOnSubscribeWithSharedRxConsumer:(id<SharedRxConsumer>)onSubscribe;
 
-- (id<SharedAppSplendoSharedrxSharedRxCompletable>)ignoreElements;
+- (id<SharedRxObservable>)subscribeOnWithSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)filterWithJavaUtilFunctionPredicate:(id<JavaUtilFunctionPredicate>)predicate;
+- (id<SharedRxObservable>)timeoutWithJavaLangDouble:(JavaLangDouble *)timeout
+                              withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)takeWhileWithJavaUtilFunctionPredicate:(id<JavaUtilFunctionPredicate>)predicate;
+- (id<SharedRxObservable>)using__WithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)resourceSupplier
+                                           withSharedRxFunction:(id<SharedRxFunction>)sourceSupplier
+                                           withSharedRxConsumer:(id<SharedRxConsumer>)disposer;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)takeWithLong:(jlong)count;
+- (id<SharedRxObservable>)ambWithJavaUtilList:(id<JavaUtilList>)sources;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)takeLastWithInt:(jint)count;
+- (id<SharedRxObservable>)skipUntilWithSharedRxObservable:(id<SharedRxObservable>)other;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)skipWithLong:(jlong)count;
+- (id<SharedRxObservable>)takeUntilWithSharedRxObservable:(id<SharedRxObservable>)other;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)skipWhileWithJavaUtilFunctionPredicate:(id<JavaUtilFunctionPredicate>)predicate;
+- (id<SharedRxObservable>)concatWithSharedRxObservable:(id<SharedRxObservable>)sources;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)mapWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)mapper;
+- (id<SharedRxObservable>)reduceWithId:(id)seed
+                withSharedRxBiFunction:(id<SharedRxBiFunction>)reducer;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)flatMapWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)mapper;
+- (id<SharedRxConnectableObservable>)publish;
 
-- (id<SharedAppSplendoSharedrxSharedRxMaybe>)elementAtWithLong:(jlong)index;
+- (id<SharedRxConnectableObservable>)replayWithInt:(jint)bufferSize;
 
-- (id<SharedAppSplendoSharedrxSharedRxMaybe>)singleElement;
+- (id<SharedRxObservable>)toList;
 
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)groupByWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)keySelector;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)throttleWithTimeoutWithLong:(jlong)timeout
-                                               withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                                withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)debounceWithLong:(jlong)timeout
-                                    withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                     withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)sampleWithSharedAppSplendoSharedrxSharedRxObservableSource:(id<SharedAppSplendoSharedrxSharedRxObservableSource>)sampler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)intervalWithJavaLangLong:(JavaLangLong *)period
-                             withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)timerWithLong:(jlong)delay
-                                 withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                  withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)takeWithLong:(jlong)time
-                                withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                 withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)skipWithLong:(jlong)time
-                                withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                 withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)delaySubscriptionWithLong:(jlong)delay
-                                             withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                              withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)bufferWithLong:(jlong)timespan
-                                  withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                   withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler
-                                                         withInt:(jint)count;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)windowWithLong:(jlong)timespan
-                                  withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                   withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler
-                                                        withLong:(jlong)count;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)timeoutWithLong:(jlong)timeout
-                                   withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)timeUnit
-                    withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
-
-- (id<SharedAppSplendoSharedrxSharedRxObservable>)delayWithLong:(jlong)delay
-                                 withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
-                  withSharedAppSplendoSharedrxSharedRxScheduler:(id<SharedAppSplendoSharedrxSharedRxScheduler>)scheduler;
+- (void)subscribeWithSharedRxObserver:(id<SharedRxObserver>)observer;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxObservable)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxObservable)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxObservable)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxObservable)
+
+#define SharedAppSplendoSharedrxSharedRxObservable SharedRxObservable
 
 #endif
 

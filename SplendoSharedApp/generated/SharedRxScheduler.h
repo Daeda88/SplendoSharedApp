@@ -9,16 +9,18 @@
 #endif
 #undef RESTRICT_SharedRxScheduler
 
-#if !defined (SharedAppSplendoSharedrxSharedRxScheduler_) && (INCLUDE_ALL_SharedRxScheduler || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxScheduler))
-#define SharedAppSplendoSharedrxSharedRxScheduler_
+#if !defined (SharedRxScheduler_) && (INCLUDE_ALL_SharedRxScheduler || defined(INCLUDE_SharedRxScheduler))
+#define SharedRxScheduler_
 
-@protocol SharedAppSplendoSharedrxSharedRxScheduler < JavaObject >
+@protocol SharedRxScheduler < JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxScheduler)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxScheduler)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxScheduler)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxScheduler)
+
+#define SharedAppSplendoSharedrxSharedRxScheduler SharedRxScheduler
 
 #endif
 

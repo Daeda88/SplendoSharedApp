@@ -10,32 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidBuilderLibrary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidBiPredicateBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxBiFunctionBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxConnectableObservableBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxConsumerBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxDisposableBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxFunctionBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxGroupedObservableBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservableOnSubscribeBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserverBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxPredicateBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxSchedulerBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxActionBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxActionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxActionBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxActionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiFunctionBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiFunctionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiPredicateBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiPredicateBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumer.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumerBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumerBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxFunctionBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxFunctionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserverBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserverBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxPredicateBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxPredicateBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" afterPath="$PROJECT_DIR$/SplendoSharedApp/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservable.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservable.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservableBuilder.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSObservableBuilder.swift" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,8 +76,8 @@
       <file leaf-file-name="MainViewModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4295875">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.29871976">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -2770,74 +2749,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="splendo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sharedrx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="splendo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="binding" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SplendoSharedApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3325,7 +3236,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-293" y="-1057" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2125206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3342,7 +3253,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914803" sideWeight="0.63885087" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914803" sideWeight="0.63885087" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1400426" sideWeight="0.4955157" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25201938" sideWeight="0.39960238" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2172524" sideWeight="0.5044843" order="3" side_tool="true" content_ui="tabs" />
@@ -3976,8 +3887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4295875">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29871976">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>

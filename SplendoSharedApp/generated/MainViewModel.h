@@ -12,16 +12,18 @@
 #if !defined (MainViewModel_) && (INCLUDE_ALL_MainViewModel || defined(INCLUDE_MainViewModel))
 #define MainViewModel_
 
-@protocol ObservableBuilder;
-@protocol SharedObservable;
+@protocol BuilderLibrary;
+@protocol SharedBindingObservable;
+@protocol SharedLogger;
 
 @interface MainViewModel : NSObject
 
 #pragma mark Public
 
-- (instancetype)initWithObservableBuilder:(id<ObservableBuilder>)observableBuilder;
+- (instancetype)initWithBuilderLibrary:(id<BuilderLibrary>)builderLibrary
+                      withSharedLogger:(id<SharedLogger>)logger;
 
-- (id<SharedObservable>)getLabelText;
+- (id<SharedBindingObservable>)getLabelText;
 
 - (void)onButtonClicked;
 
@@ -29,11 +31,11 @@
 
 J2OBJC_EMPTY_STATIC_INIT(MainViewModel)
 
-FOUNDATION_EXPORT void MainViewModel_initWithObservableBuilder_(MainViewModel *self, id<ObservableBuilder> observableBuilder);
+FOUNDATION_EXPORT void MainViewModel_initWithBuilderLibrary_withSharedLogger_(MainViewModel *self, id<BuilderLibrary> builderLibrary, id<SharedLogger> logger);
 
-FOUNDATION_EXPORT MainViewModel *new_MainViewModel_initWithObservableBuilder_(id<ObservableBuilder> observableBuilder) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT MainViewModel *new_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<BuilderLibrary> builderLibrary, id<SharedLogger> logger) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT MainViewModel *create_MainViewModel_initWithObservableBuilder_(id<ObservableBuilder> observableBuilder);
+FOUNDATION_EXPORT MainViewModel *create_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<BuilderLibrary> builderLibrary, id<SharedLogger> logger);
 
 J2OBJC_TYPE_LITERAL_HEADER(MainViewModel)
 

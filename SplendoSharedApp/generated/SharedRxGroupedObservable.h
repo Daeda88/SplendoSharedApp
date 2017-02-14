@@ -9,20 +9,22 @@
 #endif
 #undef RESTRICT_SharedRxGroupedObservable
 
-#if !defined (SharedAppSplendoSharedrxSharedRxGroupedObservable_) && (INCLUDE_ALL_SharedRxGroupedObservable || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxGroupedObservable))
-#define SharedAppSplendoSharedrxSharedRxGroupedObservable_
+#if !defined (SharedRxGroupedObservable_) && (INCLUDE_ALL_SharedRxGroupedObservable || defined(INCLUDE_SharedRxGroupedObservable))
+#define SharedRxGroupedObservable_
 
 #define RESTRICT_SharedRxObservable 1
-#define INCLUDE_SharedAppSplendoSharedrxSharedRxObservable 1
+#define INCLUDE_SharedRxObservable 1
 #include "SharedRxObservable.h"
 
-@protocol SharedAppSplendoSharedrxSharedRxGroupedObservable < SharedAppSplendoSharedrxSharedRxObservable, JavaObject >
+@protocol SharedRxGroupedObservable < SharedRxObservable, JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxGroupedObservable)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxGroupedObservable)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxGroupedObservable)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxGroupedObservable)
+
+#define SharedAppSplendoSharedrxSharedRxGroupedObservable SharedRxGroupedObservable
 
 #endif
 

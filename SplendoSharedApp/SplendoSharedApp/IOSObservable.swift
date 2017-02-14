@@ -10,7 +10,7 @@ import Foundation
 import SharedLibrary
 import Bond
 
-class IOSObservable<T> : NSObject, SharedObservable {
+class IOSObservable<T> : NSObject, SharedBindingObservable {
     
     var value: Observable<T?> = Observable<T?>.init(nil)
     

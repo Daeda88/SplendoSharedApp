@@ -9,20 +9,18 @@
 #endif
 #undef RESTRICT_SharedRxObservableOnSubscribe
 
-#if !defined (SharedAppSplendoSharedrxSharedRxObservableOnSubscribe_) && (INCLUDE_ALL_SharedRxObservableOnSubscribe || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxObservableOnSubscribe))
-#define SharedAppSplendoSharedrxSharedRxObservableOnSubscribe_
+#if !defined (SharedRxObservableOnSubscribe_) && (INCLUDE_ALL_SharedRxObservableOnSubscribe || defined(INCLUDE_SharedRxObservableOnSubscribe))
+#define SharedRxObservableOnSubscribe_
 
-@protocol SharedAppSplendoSharedrxSharedRxObservableEmitter;
-
-@protocol SharedAppSplendoSharedrxSharedRxObservableOnSubscribe < JavaObject >
-
-- (void)subscribeWithSharedAppSplendoSharedrxSharedRxObservableEmitter:(id<SharedAppSplendoSharedrxSharedRxObservableEmitter>)e;
+@protocol SharedRxObservableOnSubscribe < JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxObservableOnSubscribe)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxObservableOnSubscribe)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxObservableOnSubscribe)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxObservableOnSubscribe)
+
+#define SharedAppSplendoSharedrxSharedRxObservableOnSubscribe SharedRxObservableOnSubscribe
 
 #endif
 

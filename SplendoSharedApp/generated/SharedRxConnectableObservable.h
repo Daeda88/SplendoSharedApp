@@ -9,20 +9,22 @@
 #endif
 #undef RESTRICT_SharedRxConnectableObservable
 
-#if !defined (SharedAppSplendoSharedrxSharedRxConnectableObservable_) && (INCLUDE_ALL_SharedRxConnectableObservable || defined(INCLUDE_SharedAppSplendoSharedrxSharedRxConnectableObservable))
-#define SharedAppSplendoSharedrxSharedRxConnectableObservable_
+#if !defined (SharedRxConnectableObservable_) && (INCLUDE_ALL_SharedRxConnectableObservable || defined(INCLUDE_SharedRxConnectableObservable))
+#define SharedRxConnectableObservable_
 
 #define RESTRICT_SharedRxObservable 1
-#define INCLUDE_SharedAppSplendoSharedrxSharedRxObservable 1
+#define INCLUDE_SharedRxObservable 1
 #include "SharedRxObservable.h"
 
-@protocol SharedAppSplendoSharedrxSharedRxConnectableObservable < SharedAppSplendoSharedrxSharedRxObservable, JavaObject >
+@protocol SharedRxConnectableObservable < SharedRxObservable, JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxSharedRxConnectableObservable)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxConnectableObservable)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxSharedRxConnectableObservable)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxConnectableObservable)
+
+#define SharedAppSplendoSharedrxSharedRxConnectableObservable SharedRxConnectableObservable
 
 #endif
 

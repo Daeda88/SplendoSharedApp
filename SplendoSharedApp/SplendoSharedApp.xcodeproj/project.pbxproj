@@ -94,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		206E59211E535D3F00F4865B /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				207233831E3F5F42000AEF23 /* IOSObservable.swift */,
+				207233851E3F678D000AEF23 /* IOSObservableBuilder.swift */,
+			);
+			name = Binding;
+			sourceTree = "<group>";
+		};
 		207233411E3B8B24000AEF23 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +128,7 @@
 		2072334C1E3B8B24000AEF23 /* SplendoSharedApp */ = {
 			isa = PBXGroup;
 			children = (
+				206E59211E535D3F00F4865B /* Binding */,
 				2072334D1E3B8B24000AEF23 /* AppDelegate.swift */,
 				2072334F1E3B8B24000AEF23 /* ViewController.swift */,
 				207233511E3B8B25000AEF23 /* Main.storyboard */,
@@ -126,8 +136,6 @@
 				207233561E3B8B25000AEF23 /* LaunchScreen.storyboard */,
 				207233591E3B8B25000AEF23 /* Info.plist */,
 				2072337C1E3B9354000AEF23 /* SplendoSharedApp-Bridging-Header.h */,
-				207233831E3F5F42000AEF23 /* IOSObservable.swift */,
-				207233851E3F678D000AEF23 /* IOSObservableBuilder.swift */,
 			);
 			path = SplendoSharedApp;
 			sourceTree = "<group>";
