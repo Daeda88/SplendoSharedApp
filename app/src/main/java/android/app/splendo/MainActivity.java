@@ -1,6 +1,5 @@
 package android.app.splendo;
 
-import android.app.splendo.binding.AndroidBindingObservableBuilder;
 import android.app.splendo.databinding.ActivityMainBinding;
 import android.app.splendo.rx.AndroidRxConsumer;
 import android.app.splendo.rx.AndroidRxObservable;
@@ -18,6 +17,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+import shared.app.splendo.SharedLogger;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
@@ -29,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setViewModel(new MainViewModel(new AndroidBindingObservableBuilder()));
+        binding.setViewModel(new MainViewModel(AndroidBuilderLibrary.INSTANCE, new SharedLogger() {
+            @Override
+            public void log(String tag, String message) {
+                Log.e(tag, message);
+            }
+        }));
 
         testRxObserver();
         testAndroidObserver();

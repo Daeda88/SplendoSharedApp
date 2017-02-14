@@ -24,7 +24,6 @@ import shared.app.splendo.sharedrx.SharedRxFunction;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribe;
-import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.SharedRxPredicate;
 import shared.app.splendo.sharedrx.SharedRxScheduler;

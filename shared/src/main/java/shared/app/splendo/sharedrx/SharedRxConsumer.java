@@ -10,6 +10,6 @@ public interface SharedRxConsumer<T> {
      *
      * @param t the input argument
      */
-    void accept(T t);
+    void accept(T t)throws Exception;
 
 }

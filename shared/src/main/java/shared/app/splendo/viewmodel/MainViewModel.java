@@ -55,7 +55,7 @@ public class MainViewModel {
 
             @Override
             public void onSubscribe(SharedRxDisposable d) {
-
+                logger.log(tag, "OnSubscribe");
                 disposable = d;
             }
 

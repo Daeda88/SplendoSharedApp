@@ -7,10 +7,10 @@ public interface SharedRxPredicateBuilder {
 
     // Extend for non-primary types
 
-    public SharedRxPredicate<String> buildStringPredicate(SharedRxPredicate<String> predicate);
-    public SharedRxPredicate<Integer> buildIntegerPredicate(SharedRxPredicate<Integer> predicate);
-    public SharedRxPredicate<Float> buildFloatPredicate(SharedRxPredicate<Float> predicate);
-    public SharedRxPredicate<Double> buildDoublePredicate(SharedRxPredicate<Double> predicate);
-    public SharedRxPredicate<Boolean> buildBooleanPredicate(SharedRxPredicate<Boolean> predicate);
+    public SharedRxPredicate<String> buildStringPredicate(SharedRxPredicate<String> predicateReference);
+    public SharedRxPredicate<Integer> buildIntegerPredicate(SharedRxPredicate<Integer> predicateReference);
+    public SharedRxPredicate<Float> buildFloatPredicate(SharedRxPredicate<Float> predicateReference);
+    public SharedRxPredicate<Double> buildDoublePredicate(SharedRxPredicate<Double> predicateReference);
+    public SharedRxPredicate<Boolean> buildBooleanPredicate(SharedRxPredicate<Boolean> predicateReference);
     
 }

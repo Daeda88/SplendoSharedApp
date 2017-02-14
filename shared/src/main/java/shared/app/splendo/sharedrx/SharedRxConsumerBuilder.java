@@ -8,10 +8,10 @@ public interface SharedRxConsumerBuilder {
 
     // Extend for non-primary types
 
-    public SharedRxConsumer<String> getConcreteStringConsumer(SharedRxConsumer<String> consumer);
-    public SharedRxConsumer<Integer> getConcreteIntegerConsumer(SharedRxConsumer<Integer> consumer);
-    public SharedRxConsumer<Float> getConcreteFloatConsumer(SharedRxConsumer<Float> consumer);
-    public SharedRxConsumer<Double> getConcreteDoubleConsumer(SharedRxConsumer<Double> consumer);
-    public SharedRxConsumer<Boolean> getConcreteBooleanConsumer(SharedRxConsumer<Boolean> consumer);
+    public SharedRxConsumer<String> getConcreteStringConsumer(SharedRxConsumer<String> consumerReference);
+    public SharedRxConsumer<Integer> getConcreteIntegerConsumer(SharedRxConsumer<Integer> consumerReference);
+    public SharedRxConsumer<Float> getConcreteFloatConsumer(SharedRxConsumer<Float> consumerReference);
+    public SharedRxConsumer<Double> getConcreteDoubleConsumer(SharedRxConsumer<Double> consumerReference);
+    public SharedRxConsumer<Boolean> getConcreteBooleanConsumer(SharedRxConsumer<Boolean> consumerReference);
 
 }

@@ -8,11 +8,11 @@ import shared.app.splendo.sharedrx.SharedRxAction;
  */
 public class AndroidRxActionBuilder implements SharedRxActionBuilder {
     @Override
-    public SharedRxAction buildConcreteRxAction(final SharedRxAction action) {
+    public SharedRxAction buildConcreteRxAction(final SharedRxAction actionReference) {
         return new AndroidRxAction() {
             @Override
             public void run() throws Exception {
-                action.run();
+                actionReference.run();
             }
         };
     }

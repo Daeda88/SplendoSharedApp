@@ -8,34 +8,34 @@ public interface SharedRxBiPredicateBuilder {
 
     // Extend this interface if you need a non primary type
 
-    public SharedRxBiPredicate<String, String> buildStringStringBiPredicate(SharedRxBiPredicate<String, String> bipredicate);
-    public SharedRxBiPredicate<Integer, String> buildIntegerStringBiPredicate(SharedRxBiPredicate<Integer, String> bipredicate);
-    public SharedRxBiPredicate<Float, String> buildFloatStringBiPredicate(SharedRxBiPredicate<Float, String> bipredicate);
-    public SharedRxBiPredicate<Double, String> buildDoubleStringBiPredicate(SharedRxBiPredicate<Double, String> bipredicate);
-    public SharedRxBiPredicate<Boolean, String> buildBooleanStringBiPredicate(SharedRxBiPredicate<Boolean, String> bipredicate);
+    public SharedRxBiPredicate<String, String> buildStringStringBiPredicate(SharedRxBiPredicate<String, String> bipredicateReference);
+    public SharedRxBiPredicate<Integer, String> buildIntegerStringBiPredicate(SharedRxBiPredicate<Integer, String> bipredicateReference);
+    public SharedRxBiPredicate<Float, String> buildFloatStringBiPredicate(SharedRxBiPredicate<Float, String> bipredicateReference);
+    public SharedRxBiPredicate<Double, String> buildDoubleStringBiPredicate(SharedRxBiPredicate<Double, String> bipredicateReference);
+    public SharedRxBiPredicate<Boolean, String> buildBooleanStringBiPredicate(SharedRxBiPredicate<Boolean, String> bipredicateReference);
 
-    public SharedRxBiPredicate<String, Integer> buildStringIntegerBiPredicate(SharedRxBiPredicate<String, Integer> bipredicate);
-    public SharedRxBiPredicate<Integer, Integer> buildIntegerIntegerBiPredicate(SharedRxBiPredicate<Integer, Integer> bipredicate);
-    public SharedRxBiPredicate<Float, Integer> buildFloatIntegerBiPredicate(SharedRxBiPredicate<Float, Integer> bipredicate);
-    public SharedRxBiPredicate<Double, Integer> buildDoubleIntegerBiPredicate(SharedRxBiPredicate<Double, Integer> bipredicate);
-    public SharedRxBiPredicate<Boolean, Integer> buildBooleanIntegerBiPredicate(SharedRxBiPredicate<Boolean, Integer> bipredicate);
+    public SharedRxBiPredicate<String, Integer> buildStringIntegerBiPredicate(SharedRxBiPredicate<String, Integer> bipredicateReference);
+    public SharedRxBiPredicate<Integer, Integer> buildIntegerIntegerBiPredicate(SharedRxBiPredicate<Integer, Integer> bipredicateReference);
+    public SharedRxBiPredicate<Float, Integer> buildFloatIntegerBiPredicate(SharedRxBiPredicate<Float, Integer> bipredicateReference);
+    public SharedRxBiPredicate<Double, Integer> buildDoubleIntegerBiPredicate(SharedRxBiPredicate<Double, Integer> bipredicateReference);
+    public SharedRxBiPredicate<Boolean, Integer> buildBooleanIntegerBiPredicate(SharedRxBiPredicate<Boolean, Integer> bipredicateReference);
 
-    public SharedRxBiPredicate<String, Float> buildStringFloatBiPredicate(SharedRxBiPredicate<String, Float> bipredicate);
-    public SharedRxBiPredicate<Integer, Float> buildIntegerFloatBiPredicate(SharedRxBiPredicate<Integer, Float> bipredicate);
-    public SharedRxBiPredicate<Float, Float> buildFloatFloatBiPredicate(SharedRxBiPredicate<Float, Float> bipredicate);
-    public SharedRxBiPredicate<Double, Float> buildDoubleFloatBiPredicate(SharedRxBiPredicate<Double, Float> bipredicate);
-    public SharedRxBiPredicate<Boolean, Float> buildBooleanFloatBiPredicate(SharedRxBiPredicate<Boolean, Float> bipredicate);
+    public SharedRxBiPredicate<String, Float> buildStringFloatBiPredicate(SharedRxBiPredicate<String, Float> bipredicateReference);
+    public SharedRxBiPredicate<Integer, Float> buildIntegerFloatBiPredicate(SharedRxBiPredicate<Integer, Float> bipredicateReference);
+    public SharedRxBiPredicate<Float, Float> buildFloatFloatBiPredicate(SharedRxBiPredicate<Float, Float> bipredicateReference);
+    public SharedRxBiPredicate<Double, Float> buildDoubleFloatBiPredicate(SharedRxBiPredicate<Double, Float> bipredicateReference);
+    public SharedRxBiPredicate<Boolean, Float> buildBooleanFloatBiPredicate(SharedRxBiPredicate<Boolean, Float> bipredicateReference);
 
-    public SharedRxBiPredicate<String, Double> buildStringDoubleBiPredicate(SharedRxBiPredicate<String, Double> bipredicate);
-    public SharedRxBiPredicate<Integer, Double> buildIntegerDoubleBiPredicate(SharedRxBiPredicate<Integer, Double> bipredicate);
-    public SharedRxBiPredicate<Float, Double> buildFloatDoubleBiPredicate(SharedRxBiPredicate<Float, Double> bipredicate);
-    public SharedRxBiPredicate<Double, Double> buildDoubleDoubleBiPredicate(SharedRxBiPredicate<Double, Double> bipredicate);
-    public SharedRxBiPredicate<Boolean, Double> buildBooleanDoubleBiPredicate(SharedRxBiPredicate<Boolean, Double> bipredicate);
+    public SharedRxBiPredicate<String, Double> buildStringDoubleBiPredicate(SharedRxBiPredicate<String, Double> bipredicateReference);
+    public SharedRxBiPredicate<Integer, Double> buildIntegerDoubleBiPredicate(SharedRxBiPredicate<Integer, Double> bipredicateReference);
+    public SharedRxBiPredicate<Float, Double> buildFloatDoubleBiPredicate(SharedRxBiPredicate<Float, Double> bipredicateReference);
+    public SharedRxBiPredicate<Double, Double> buildDoubleDoubleBiPredicate(SharedRxBiPredicate<Double, Double> bipredicateReference);
+    public SharedRxBiPredicate<Boolean, Double> buildBooleanDoubleBiPredicate(SharedRxBiPredicate<Boolean, Double> bipredicateReference);
 
-    public SharedRxBiPredicate<String, Boolean> buildStringBooleanBiPredicate(SharedRxBiPredicate<String, Boolean> bipredicate);
-    public SharedRxBiPredicate<Integer, Boolean> buildIntegerBooleanBiPredicate(SharedRxBiPredicate<Integer, Boolean> bipredicate);
-    public SharedRxBiPredicate<Float, Boolean> buildFloatBooleanBiPredicate(SharedRxBiPredicate<Float, Boolean> bipredicate);
-    public SharedRxBiPredicate<Double, Boolean> buildDoubleBooleanBiPredicate(SharedRxBiPredicate<Double, Boolean> bipredicate);
-    public SharedRxBiPredicate<Boolean, Boolean> buildBooleanBooleanBiPredicate(SharedRxBiPredicate<Boolean, Boolean> bipredicate);
+    public SharedRxBiPredicate<String, Boolean> buildStringBooleanBiPredicate(SharedRxBiPredicate<String, Boolean> bipredicateReference);
+    public SharedRxBiPredicate<Integer, Boolean> buildIntegerBooleanBiPredicate(SharedRxBiPredicate<Integer, Boolean> bipredicateReference);
+    public SharedRxBiPredicate<Float, Boolean> buildFloatBooleanBiPredicate(SharedRxBiPredicate<Float, Boolean> bipredicateReference);
+    public SharedRxBiPredicate<Double, Boolean> buildDoubleBooleanBiPredicate(SharedRxBiPredicate<Double, Boolean> bipredicateReference);
+    public SharedRxBiPredicate<Boolean, Boolean> buildBooleanBooleanBiPredicate(SharedRxBiPredicate<Boolean, Boolean> bipredicateReference);
     
 }

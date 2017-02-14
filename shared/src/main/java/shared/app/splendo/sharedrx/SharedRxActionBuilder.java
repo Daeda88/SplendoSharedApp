@@ -8,9 +8,9 @@ public interface SharedRxActionBuilder {
 
     /**
      * Builds a platform specific implementation of a SharedRxAction
-     * @param action The SharedRxAction to copy. Use this to inject the interface.
+     * @param actionReference The SharedRxAction to copy. Use this to inject the interface.
      * @return The SharedRxAction wrapped by a platform specific implementation.
      */
-    public SharedRxAction buildConcreteRxAction(final SharedRxAction action);
+    public SharedRxAction buildConcreteRxAction(final SharedRxAction actionReference);
 
 }
