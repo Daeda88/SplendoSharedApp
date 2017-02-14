@@ -1,37 +1,34 @@
 package android.app.splendo.rx;
 
 import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 
 /**
  * Created by gijsvanveen on 02/02/2017.
  */
-public class AndroidRxObserver<T> implements SharedRxObserver<T> {
+public abstract class AndroidRxObserver<T> implements SharedRxObserver<T> {
 
-    public final Observer<T> observer;
+    public final Observer<T> observer = new Observer<T>() {
+        @Override
+        public void onSubscribe(Disposable d) {
+            AndroidRxObserver.this.onSubscribe(new AndroidRxDisposable(d));
+        }
 
-    public AndroidRxObserver(Observer<T> observer) {
-        this.observer = observer;
-    }
+        @Override
+        public void onNext(T value) {
+            AndroidRxObserver.this.onNext(value);
+        }
 
-    @Override
-    public void onSubscribe(SharedRxDisposable d) {
-        observer.onSubscribe(((AndroidRxDisposable) d).disposable);
-    }
+        @Override
+        public void onError(Throwable e) {
+            AndroidRxObserver.this.onError(e);
+        }
 
-    @Override
-    public void onNext(T value) {
-        observer.onNext(value);
-    }
-
-    @Override
-    public void onError(Throwable e) {
-        observer.onError(e);
-    }
-
-    @Override
-    public void onComplete() {
-        observer.onComplete();
-    }
+        @Override
+        public void onComplete() {
+            AndroidRxObserver.this.onComplete();
+        }
+    };
 }

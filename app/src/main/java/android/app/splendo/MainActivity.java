@@ -1,18 +1,26 @@
 package android.app.splendo;
 
+import android.app.splendo.binding.AndroidBindingObservableBuilder;
+import android.app.splendo.databinding.ActivityMainBinding;
+import android.app.splendo.rx.AndroidRxConsumer;
 import android.app.splendo.rx.AndroidRxObservable;
 import android.app.splendo.rx.AndroidRxObserver;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.app.splendo.databinding.ActivityMainBinding;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
+import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setViewModel(new MainViewModel(new AndroidObservableBuilder()));
+        binding.setViewModel(new MainViewModel(new AndroidBindingObservableBuilder()));
 
         testRxObserver();
-        testSharedObserver();
+        testAndroidObserver();
     }
 
     private void testRxObserver() {
         final String tag = "OBSERVER";
-        Observer<String> observer = new Observer<String>() {
+        Observer<Integer> observer = new Observer<Integer>() {
 
             private Disposable disposable;
 
@@ -40,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNext(String value) {
+            public void onNext(Integer value) {
                 Log.e(tag, "OnNext: " + value);
             }
 
@@ -55,24 +63,34 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        Observable<String> observable = Observable.empty();
-        observable.subscribe(observer);
+//        Observable<String> observable = Observable.empty();
+//        observable.subscribe(observer);
+
+        Observable.just(1, 2, 3)
+                .doOnNext(new Consumer<Integer>() {
+                    @Override
+                    public void accept(Integer item) {
+                        if( item > 2 ) {
+                            throw new RuntimeException( "Item exceeds maximum value" );
+                        }
+                    }
+                }).subscribe(observer);
     }
 
-    private void testSharedObserver() {
-        final String tag = "SHARED_OBSERVER";
-        Observer<String> observer = new Observer<String>() {
+    private void testAndroidObserver() {
+        final String tag = "ANDROID_OBSERVER";
+        SharedRxObserver<Integer> androidObserver = new AndroidRxObserver<Integer>() {
 
-            private Disposable disposable;
+            private SharedRxDisposable disposable;
 
             @Override
-            public void onSubscribe(Disposable d) {
+            public void onSubscribe(SharedRxDisposable d) {
                 Log.e(tag, "OnSubscribe");
                 disposable = d;
             }
 
             @Override
-            public void onNext(String value) {
+            public void onNext(Integer value) {
                 Log.e(tag, "OnNext: " + value);
             }
 
@@ -86,9 +104,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(tag, "OnComplete");
             }
         };
-        AndroidRxObserver<String> androidObserver = new AndroidRxObserver<>(observer);
 
-        SharedRxObservable<String> androidObservable = new AndroidRxObservable<String>(null).empty();
+        SharedRxObservable<Integer> androidObservable = new AndroidRxObservable<Integer>(null).just(new ArrayList<Integer>(Arrays.asList(1,2,3))).doOnNext(new AndroidRxConsumer<Integer>() {
+            @Override
+            public void accept(Integer item) {
+                if( item > 2 ) {
+                    throw new RuntimeException( "Item exceeds maximum value" );
+                }
+            }
+        });
         androidObservable.subscribe(androidObserver);
     }
 }
