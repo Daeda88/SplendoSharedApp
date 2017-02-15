@@ -42,8 +42,6 @@ J2OBJC_FIELD_SETTER(MainViewModel, model_, MainModel *)
 
 __attribute__((unused)) static void MainViewModel_updateLabelText(MainViewModel *self);
 
-__attribute__((unused)) static void MainViewModel_testSharedObserver(MainViewModel *self);
-
 @interface MainViewModel_$1 : NSObject < SharedRxObserver > {
  @public
   MainViewModel *this$0_;
@@ -111,7 +109,10 @@ __attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
 }
 
 - (void)testSharedObserver {
-  MainViewModel_testSharedObserver(self);
+  NSString *tag = @"SHARED_OBSERVER";
+  id<SharedRxObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxObserverBuilder])) getConcreteIntegerObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
+  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxConsumerBuilder])) getConcreteIntegerConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
+  [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
 }
 
 - (void)dealloc {
@@ -158,7 +159,6 @@ void MainViewModel_initWithBuilderLibrary_withSharedLogger_(MainViewModel *self,
   JreStrongAssign(&self->logger_, logger);
   JreStrongAssign(&self->labelText_, [((id<SharedBindingObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getBindingObservableBuilder])) getStringObservable]);
   MainViewModel_updateLabelText(self);
-  MainViewModel_testSharedObserver(self);
 }
 
 MainViewModel *new_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<BuilderLibrary> builderLibrary, id<SharedLogger> logger) {
@@ -171,13 +171,6 @@ MainViewModel *create_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<
 
 void MainViewModel_updateLabelText(MainViewModel *self) {
   [((id<SharedBindingObservable>) nil_chk(self->labelText_)) setWithId:NSString_formatWithNSString_withNSObjectArray_(@"Current Count: %1$d", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_([((MainModel *) nil_chk(self->model_)) getCounter]) } count:1 type:NSObject_class_()])];
-}
-
-void MainViewModel_testSharedObserver(MainViewModel *self) {
-  NSString *tag = @"SHARED_OBSERVER";
-  id<SharedRxObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObserverBuilder])) getConcreteIntegerObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
-  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteIntegerConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
-  [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(MainViewModel)

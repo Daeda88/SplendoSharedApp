@@ -15,7 +15,7 @@ public interface SharedRxObservable<T> {
     public SharedRxObservable<T> defer(Callable<? extends SharedRxObservable<? extends T>> supplier);
     public SharedRxObservable<T> empty();
     public SharedRxObservable<T> never();
-    public SharedRxObservable<T> error(Callable<? extends Throwable> errorSupplier);
+    public SharedRxObservable<T> error(Throwable error);
     public SharedRxObservable<T> fromArray(T... items);
     public SharedRxObservable<Double> interval(Double period, SharedRxScheduler scheduler);
     public SharedRxObservable<T> just(List<T> items);

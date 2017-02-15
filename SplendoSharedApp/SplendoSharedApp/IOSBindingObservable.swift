@@ -10,7 +10,7 @@ import Foundation
 import SharedLibrary
 import Bond
 
-class IOSObservable<T> : NSObject, SharedBindingObservable {
+class IOSBindingObservable<T> : NSObject, SharedBindingObservable {
     
     var value: Observable<T?> = Observable<T?>.init(nil)
     
@@ -20,9 +20,19 @@ class IOSObservable<T> : NSObject, SharedBindingObservable {
     
     func setWithId(_ value: Any!) {
         guard let tValue = value as? T else {
-            return
+            fatalError("Invalid Type")
         }
         self.value.value = tValue
+    }
+    
+    func castTo<A>(_ castFunc: @escaping (Any?) -> A) -> IOSBindingObservable<A> {
+        let result = IOSBindingObservable<A>.init()
+        let _ = value.map { (tValue) -> A in
+            return castFunc(tValue)
+        }.observeNext { newValue in
+            result.setWithId(newValue)
+        }
+        return result
     }
     
 }

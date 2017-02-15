@@ -31,7 +31,7 @@ public class MainViewModel {
         labelText = this.builderLibrary.getBindingObservableBuilder().getStringObservable();
 
         updateLabelText();
-        testSharedObserver();
+//        testSharedObserver();
     }
 
     public SharedBindingObservable<String> getLabelText() {

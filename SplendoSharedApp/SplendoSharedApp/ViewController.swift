@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet public var label: UILabel!
     @IBOutlet public var button: UIButton!
     
-    private let viewModel: MainViewModel = MainViewModel.init(observableBuilder: IOSObservableBuilder.init())
+    private let viewModel: MainViewModel = MainViewModel.init(builderLibrary: IOBuilderLibrary.instance, with: IOSLogger())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        (viewModel.getLabelText() as! IOSObservable<String>).value.bind(to: label)
+        (viewModel.getLabelText() as! IOSBindingObservable<Any>).value.map({ (valueToCast) -> String in
+            valueToCast as! String
+        }).bind(to: label)
         
         button.addTarget(viewModel, action: #selector(viewModel.onButtonClicked), for: .touchUpInside)
     }
@@ -30,6 +32,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    private class IOSLogger : NSObject, SharedLogger {
+        public func log(with tag: String!, with message: String!) {
+            print("\(tag): \(message)")
+        }
+    }
 
 }
 

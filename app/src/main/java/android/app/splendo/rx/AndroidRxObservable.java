@@ -66,8 +66,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> error(Callable<? extends Throwable> errorSupplier) {
-        return new AndroidRxObservable<T>(Observable.<T>error(errorSupplier));
+    public SharedRxObservable<T> error(Throwable error) {
+        return new AndroidRxObservable<T>(Observable.<T>error(error));
     }
 
     @Override
@@ -145,7 +145,7 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper) {
+    public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper, Class<R> className) {
        return new AndroidRxObservable<R>(observable.map(((AndroidRxFunction<? super T, ? extends R>) mapper).function));
     }
 

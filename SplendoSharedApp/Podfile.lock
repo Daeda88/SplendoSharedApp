@@ -6,6 +6,9 @@ PODS:
   - J2ObjC-Framework (1.2)
   - KVOController (1.2.0)
   - ReactiveKit (3.3.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
   - SharedLibrary (1.0):
     - J2ObjC-Framework
 
@@ -13,6 +16,8 @@ DEPENDENCIES:
   - Bond (~> 6.0)
   - J2ObjC-Framework (from `https://github.com/Daeda88/J2ObjC-Framework.git`, branch `v1.2`)
   - KVOController
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SharedLibrary (from `./`)
 
 EXTERNAL SOURCES:
@@ -33,8 +38,10 @@ SPEC CHECKSUMS:
   J2ObjC-Framework: 12869e55feacf403d6d79aef1cdfae3fb46aa8d2
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   ReactiveKit: 27df79c2e2f0771aef1061551fcd7e82b92066e9
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SharedLibrary: b8de919adcc640b0560313c230c257cfcbf2ff7b
 
-PODFILE CHECKSUM: a1dba246f4028e3f02782848d92501a48ac29833
+PODFILE CHECKSUM: ae33cb4a1eacbff65d42bf01788b6ebe2adc2781
 
 COCOAPODS: 1.2.0.beta.1

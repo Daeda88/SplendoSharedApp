@@ -38,7 +38,7 @@
 
 - (id<SharedRxObservable>)never;
 
-- (id<SharedRxObservable>)errorWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)errorSupplier;
+- (id<SharedRxObservable>)errorWithNSException:(NSException *)error;
 
 - (id<SharedRxObservable>)fromArrayWithNSObjectArray:(IOSObjectArray *)items;
 

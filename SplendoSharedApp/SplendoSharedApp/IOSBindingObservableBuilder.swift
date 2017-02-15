@@ -9,26 +9,26 @@
 import Foundation
 import SharedLibrary
 
-class IOSObservableBuilder : NSObject, BindingObservableBuilder {
+class IOSBindingObservableBuilder : NSObject, SharedBindingObservableBuilder {
     
     func getIntObservable() -> SharedBindingObservable! {
-        return IOSObservable<Int>.init()
+        return IOSBindingObservable<Int>.init()
     }
     
     func getDoubleObservable() -> SharedBindingObservable! {
-        return IOSObservable<Double>.init()
+        return IOSBindingObservable<Double>.init()
     }
     
     func getFloatObservable() -> SharedBindingObservable! {
-        return IOSObservable<Float>.init()
+        return IOSBindingObservable<Float>.init()
     }
     
     func getStringObservable() -> SharedBindingObservable! {
-        return IOSObservable<String>.init()
+        return IOSBindingObservable<Any>.init()
     }
     
     func getBooleanObservable() -> SharedBindingObservable! {
-        return IOSObservable<Bool>.init()
+        return IOSBindingObservable<Bool>.init()
     }
     
 }
