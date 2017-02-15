@@ -13,8 +13,8 @@
 #define MainViewModel_
 
 @protocol BuilderLibrary;
-@protocol SharedBindingObservable;
 @protocol SharedLogger;
+@protocol SharedStringBindingObservable;
 
 @interface MainViewModel : NSObject
 
@@ -23,7 +23,7 @@
 - (instancetype)initWithBuilderLibrary:(id<BuilderLibrary>)builderLibrary
                       withSharedLogger:(id<SharedLogger>)logger;
 
-- (id<SharedBindingObservable>)getLabelText;
+- (id<SharedStringBindingObservable>)getLabelText;
 
 - (void)onButtonClicked;
 

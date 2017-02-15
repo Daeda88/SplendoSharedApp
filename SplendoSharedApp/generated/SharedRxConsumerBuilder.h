@@ -12,13 +12,14 @@
 #if !defined (SharedRxConsumerBuilder_) && (INCLUDE_ALL_SharedRxConsumerBuilder || defined(INCLUDE_SharedRxConsumerBuilder))
 #define SharedRxConsumerBuilder_
 
+@protocol SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer;
 @protocol SharedRxConsumer;
 
 @protocol SharedRxConsumerBuilder < JavaObject >
 
 - (id<SharedRxConsumer>)getConcreteStringConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
-- (id<SharedRxConsumer>)getConcreteIntegerConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
+- (id<SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer>)getConcreteIntegerConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
 - (id<SharedRxConsumer>)getConcreteFloatConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 

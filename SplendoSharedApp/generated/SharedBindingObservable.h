@@ -14,8 +14,6 @@
 
 @protocol SharedBindingObservable < JavaObject >
 
-- (id)get;
-
 - (void)setWithId:(id)value;
 
 @end

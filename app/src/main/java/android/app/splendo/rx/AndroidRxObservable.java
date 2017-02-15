@@ -145,7 +145,7 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper, Class<R> className) {
+    public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper) {
        return new AndroidRxObservable<R>(observable.map(((AndroidRxFunction<? super T, ? extends R>) mapper).function));
     }
 

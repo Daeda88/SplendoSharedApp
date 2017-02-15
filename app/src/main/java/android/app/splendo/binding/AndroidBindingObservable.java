@@ -12,11 +12,6 @@ public class AndroidBindingObservable<T> implements SharedBindingObservable<T> {
     public final ObservableField<T> value = new ObservableField<T>();
 
     @Override
-    public T get() {
-        return value.get();
-    }
-
-    @Override
     public void set(T value) {
         this.value.set(value);
     }

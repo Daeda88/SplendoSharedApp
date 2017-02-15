@@ -12,23 +12,23 @@ import SharedLibrary
 class IOSBindingObservableBuilder : NSObject, SharedBindingObservableBuilder {
     
     func getIntObservable() -> SharedBindingObservable! {
-        return IOSBindingObservable<Int>.init()
+        return IOSBindingObservable.init()
     }
     
     func getDoubleObservable() -> SharedBindingObservable! {
-        return IOSBindingObservable<Double>.init()
+        return IOSBindingObservable.init()
     }
     
     func getFloatObservable() -> SharedBindingObservable! {
-        return IOSBindingObservable<Float>.init()
+        return IOSBindingObservable.init()
     }
     
-    func getStringObservable() -> SharedBindingObservable! {
-        return IOSBindingObservable<Any>.init()
+    func getStringObservable() -> SharedStringBindingObservable! {
+        return IOSStringBindingObservable.init()
     }
     
     func getBooleanObservable() -> SharedBindingObservable! {
-        return IOSBindingObservable<Bool>.init()
+        return IOSBindingObservable.init()
     }
     
 }

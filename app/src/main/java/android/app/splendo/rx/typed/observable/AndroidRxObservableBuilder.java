@@ -1,10 +1,13 @@
-package android.app.splendo.rx;
+package android.app.splendo.rx.typed.observable;
+
+import android.app.splendo.rx.AndroidRxObservable;
 
 import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObservableBuilder;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.SharedRxObserverBuilder;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
 
 /**
  * Created by gijsvanveen on 14/02/2017.
@@ -17,8 +20,8 @@ public class AndroidRxObservableBuilder implements SharedRxObservableBuilder {
     }
 
     @Override
-    public SharedRxObservable<Integer> getConcreteIntegerObservable() {
-        return new AndroidRxObservable<Integer>(null);
+    public SharedRxIntegerObservable getConcreteIntegerObservable() {
+        return new AndroidRxIntegerObservable(null);
     }
 
     @Override

@@ -5,7 +5,6 @@ package shared.app.splendo.binding;
  */
 public interface SharedBindingObservable<T> {
 
-    public T get();
     public void set(T value);
 
 }

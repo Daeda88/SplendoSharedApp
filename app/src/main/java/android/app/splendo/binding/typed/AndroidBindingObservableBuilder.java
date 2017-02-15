@@ -1,4 +1,9 @@
-package android.app.splendo.binding;
+package android.app.splendo.binding.typed;
+
+import android.app.splendo.binding.AndroidBindingObservable;
+import android.app.splendo.binding.typed.AndroidStringBindingObservable;
+
+import shared.app.splendo.binding.typed.SharedStringBindingObservable;
 
 import shared.app.splendo.binding.SharedBindingObservableBuilder;
 import shared.app.splendo.binding.SharedBindingObservable;
@@ -9,8 +14,8 @@ import shared.app.splendo.binding.SharedBindingObservable;
 public class AndroidBindingObservableBuilder implements SharedBindingObservableBuilder {
 
     @Override
-    public SharedBindingObservable<String> getStringObservable() {
-        return new AndroidBindingObservable<String>();
+    public SharedStringBindingObservable getStringObservable() {
+        return new AndroidStringBindingObservable();
     }
 
     @Override

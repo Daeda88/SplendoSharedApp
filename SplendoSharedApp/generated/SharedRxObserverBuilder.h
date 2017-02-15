@@ -12,13 +12,14 @@
 #if !defined (SharedRxObserverBuilder_) && (INCLUDE_ALL_SharedRxObserverBuilder || defined(INCLUDE_SharedRxObserverBuilder))
 #define SharedRxObserverBuilder_
 
+@protocol SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver;
 @protocol SharedRxObserver;
 
 @protocol SharedRxObserverBuilder < JavaObject >
 
 - (id<SharedRxObserver>)getConcreteStringObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
-- (id<SharedRxObserver>)getConcreteIntegerObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
+- (id<SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver>)getConcreteIntegerObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
 - (id<SharedRxObserver>)getConcreteFloatObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 

@@ -5,16 +5,19 @@
 #include "J2ObjC_source.h"
 #include "MainModel.h"
 #include "MainViewModel.h"
-#include "SharedBindingObservable.h"
 #include "SharedBindingObservableBuilder.h"
 #include "SharedLogger.h"
 #include "SharedRxConsumer.h"
 #include "SharedRxConsumerBuilder.h"
 #include "SharedRxDisposable.h"
+#include "SharedRxIntegerConsumer.h"
+#include "SharedRxIntegerObservable.h"
+#include "SharedRxIntegerObserver.h"
 #include "SharedRxObservable.h"
 #include "SharedRxObservableBuilder.h"
 #include "SharedRxObserver.h"
 #include "SharedRxObserverBuilder.h"
+#include "SharedStringBindingObservable.h"
 #include "java/lang/Integer.h"
 #include "java/lang/RuntimeException.h"
 #include "java/util/ArrayList.h"
@@ -25,7 +28,7 @@
  @public
   id<BuilderLibrary> builderLibrary_;
   id<SharedLogger> logger_;
-  id<SharedBindingObservable> labelText_;
+  id<SharedStringBindingObservable> labelText_;
   MainModel *model_;
 }
 
@@ -37,10 +40,12 @@
 
 J2OBJC_FIELD_SETTER(MainViewModel, builderLibrary_, id<BuilderLibrary>)
 J2OBJC_FIELD_SETTER(MainViewModel, logger_, id<SharedLogger>)
-J2OBJC_FIELD_SETTER(MainViewModel, labelText_, id<SharedBindingObservable>)
+J2OBJC_FIELD_SETTER(MainViewModel, labelText_, id<SharedStringBindingObservable>)
 J2OBJC_FIELD_SETTER(MainViewModel, model_, MainModel *)
 
 __attribute__((unused)) static void MainViewModel_updateLabelText(MainViewModel *self);
+
+__attribute__((unused)) static void MainViewModel_testSharedObserver(MainViewModel *self);
 
 @interface MainViewModel_$1 : NSObject < SharedRxObserver > {
  @public
@@ -95,7 +100,7 @@ __attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
   return self;
 }
 
-- (id<SharedBindingObservable>)getLabelText {
+- (id<SharedStringBindingObservable>)getLabelText {
   return labelText_;
 }
 
@@ -109,10 +114,7 @@ __attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
 }
 
 - (void)testSharedObserver {
-  NSString *tag = @"SHARED_OBSERVER";
-  id<SharedRxObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxObserverBuilder])) getConcreteIntegerObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
-  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(builderLibrary_)) getRxConsumerBuilder])) getConcreteIntegerConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
-  [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
+  MainViewModel_testSharedObserver(self);
 }
 
 - (void)dealloc {
@@ -126,7 +128,7 @@ __attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LSharedBindingObservable;", 0x1, -1, -1, -1, 1, -1, -1 },
+    { NULL, "LSharedStringBindingObservable;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, -1, -1, -1, -1, -1, -1 },
@@ -142,10 +144,10 @@ __attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
   static const J2ObjcFieldInfo fields[] = {
     { "builderLibrary_", "LBuilderLibrary;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "logger_", "LSharedLogger;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "labelText_", "LSharedBindingObservable;", .constantValue.asLong = 0, 0x2, -1, -1, 2, -1 },
+    { "labelText_", "LSharedStringBindingObservable;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "model_", "LMainModel;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LBuilderLibrary;LSharedLogger;", "()Lshared/app/splendo/binding/SharedBindingObservable<Ljava/lang/String;>;", "Lshared/app/splendo/binding/SharedBindingObservable<Ljava/lang/String;>;" };
+  static const void *ptrTable[] = { "LBuilderLibrary;LSharedLogger;" };
   static const J2ObjcClassInfo _MainViewModel = { "MainViewModel", "shared.app.splendo.viewmodel", ptrTable, methods, fields, 7, 0x1, 5, 4, -1, -1, -1, -1, -1 };
   return &_MainViewModel;
 }
@@ -159,6 +161,7 @@ void MainViewModel_initWithBuilderLibrary_withSharedLogger_(MainViewModel *self,
   JreStrongAssign(&self->logger_, logger);
   JreStrongAssign(&self->labelText_, [((id<SharedBindingObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getBindingObservableBuilder])) getStringObservable]);
   MainViewModel_updateLabelText(self);
+  MainViewModel_testSharedObserver(self);
 }
 
 MainViewModel *new_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<BuilderLibrary> builderLibrary, id<SharedLogger> logger) {
@@ -170,7 +173,14 @@ MainViewModel *create_MainViewModel_initWithBuilderLibrary_withSharedLogger_(id<
 }
 
 void MainViewModel_updateLabelText(MainViewModel *self) {
-  [((id<SharedBindingObservable>) nil_chk(self->labelText_)) setWithId:NSString_formatWithNSString_withNSObjectArray_(@"Current Count: %1$d", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_([((MainModel *) nil_chk(self->model_)) getCounter]) } count:1 type:NSObject_class_()])];
+  [((id<SharedStringBindingObservable>) nil_chk(self->labelText_)) setWithId:NSString_formatWithNSString_withNSObjectArray_(@"Current Count: %1$d", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_([((MainModel *) nil_chk(self->model_)) getCounter]) } count:1 type:NSObject_class_()])];
+}
+
+void MainViewModel_testSharedObserver(MainViewModel *self) {
+  NSString *tag = @"SHARED_OBSERVER";
+  id<SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObserverBuilder])) getConcreteIntegerObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
+  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedAppSplendoSharedrxTypedObservableSharedRxIntegerObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteIntegerConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
+  [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(MainViewModel)

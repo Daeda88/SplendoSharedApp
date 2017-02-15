@@ -1,7 +1,10 @@
-package android.app.splendo.rx;
+package android.app.splendo.rx.typed.consumer;
+
+import android.app.splendo.rx.AndroidRxConsumer;
 
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxConsumerBuilder;
+import shared.app.splendo.sharedrx.typed.consumer.SharedRxIntegerConsumer;
 
 /**
  * Created by gijsvanveen on 14/02/2017.
@@ -18,8 +21,8 @@ public class AndroidRxConsumerBuilder implements SharedRxConsumerBuilder {
     }
 
     @Override
-    public SharedRxConsumer<Integer> getConcreteIntegerConsumer(final SharedRxConsumer<Integer> consumerReference) {
-        return new AndroidRxConsumer<Integer>() {
+    public SharedRxIntegerConsumer getConcreteIntegerConsumer(final SharedRxConsumer<Integer> consumerReference) {
+        return new AndroidRxIntegerConsumer() {
             @Override
             public void accept(Integer integer) throws Exception {
                 consumerReference.accept(integer);

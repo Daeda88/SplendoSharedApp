@@ -1,17 +1,17 @@
 package android.app.splendo;
 
-import android.app.splendo.binding.AndroidBindingObservableBuilder;
+import android.app.splendo.binding.typed.AndroidBindingObservableBuilder;
 import android.app.splendo.rx.AndroidBiPredicateBuilder;
 import android.app.splendo.rx.AndroidRxActionBuilder;
 import android.app.splendo.rx.AndroidRxBiFunctionBuilder;
 import android.app.splendo.rx.AndroidRxConnectableObservableBuilder;
-import android.app.splendo.rx.AndroidRxConsumerBuilder;
+import android.app.splendo.rx.typed.consumer.AndroidRxConsumerBuilder;
 import android.app.splendo.rx.AndroidRxDisposableBuilder;
 import android.app.splendo.rx.AndroidRxFunctionBuilder;
 import android.app.splendo.rx.AndroidRxGroupedObservableBuilder;
-import android.app.splendo.rx.AndroidRxObservableBuilder;
+import android.app.splendo.rx.typed.observable.AndroidRxObservableBuilder;
 import android.app.splendo.rx.AndroidRxObservableOnSubscribeBuilder;
-import android.app.splendo.rx.AndroidRxObserverBuilder;
+import android.app.splendo.rx.typed.observer.AndroidRxObserverBuilder;
 import android.app.splendo.rx.AndroidRxPredicateBuilder;
 import android.app.splendo.rx.AndroidRxSchedulerBuilder;
 

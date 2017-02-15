@@ -9,30 +9,30 @@
 import Foundation
 import SharedLibrary
 import Bond
+import ReactiveKit
 
-class IOSBindingObservable<T> : NSObject, SharedBindingObservable {
+class IOSBindingObservable : NSObject, SharedBindingObservable {
     
-    var value: Observable<T?> = Observable<T?>.init(nil)
-    
-    func get() -> Any! {
-        return value.value
-    }
+    fileprivate var observableValue: Observable<Any?> = Observable<Any?>.init(nil)
     
     func setWithId(_ value: Any!) {
-        guard let tValue = value as? T else {
-            fatalError("Invalid Type")
-        }
-        self.value.value = tValue
+        observableValue.value = value
     }
     
-    func castTo<A>(_ castFunc: @escaping (Any?) -> A) -> IOSBindingObservable<A> {
-        let result = IOSBindingObservable<A>.init()
-        let _ = value.map { (tValue) -> A in
-            return castFunc(tValue)
-        }.observeNext { newValue in
-            result.setWithId(newValue)
-        }
-        return result
+}
+
+class IOSStringBindingObservable : IOSBindingObservable, SharedStringBindingObservable {
+    
+    func get() -> String! {
+        return observableValue.value as! String
     }
     
+    internal var stringObservable: Signal<String, NoError> {
+        return observableValue.map({ (anyValue) -> String in
+            guard let stringValue = anyValue as? String else {
+                fatalError("Not A String Value")
+            }
+            return stringValue
+        })
+    }
 }

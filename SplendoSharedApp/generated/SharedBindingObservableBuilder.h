@@ -13,10 +13,11 @@
 #define SharedBindingObservableBuilder_
 
 @protocol SharedBindingObservable;
+@protocol SharedStringBindingObservable;
 
 @protocol SharedBindingObservableBuilder < JavaObject >
 
-- (id<SharedBindingObservable>)getStringObservable;
+- (id<SharedStringBindingObservable>)getStringObservable;
 
 - (id<SharedBindingObservable>)getIntObservable;
 

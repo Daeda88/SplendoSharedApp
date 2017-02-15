@@ -7,11 +7,14 @@ import shared.app.splendo.BuilderLibrary;
 import shared.app.splendo.SharedLogger;
 import shared.app.splendo.binding.SharedBindingObservableBuilder;
 import shared.app.splendo.binding.SharedBindingObservable;
+import shared.app.splendo.binding.typed.SharedStringBindingObservable;
 import shared.app.splendo.model.MainModel;
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
+import shared.app.splendo.sharedrx.typed.observer.SharedRxIntegerObserver;
 
 /**
  * Created by gijsvanveen on 26/01/2017.
@@ -21,7 +24,7 @@ public class MainViewModel {
     private BuilderLibrary builderLibrary;
     private SharedLogger logger;
 
-    private SharedBindingObservable<String> labelText;
+    private SharedStringBindingObservable labelText;
 
     private MainModel model = new MainModel();
 
@@ -31,10 +34,10 @@ public class MainViewModel {
         labelText = this.builderLibrary.getBindingObservableBuilder().getStringObservable();
 
         updateLabelText();
-//        testSharedObserver();
+        testSharedObserver();
     }
 
-    public SharedBindingObservable<String> getLabelText() {
+    public SharedStringBindingObservable getLabelText() {
         return labelText;
     }
 
@@ -49,7 +52,7 @@ public class MainViewModel {
 
     private void testSharedObserver() {
         final String tag = "SHARED_OBSERVER";
-        SharedRxObserver<Integer> sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteIntegerObserver(new SharedRxObserver<Integer>() {
+        SharedRxIntegerObserver sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteIntegerObserver(new SharedRxObserver<Integer>() {
 
             private SharedRxDisposable disposable;
 
