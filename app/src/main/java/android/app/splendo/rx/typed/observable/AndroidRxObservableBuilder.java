@@ -2,11 +2,8 @@ package android.app.splendo.rx.typed.observable;
 
 import android.app.splendo.rx.AndroidRxObservable;
 
-import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
-import shared.app.splendo.sharedrx.SharedRxObservableBuilder;
-import shared.app.splendo.sharedrx.SharedRxObserver;
-import shared.app.splendo.sharedrx.SharedRxObserverBuilder;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableBuilder;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
 
 /**

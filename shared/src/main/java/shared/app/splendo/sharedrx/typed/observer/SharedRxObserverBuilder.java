@@ -1,5 +1,6 @@
-package shared.app.splendo.sharedrx;
+package shared.app.splendo.sharedrx.typed.observer;
 
+import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxIntegerObserver;
 
 /**

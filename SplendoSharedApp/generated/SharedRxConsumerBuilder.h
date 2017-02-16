@@ -12,14 +12,14 @@
 #if !defined (SharedRxConsumerBuilder_) && (INCLUDE_ALL_SharedRxConsumerBuilder || defined(INCLUDE_SharedRxConsumerBuilder))
 #define SharedRxConsumerBuilder_
 
-@protocol SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer;
 @protocol SharedRxConsumer;
+@protocol SharedRxIntegerConsumer;
 
 @protocol SharedRxConsumerBuilder < JavaObject >
 
 - (id<SharedRxConsumer>)getConcreteStringConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
-- (id<SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer>)getConcreteIntegerConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
+- (id<SharedRxIntegerConsumer>)getConcreteIntegerConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
 - (id<SharedRxConsumer>)getConcreteFloatConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
@@ -33,7 +33,7 @@ J2OBJC_EMPTY_STATIC_INIT(SharedRxConsumerBuilder)
 
 J2OBJC_TYPE_LITERAL_HEADER(SharedRxConsumerBuilder)
 
-#define SharedAppSplendoSharedrxSharedRxConsumerBuilder SharedRxConsumerBuilder
+#define SharedAppSplendoSharedrxTypedConsumerSharedRxConsumerBuilder SharedRxConsumerBuilder
 
 #endif
 

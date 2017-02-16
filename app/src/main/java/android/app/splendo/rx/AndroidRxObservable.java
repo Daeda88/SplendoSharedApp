@@ -1,5 +1,11 @@
 package android.app.splendo.rx;
 
+import android.app.splendo.rx.typed.observable.AndroidRxDoubleObservable;
+import android.app.splendo.rx.typed.observable.AndroidRxGroupedObservableObservable;
+import android.app.splendo.rx.typed.observable.AndroidRxIntegerObservable;
+import android.app.splendo.rx.typed.observable.AndroidRxListObservable;
+import android.app.splendo.rx.typed.observable.AndroidRxObservableObservable;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -27,6 +33,11 @@ import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribe;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.SharedRxPredicate;
 import shared.app.splendo.sharedrx.SharedRxScheduler;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxDoubleObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxGroupedObservableObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxListObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableObservable;
 
 /**
  * Created by gijsvanveen on 02/02/2017.
@@ -76,8 +87,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<Double> interval(Double period, SharedRxScheduler scheduler) {
-        return new AndroidRxObservable<Double>(Observable.interval((long)(period * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler).map(new io.reactivex.functions.Function<Long, Double>() {
+    public SharedRxDoubleObservable interval(Double period, SharedRxScheduler scheduler) {
+        return new AndroidRxDoubleObservable(Observable.interval((long)(period * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler).map(new io.reactivex.functions.Function<Long, Double>() {
             @Override
             public Double apply(Long aLong) throws Exception {
                 return aLong.doubleValue() / 1000;
@@ -103,13 +114,13 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<Integer> range(int start, int count) {
-        return new AndroidRxObservable<Integer>(Observable.<Integer>range(start, count));
+    public SharedRxIntegerObservable range(int start, int count) {
+        return new AndroidRxIntegerObservable(Observable.<Integer>range(start, count));
     }
 
     @Override
-    public SharedRxObservable<Double> timer(Double delay, SharedRxScheduler scheduler) {
-        return new AndroidRxObservable<Double>(Observable.timer((long)(delay * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler).map(new io.reactivex.functions.Function<Long, Double>() {
+    public SharedRxDoubleObservable timer(Double delay, SharedRxScheduler scheduler) {
+        return new AndroidRxDoubleObservable(Observable.timer((long)(delay * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler).map(new io.reactivex.functions.Function<Long, Double>() {
             @Override
             public Double apply(Long aLong) throws Exception {
                 return aLong.doubleValue() / 1000;
@@ -118,8 +129,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<List<T>> buffer(Double timespan, SharedRxScheduler scheduler, int count) {
-        return new AndroidRxObservable<List<T>>(observable.buffer((long) (timespan * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler, count));
+    public SharedRxListObservable<T> buffer(Double timespan, SharedRxScheduler scheduler, int count) {
+        return new AndroidRxListObservable<T>(observable.buffer((long) (timespan * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler)scheduler).scheduler, count));
     }
 
     @Override
@@ -135,11 +146,23 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public <K> SharedRxObservable<SharedRxGroupedObservable<K, T>> groupBy(SharedRxFunction<? super T, ? extends K> keySelector) {
-        return new AndroidRxObservable<SharedRxGroupedObservable<K, T>>(observable.groupBy(((AndroidRxFunction<? super T, ? extends K>) keySelector).function).map(new Function<GroupedObservable<K, T>, SharedRxGroupedObservable<K, T>>() {
+    public SharedRxGroupedObservableObservable<Integer, T> groupByInteger(SharedRxFunction<? super T, Integer> keySelector) {
+        return new AndroidRxGroupedObservableObservable<Integer, T>(observable.groupBy(((AndroidRxFunction<? super T, Integer>) keySelector).function)
+                .map(new Function<GroupedObservable<Integer, T>, SharedRxGroupedObservable<Integer, T>>() {
             @Override
-            public SharedRxGroupedObservable<K, T> apply(GroupedObservable<K, T> ktGroupedObservable) throws Exception {
-                return new AndroidRxGroupedObservable<K, T>(ktGroupedObservable);
+            public SharedRxGroupedObservable<Integer, T> apply(GroupedObservable<Integer, T> ktGroupedObservable) throws Exception {
+                return new AndroidRxGroupedObservable<Integer, T>(ktGroupedObservable);
+            }
+        }));
+    }
+
+    @Override
+    public SharedRxGroupedObservableObservable<String, T> groupByString(SharedRxFunction<? super T, String> keySelector) {
+        return new AndroidRxGroupedObservableObservable<String, T>(observable.groupBy(((AndroidRxFunction<? super T, String>) keySelector).function)
+                .map(new Function<GroupedObservable<String, T>, SharedRxGroupedObservable<String, T>>() {
+            @Override
+            public SharedRxGroupedObservable<String, T> apply(GroupedObservable<String, T> ktGroupedObservable) throws Exception {
+                return new AndroidRxGroupedObservable<String, T>(ktGroupedObservable);
             }
         }));
     }
@@ -155,8 +178,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<SharedRxObservable<T>> window(Double timespan, SharedRxScheduler scheduler, long count) {
-        return  new AndroidRxObservable<SharedRxObservable<T>>(observable.window((long)(timespan * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler, count)
+    public SharedRxObservableObservable<T> window(Double timespan, SharedRxScheduler scheduler, long count) {
+        return  new AndroidRxObservableObservable<T>(observable.window((long)(timespan * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler, count)
                 .map(new Function<Observable<T>, SharedRxObservable<T>>() {
             @Override
             public SharedRxObservable<T> apply(Observable<T> o) throws Exception {
@@ -228,7 +251,7 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> merge(SharedRxObservable<? extends SharedRxObservable<? extends T>> sources) {
+    public SharedRxObservable<T> merge(SharedRxObservableObservable<? extends T> sources) {
         ObservableSource<ObservableSource<? extends T>> mappedSources = ((AndroidRxObservable<? extends SharedRxObservable<? extends T>>) sources).observable.map(new Function<SharedRxObservable<? extends T>, ObservableSource<? extends T>>() {
             @Override
             public ObservableSource<? extends T> apply(SharedRxObservable<? extends T> sharedRxObservableSource) throws Exception {
@@ -241,7 +264,7 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
 
     @Override
     public SharedRxObservable<T> startWithArray(T... items) {
-        return new AndroidRxObservable<T>(Observable.fromArray(items));
+        return new AndroidRxObservable<T>(observable.startWithArray(items));
     }
 
     @Override
@@ -347,16 +370,16 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
         return new AndroidRxObservable<T>(observable.timeout((long)(timeout * 1000), TimeUnit.MILLISECONDS, ((AndroidRxScheduler) scheduler).scheduler));
     }
 
-    @Override
-    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, final SharedRxFunction<? super D, ? extends SharedRxObservable<? extends T>> sourceSupplier, SharedRxConsumer<? super D> disposer) {
-        Function<? super D, ObservableSource<? extends T>> function = new Function<D, ObservableSource<? extends T>>() {
-            @Override
-            public ObservableSource<? extends T> apply(D d) throws Exception {
-                return ((AndroidRxObservable<? extends T>) sourceSupplier.apply(d)).observable;
-            }
-        };
-        return new AndroidRxObservable<T>(observable.using(resourceSupplier, function, ((AndroidRxConsumer<? super D>) disposer).consumer));
-    }
+//    @Override
+//    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, final SharedRxFunction<? super D, ? extends SharedRxObservable<? extends T>> sourceSupplier, SharedRxConsumer<? super D> disposer) {
+//        Function<? super D, ObservableSource<? extends T>> function = new Function<D, ObservableSource<? extends T>>() {
+//            @Override
+//            public ObservableSource<? extends T> apply(D d) throws Exception {
+//                return ((AndroidRxObservable<? extends T>) sourceSupplier.apply(d)).observable;
+//            }
+//        };
+//        return new AndroidRxObservable<T>(observable.using(resourceSupplier, function, ((AndroidRxConsumer<? super D>) disposer).consumer));
+//    }
 
     @Override
     public SharedRxObservable<T> amb(List<? extends SharedRxObservable<? extends T>> sharedRxObservableSources) {
@@ -379,14 +402,14 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> concat(SharedRxObservable<? extends SharedRxObservable<? extends T>> sources) {
-        ObservableSource<ObservableSource<? extends T>> observables = ((AndroidRxObservable<? extends SharedRxObservable<? extends T>>) sources).observable.map(new Function<SharedRxObservable<? extends T>, ObservableSource<? extends T>>() {
-            @Override
-            public ObservableSource<? extends T> apply(SharedRxObservable<? extends T> sharedRxObservableSource) throws Exception {
-                return ((AndroidRxObservable<? extends T>) sharedRxObservableSource).observable;
-            }
-        });
-        return new AndroidRxObservable<T>(Observable.concat(observables));
+    public SharedRxObservable<T> concat(List<SharedRxObservable<? extends T>> sources) {
+        ArrayList<ObservableSource<? extends T>> list = new ArrayList<>();
+        for (SharedRxObservable<? extends T> sharedSource : sources
+                ) {
+            list.add(((AndroidRxObservable<? extends T>) sharedSource).observable);
+        }
+
+        return new AndroidRxObservable<T>(Observable.concat(list));
     }
 
     @Override
@@ -405,8 +428,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<List<T>> toList() {
-        return new AndroidRxObservable<List<T>>(observable.toList().toObservable());
+    public SharedRxListObservable<T> toList() {
+        return new AndroidRxListObservable<T>(observable.toList().toObservable());
     }
 
     @Override

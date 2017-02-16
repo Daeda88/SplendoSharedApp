@@ -22,7 +22,12 @@
 @protocol SharedRxBiPredicate;
 @protocol SharedRxConnectableObservable;
 @protocol SharedRxConsumer;
+@protocol SharedRxDoubleObservable;
 @protocol SharedRxFunction;
+@protocol SharedRxGroupedObservableObservable;
+@protocol SharedRxIntegerObservable;
+@protocol SharedRxListObservable;
+@protocol SharedRxObservableObservable;
 @protocol SharedRxObservableOnSubscribe;
 @protocol SharedRxObserver;
 @protocol SharedRxPredicate;
@@ -42,33 +47,35 @@
 
 - (id<SharedRxObservable>)fromArrayWithNSObjectArray:(IOSObjectArray *)items;
 
-- (id<SharedRxObservable>)intervalWithJavaLangDouble:(JavaLangDouble *)period
-                               withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
+- (id<SharedRxDoubleObservable>)intervalWithJavaLangDouble:(JavaLangDouble *)period
+                                     withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
 - (id<SharedRxObservable>)justWithJavaUtilList:(id<JavaUtilList>)items;
 
-- (id<SharedRxObservable>)rangeWithInt:(jint)start
-                               withInt:(jint)count;
+- (id<SharedRxIntegerObservable>)rangeWithInt:(jint)start
+                                      withInt:(jint)count;
 
-- (id<SharedRxObservable>)timerWithJavaLangDouble:(JavaLangDouble *)delay
-                            withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
+- (id<SharedRxDoubleObservable>)timerWithJavaLangDouble:(JavaLangDouble *)delay
+                                  withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedRxObservable>)bufferWithJavaLangDouble:(JavaLangDouble *)timespan
-                             withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
-                                           withInt:(jint)count;
+- (id<SharedRxListObservable>)bufferWithJavaLangDouble:(JavaLangDouble *)timespan
+                                 withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
+                                               withInt:(jint)count;
 
 - (id<SharedRxObservable>)flatMapWithSharedRxFunction:(id<SharedRxFunction>)mapper;
 
-- (id<SharedRxObservable>)groupByWithSharedRxFunction:(id<SharedRxFunction>)keySelector;
+- (id<SharedRxGroupedObservableObservable>)groupByIntegerWithSharedRxFunction:(id<SharedRxFunction>)keySelector;
+
+- (id<SharedRxGroupedObservableObservable>)groupByStringWithSharedRxFunction:(id<SharedRxFunction>)keySelector;
 
 - (id<SharedRxObservable>)mapWithSharedRxFunction:(id<SharedRxFunction>)mapper;
 
 - (id<SharedRxObservable>)scanWithId:(id)initialValue
               withSharedRxBiFunction:(id<SharedRxBiFunction>)accumulator;
 
-- (id<SharedRxObservable>)windowWithJavaLangDouble:(JavaLangDouble *)timespan
-                             withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
-                                          withLong:(jlong)count;
+- (id<SharedRxObservableObservable>)windowWithJavaLangDouble:(JavaLangDouble *)timespan
+                                       withSharedRxScheduler:(id<SharedRxScheduler>)scheduler
+                                                    withLong:(jlong)count;
 
 - (id<SharedRxObservable>)debounceWithJavaLangDouble:(JavaLangDouble *)timeout
                                withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
@@ -95,7 +102,7 @@
 - (id<SharedRxObservable>)combineLatestWithJavaUtilCollection:(id<JavaUtilCollection>)sources
                                          withSharedRxFunction:(id<SharedRxFunction>)combiner;
 
-- (id<SharedRxObservable>)mergeWithSharedRxObservable:(id<SharedRxObservable>)sources;
+- (id<SharedRxObservable>)mergeWithSharedRxObservableObservable:(id<SharedRxObservableObservable>)sources;
 
 - (id<SharedRxObservable>)startWithArrayWithNSObjectArray:(IOSObjectArray *)items;
 
@@ -135,17 +142,13 @@
 - (id<SharedRxObservable>)timeoutWithJavaLangDouble:(JavaLangDouble *)timeout
                               withSharedRxScheduler:(id<SharedRxScheduler>)scheduler;
 
-- (id<SharedRxObservable>)using__WithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)resourceSupplier
-                                           withSharedRxFunction:(id<SharedRxFunction>)sourceSupplier
-                                           withSharedRxConsumer:(id<SharedRxConsumer>)disposer;
-
 - (id<SharedRxObservable>)ambWithJavaUtilList:(id<JavaUtilList>)sources;
 
 - (id<SharedRxObservable>)skipUntilWithSharedRxObservable:(id<SharedRxObservable>)other;
 
 - (id<SharedRxObservable>)takeUntilWithSharedRxObservable:(id<SharedRxObservable>)other;
 
-- (id<SharedRxObservable>)concatWithSharedRxObservable:(id<SharedRxObservable>)sources;
+- (id<SharedRxObservable>)concatWithJavaUtilList:(id<JavaUtilList>)sources;
 
 - (id<SharedRxObservable>)reduceWithId:(id)seed
                 withSharedRxBiFunction:(id<SharedRxBiFunction>)reducer;
@@ -154,7 +157,7 @@
 
 - (id<SharedRxConnectableObservable>)replayWithInt:(jint)bufferSize;
 
-- (id<SharedRxObservable>)toList;
+- (id<SharedRxListObservable>)toList;
 
 - (void)subscribeWithSharedRxObserver:(id<SharedRxObserver>)observer;
 

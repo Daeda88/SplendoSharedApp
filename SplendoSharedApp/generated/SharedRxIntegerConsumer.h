@@ -9,20 +9,22 @@
 #endif
 #undef RESTRICT_SharedRxIntegerConsumer
 
-#if !defined (SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer_) && (INCLUDE_ALL_SharedRxIntegerConsumer || defined(INCLUDE_SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer))
-#define SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer_
+#if !defined (SharedRxIntegerConsumer_) && (INCLUDE_ALL_SharedRxIntegerConsumer || defined(INCLUDE_SharedRxIntegerConsumer))
+#define SharedRxIntegerConsumer_
 
 #define RESTRICT_SharedRxConsumer 1
 #define INCLUDE_SharedRxConsumer 1
 #include "SharedRxConsumer.h"
 
-@protocol SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer < SharedRxConsumer, JavaObject >
+@protocol SharedRxIntegerConsumer < SharedRxConsumer, JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxIntegerConsumer)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxIntegerConsumer)
+
+#define SharedAppSplendoSharedrxTypedConsumerSharedRxIntegerConsumer SharedRxIntegerConsumer
 
 #endif
 

@@ -9,20 +9,22 @@
 #endif
 #undef RESTRICT_SharedRxIntegerObserver
 
-#if !defined (SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver_) && (INCLUDE_ALL_SharedRxIntegerObserver || defined(INCLUDE_SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver))
-#define SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver_
+#if !defined (SharedRxIntegerObserver_) && (INCLUDE_ALL_SharedRxIntegerObserver || defined(INCLUDE_SharedRxIntegerObserver))
+#define SharedRxIntegerObserver_
 
 #define RESTRICT_SharedRxObserver 1
 #define INCLUDE_SharedRxObserver 1
 #include "SharedRxObserver.h"
 
-@protocol SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver < SharedRxObserver, JavaObject >
+@protocol SharedRxIntegerObserver < SharedRxObserver, JavaObject >
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver)
+J2OBJC_EMPTY_STATIC_INIT(SharedRxIntegerObserver)
 
-J2OBJC_TYPE_LITERAL_HEADER(SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver)
+J2OBJC_TYPE_LITERAL_HEADER(SharedRxIntegerObserver)
+
+#define SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver SharedRxIntegerObserver
 
 #endif
 

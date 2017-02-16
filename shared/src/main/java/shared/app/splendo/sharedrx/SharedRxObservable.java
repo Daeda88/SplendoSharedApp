@@ -4,6 +4,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+import shared.app.splendo.sharedrx.typed.observable.SharedRxDoubleObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxGroupedObservableObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxListObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableObservable;
+
 /**
  * Created by gijsvanveen on 31/01/2017.
  */
@@ -17,20 +23,21 @@ public interface SharedRxObservable<T> {
     public SharedRxObservable<T> never();
     public SharedRxObservable<T> error(Throwable error);
     public SharedRxObservable<T> fromArray(T... items);
-    public SharedRxObservable<Double> interval(Double period, SharedRxScheduler scheduler);
+    public SharedRxDoubleObservable interval(Double period, SharedRxScheduler scheduler);
     public SharedRxObservable<T> just(List<T> items);
-    public SharedRxObservable<Integer> range(int start, int count);
-    public SharedRxObservable<Double> timer(Double delay, SharedRxScheduler scheduler);
+    public SharedRxIntegerObservable range(int start, int count);
+    public SharedRxDoubleObservable timer(Double delay, SharedRxScheduler scheduler);
 
     // Transforming
 
-    public SharedRxObservable<List<T>> buffer(Double timespan, SharedRxScheduler scheduler, int count);
+    public SharedRxListObservable<T> buffer(Double timespan, SharedRxScheduler scheduler, int count);
     public <R> SharedRxObservable<R> flatMap(final SharedRxFunction<? super T, ? extends SharedRxObservable<? extends R>> mapper);
-    public <K> SharedRxObservable<SharedRxGroupedObservable<K, T>> groupBy(SharedRxFunction<? super T, ? extends K> keySelector);
+    public SharedRxGroupedObservableObservable<Integer, T> groupByInteger(SharedRxFunction<? super T, Integer> keySelector);
+    public SharedRxGroupedObservableObservable<String, T> groupByString(SharedRxFunction<? super T, String> keySelector);
     public <R> SharedRxObservable<R> map(SharedRxFunction<? super T, ? extends R> mapper);
     public <R> SharedRxObservable<R> scan(final R initialValue, SharedRxBiFunction<R, ? super T, R> accumulator);
-    public SharedRxObservable<SharedRxObservable<T>> window(Double timespan,
-                                                            SharedRxScheduler scheduler, long count);
+    public SharedRxObservableObservable<T> window(Double timespan,
+                                                  SharedRxScheduler scheduler, long count);
 
     // Filtering
 
@@ -48,7 +55,7 @@ public interface SharedRxObservable<T> {
     // Combining
 
     public <R> SharedRxObservable<R> combineLatest(Collection<? extends SharedRxObservable<? extends T>> sources, SharedRxFunction<? super Object[], ? extends R> combiner);
-    public SharedRxObservable<T> merge(SharedRxObservable<? extends SharedRxObservable<? extends T>> sources);
+    public SharedRxObservable<T> merge(SharedRxObservableObservable<? extends T> sources);
     public SharedRxObservable<T> startWithArray(T... items);
     public SharedRxObservable<T> switchIfEmpty(SharedRxObservable<? extends T> other);
     public <R> SharedRxObservable<R> zip(Collection<? extends SharedRxObservable<? extends T>> sources, SharedRxFunction<? super Object[], ? extends R> zipper);
@@ -72,7 +79,7 @@ public interface SharedRxObservable<T> {
     public SharedRxObservable<T> doOnSubscribe(SharedRxConsumer<? super SharedRxDisposable> onSubscribe);
     public SharedRxObservable<T> subscribeOn(SharedRxScheduler scheduler);
     public SharedRxObservable<T> timeout(Double timeout, SharedRxScheduler scheduler);
-    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, SharedRxFunction<? super D, ? extends SharedRxObservable<? extends T>> sourceSupplier, SharedRxConsumer<? super D> disposer);
+//    public <D> SharedRxObservable<T> using(Callable<? extends D> resourceSupplier, SharedRxFunction<? super D, ? extends SharedRxObservable<? extends T>> sourceSupplier, SharedRxConsumer<? super D> disposer);
 
     // Conditional
 
@@ -82,7 +89,7 @@ public interface SharedRxObservable<T> {
 
     // Aggregate
 
-    public SharedRxObservable<T> concat(SharedRxObservable<? extends SharedRxObservable<? extends T>> sources);
+    public SharedRxObservable<T> concat(List<SharedRxObservable<? extends T>> sources);
     public <R> SharedRxObservable<R> reduce(R seed, SharedRxBiFunction<R, ? super T, R> reducer);
 
     // Connect
@@ -92,7 +99,7 @@ public interface SharedRxObservable<T> {
 
     // Casting
 
-    public SharedRxObservable<List<T>> toList();
+    public SharedRxListObservable<T> toList();
 
     public void subscribe(SharedRxObserver<? super T> observer);
 

@@ -1,12 +1,11 @@
 package android.app.splendo.rx.typed.observer;
 
 import android.app.splendo.rx.AndroidRxObserver;
-import android.app.splendo.rx.typed.observer.AndroidRxIntegerObserver;
 import android.util.Log;
 
 import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
-import shared.app.splendo.sharedrx.SharedRxObserverBuilder;
+import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxIntegerObserver;
 
 /**

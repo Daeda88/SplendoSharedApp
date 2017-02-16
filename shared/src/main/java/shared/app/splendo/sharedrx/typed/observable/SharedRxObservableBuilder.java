@@ -1,5 +1,6 @@
-package shared.app.splendo.sharedrx;
+package shared.app.splendo.sharedrx.typed.observable;
 
+import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
 
 /**
@@ -11,7 +12,7 @@ public interface SharedRxObservableBuilder {
     public SharedRxObservable<String> getConcreteStringObservable();
     public SharedRxIntegerObservable getConcreteIntegerObservable();
     public SharedRxObservable<Float> getConcreteFloatObservable();
-    public SharedRxObservable<Double> getConcreteDoubleObservable();
+    public SharedRxDoubleObservable getConcreteDoubleObservable();
     public SharedRxObservable<Boolean> getConcreteBooleanObservable();
     
 }

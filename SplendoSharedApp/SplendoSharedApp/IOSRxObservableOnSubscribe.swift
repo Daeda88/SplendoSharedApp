@@ -10,11 +10,11 @@ import Foundation
 import SharedLibrary
 import RxSwift
 
-class IOSRxObservableOnSubscribe<T> : NSObject, SharedRxObservableOnSubscribe {
+class IOSRxObservableOnSubscribe : NSObject, SharedRxObservableOnSubscribe {
     
-    public let subscribeFunction: (AnyObserver<T>) -> Disposable
+    public let subscribeFunction: (AnyObserver<Any>) -> Disposable
     
-    public init(subscribeFunction: @escaping (AnyObserver<T>) -> Disposable) {
+    public init(subscribeFunction: @escaping (AnyObserver<Any>) -> Disposable) {
         self.subscribeFunction = subscribeFunction
         super.init()
     }

@@ -5,13 +5,13 @@ import shared.app.splendo.sharedrx.SharedRxActionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxConnectableObservableBuilder;
-import shared.app.splendo.sharedrx.SharedRxConsumerBuilder;
+import shared.app.splendo.sharedrx.typed.consumer.SharedRxConsumerBuilder;
 import shared.app.splendo.sharedrx.SharedRxDisposableBuilder;
 import shared.app.splendo.sharedrx.SharedRxFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservableBuilder;
-import shared.app.splendo.sharedrx.SharedRxObservableBuilder;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableBuilder;
 import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribeBuilder;
-import shared.app.splendo.sharedrx.SharedRxObserverBuilder;
+import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxSchedulerBuilder;
 

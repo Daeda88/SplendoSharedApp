@@ -1,5 +1,6 @@
-package shared.app.splendo.sharedrx;
+package shared.app.splendo.sharedrx.typed.consumer;
 
+import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.typed.consumer.SharedRxIntegerConsumer;
 
 /**

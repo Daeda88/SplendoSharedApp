@@ -12,14 +12,14 @@
 #if !defined (SharedRxObserverBuilder_) && (INCLUDE_ALL_SharedRxObserverBuilder || defined(INCLUDE_SharedRxObserverBuilder))
 #define SharedRxObserverBuilder_
 
-@protocol SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver;
+@protocol SharedRxIntegerObserver;
 @protocol SharedRxObserver;
 
 @protocol SharedRxObserverBuilder < JavaObject >
 
 - (id<SharedRxObserver>)getConcreteStringObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
-- (id<SharedAppSplendoSharedrxTypedObserverSharedRxIntegerObserver>)getConcreteIntegerObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
+- (id<SharedRxIntegerObserver>)getConcreteIntegerObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
 - (id<SharedRxObserver>)getConcreteFloatObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
@@ -33,7 +33,7 @@ J2OBJC_EMPTY_STATIC_INIT(SharedRxObserverBuilder)
 
 J2OBJC_TYPE_LITERAL_HEADER(SharedRxObserverBuilder)
 
-#define SharedAppSplendoSharedrxSharedRxObserverBuilder SharedRxObserverBuilder
+#define SharedAppSplendoSharedrxTypedObserverSharedRxObserverBuilder SharedRxObserverBuilder
 
 #endif
 

@@ -3,7 +3,7 @@ package android.app.splendo.rx.typed.consumer;
 import android.app.splendo.rx.AndroidRxConsumer;
 
 import shared.app.splendo.sharedrx.SharedRxConsumer;
-import shared.app.splendo.sharedrx.SharedRxConsumerBuilder;
+import shared.app.splendo.sharedrx.typed.consumer.SharedRxConsumerBuilder;
 import shared.app.splendo.sharedrx.typed.consumer.SharedRxIntegerConsumer;
 
 /**
