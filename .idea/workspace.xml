@@ -10,49 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxConnectableObservable.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxGroupedObservable.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxDoubleObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxGroupedObservableObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxListObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxObservableObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxDoubleObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxGroupedObservableObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxListObservable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxObservableObservable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConsumerBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/consumer/SharedRxConsumerBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservableBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxObservableBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserverBuilder.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observer/SharedRxObserverBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxDisposable.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObserver.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxBiFunction.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxBiFunction.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservable.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservable.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservableOnSubscribe.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservableOnSubscribe.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/MainViewModel.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/MainViewModel.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxConsumerBuilder.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxConsumerBuilder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxConsumerBuilder.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxConsumerBuilder.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerConsumer.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerConsumer.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerConsumer.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerConsumer.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObservable.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObservable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObservable.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObservable.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObserver.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObserver.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObserver.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxIntegerObserver.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservable.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservable.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservable.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservableBuilder.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservableBuilder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservableBuilder.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObservableBuilder.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObserverBuilder.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObserverBuilder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObserverBuilder.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/SharedRxObserverBuilder.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/wrapper/prefixes.properties" afterPath="$PROJECT_DIR$/SplendoSharedApp/wrapper/prefixes.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidBuilderLibrary.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidBuilderLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/consumer/AndroidRxConsumerBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/consumer/AndroidRxConsumerBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxObservableBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxObservableBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observer/AndroidRxObserverBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observer/AndroidRxObserverBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/BuilderLibrary.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/BuilderLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,93 +61,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AndroidRxObservable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java">
+      <file leaf-file-name="AndroidRxObserver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.814815">
-              <caret line="410" column="0" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2730#3082#0" expanded="true" />
-                <element signature="e#3081#3082#0" expanded="true" />
-                <element signature="e#6974#7323#0" expanded="true" />
-                <element signature="e#7322#7323#0" expanded="true" />
-                <element signature="e#7718#8071#0" expanded="true" />
-                <element signature="e#8070#8071#0" expanded="true" />
-                <element signature="e#8389#8737#0" expanded="true" />
-                <element signature="e#8736#8737#0" expanded="true" />
-                <element signature="e#15671#16017#0" expanded="true" />
-                <element signature="e#16016#16017#0" expanded="true" />
-                <element signature="e#17656#17876#0" expanded="true" />
-                <element signature="e#17875#17876#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidRxConnectableObservable.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxConnectableObservable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46563193">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Observable.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.0.1/194434fed571c2038f2d78baad1acd0d86394c3b/rxjava-2.0.1-sources.jar!/io/reactivex/Observable.java">
+      <file leaf-file-name="AndroidRxDisposable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxDisposable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="890" column="36" selection-start-line="890" selection-start-column="36" selection-end-line="890" selection-end-column="36" />
-              <folding>
-                <element signature="e#507747#507748#0" expanded="true" />
-                <element signature="e#507806#507807#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SharedRxObservable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.23281597">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SharedRxObservableObservable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxObservableObservable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidRxIntegerObservable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxIntegerObservable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidRxDoubleObservable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxDoubleObservable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -3725,22 +3617,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxActionBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxBiPredicateBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.722222">
-          <caret line="38" column="138" selection-start-line="38" selection-start-column="138" selection-end-line="38" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxConnectableObservableBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4136,16 +4012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxDoubleObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxGroupedObservableObservable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4178,14 +4044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxObservableObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxListObservable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29933482">
@@ -4215,16 +4073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxIntegerObservable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxGroupedObservableObservable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29933482">
@@ -4235,9 +4083,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxConnectableObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46563193">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.767184">
           <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="77" />
           <folding />
         </state>
@@ -4245,7 +4101,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.814815">
+        <state vertical-scroll-proportion="0.7523585">
           <caret line="410" column="0" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -4265,10 +4121,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxConnectableObservable.java">
+    <entry file="file://$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/typed/observable/SharedRxObservableObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46563193">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.29933482">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxIntegerObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49889135">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxDoubleObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33259425">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxDisposable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23281597">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>

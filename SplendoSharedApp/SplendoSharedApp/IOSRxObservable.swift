@@ -358,7 +358,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     }
     
     public func subscribe(with observer: SharedRxObserver!)  {
-        
+        let iosObserver = observer as! IOSRxObserver
+        let disposable = observable.subscribe(onNext: iosObserver.onNextFunc, onError: iosObserver.onErrorFunc, onCompleted: iosObserver.onCompleteFunc)
+        iosObserver.onSubscribeFunc(IOSRxDisposable.init(disposable: disposable))
     }
     
     private static func iosObjectArrayToArray(_ iosObjectArray: IOSObjectArray) -> [Any] {

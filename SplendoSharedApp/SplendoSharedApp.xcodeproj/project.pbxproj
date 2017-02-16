@@ -14,6 +14,8 @@
 		206E592C1E54711400F4865B /* IOSRxScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E592B1E54711400F4865B /* IOSRxScheduler.swift */; };
 		206E59321E55ABF600F4865B /* IOSRxGroupedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */; };
 		206E59341E55F39300F4865B /* IOSRxConnectableObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */; };
+		206E59361E55F8E400F4865B /* IOSRxObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59351E55F8E400F4865B /* IOSRxObserver.swift */; };
+		206E59381E56142C00F4865B /* IOSRxDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59371E56142C00F4865B /* IOSRxDisposable.swift */; };
 		2072334E1E3B8B24000AEF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072334D1E3B8B24000AEF23 /* AppDelegate.swift */; };
 		207233501E3B8B24000AEF23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072334F1E3B8B24000AEF23 /* ViewController.swift */; };
 		207233531E3B8B25000AEF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207233511E3B8B25000AEF23 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		206E592B1E54711400F4865B /* IOSRxScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxScheduler.swift; sourceTree = "<group>"; };
 		206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxGroupedObservable.swift; sourceTree = "<group>"; };
 		206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxConnectableObservable.swift; sourceTree = "<group>"; };
+		206E59351E55F8E400F4865B /* IOSRxObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObserver.swift; sourceTree = "<group>"; };
+		206E59371E56142C00F4865B /* IOSRxDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxDisposable.swift; sourceTree = "<group>"; };
 		2072334A1E3B8B24000AEF23 /* SplendoSharedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplendoSharedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2072334D1E3B8B24000AEF23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2072334F1E3B8B24000AEF23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				206E592B1E54711400F4865B /* IOSRxScheduler.swift */,
 				206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */,
 				206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */,
+				206E59351E55F8E400F4865B /* IOSRxObserver.swift */,
+				206E59371E56142C00F4865B /* IOSRxDisposable.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -500,9 +506,11 @@
 				206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */,
 				206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */,
 				206E592C1E54711400F4865B /* IOSRxScheduler.swift in Sources */,
+				206E59381E56142C00F4865B /* IOSRxDisposable.swift in Sources */,
 				206E59321E55ABF600F4865B /* IOSRxGroupedObservable.swift in Sources */,
 				207233841E3F5F42000AEF23 /* IOSBindingObservable.swift in Sources */,
 				206E59281E536C0100F4865B /* IOSRxBiFunction.swift in Sources */,
+				206E59361E55F8E400F4865B /* IOSRxObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
