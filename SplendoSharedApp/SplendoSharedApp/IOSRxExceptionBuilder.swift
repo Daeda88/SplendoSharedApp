@@ -11,7 +11,7 @@ import SharedLibrary
 
 class IOSRxExceptionBuilder : NSObject, SharedRxExceptionBuilder {
     
-    public func buildException() -> SharedRxException! {
-        return IOSRxException.init()
+    public func buildException(with message: String!) -> SharedRxException! {
+        return IOSRxException.init(message: message)
     }
 }

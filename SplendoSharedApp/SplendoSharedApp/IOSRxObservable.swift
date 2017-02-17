@@ -44,8 +44,8 @@ class IOSRxObservable : NSObject, SharedRxObservable {
         return IOSRxObservable.init(observable: Observable<Any>.never())
     }
     
-    public func error(with error: NSException!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: Observable<Any>.error(error as! Error))
+    public func error(with error: SharedRxException!) -> SharedRxObservable! {
+        return IOSRxObservable.init(observable: Observable<Any>.error((error as! IOSRxException).exception as! Error))
     }
     
     public func fromArray(withNSObjectArray items: IOSObjectArray!) -> SharedRxObservable! {
@@ -99,38 +99,38 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func flatMap(with mapper: SharedRxFunction!) -> SharedRxObservable! {
-        func function(any: Any) -> Observable<Any> {
-            return (mapper.apply(withId: any) as! IOSRxObservable).observable
+        func function(any: Any) throws -> Observable<Any> {
+            return try ((mapper as! IOSRxFunction).applyWithError(withId: any) as! IOSRxObservable).observable
         }
         return IOSRxObservable.init(observable: observable.flatMap(function))
     }
     
     
     public func groupByInteger(with keySelector: SharedRxFunction!) -> SharedRxGroupedObservableObservable! {
-        return IOSRxGroupedObservableObservable<Int>.init(observable: observable.groupBy(keySelector: { (any) -> Int in
-            return keySelector.apply(withId: any) as! Int
+        return IOSRxGroupedObservableObservable<Int>.init(observable: observable.groupBy(keySelector: { (any) throws -> Int in
+            return try (keySelector as! IOSRxFunction).applyWithError(withId: any) as! Int
         }).map({ (groupedObservable) -> SharedRxGroupedObservable in
             return IOSRxGroupedObservable.init(observable: groupedObservable)
         }))
     }
     
     public func groupByString(with keySelector: SharedRxFunction!) -> SharedRxGroupedObservableObservable! {
-        return IOSRxGroupedObservableObservable<String>.init(observable: observable.groupBy(keySelector: { (any) -> String in
-            return keySelector.apply(withId: any) as! String
+        return IOSRxGroupedObservableObservable<String>.init(observable: observable.groupBy(keySelector: { (any) throws -> String in
+            return try (keySelector as! IOSRxFunction).applyWithError(withId: any) as! String
         }).map({ (groupedObservable) -> SharedRxGroupedObservable in
             return IOSRxGroupedObservable.init(observable: groupedObservable)
         }))
     }
     
     public func map(with mapper: SharedRxFunction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.map({ (any) -> Any in
-            mapper.apply(withId: any)
+        return IOSRxObservable.init(observable: observable.map({ (any) throws -> Any in
+            try (mapper as! IOSRxFunction).applyWithError(withId: any)
         }))
     }
     
     public func scan(withId initialValue: Any!, with accumulator: SharedRxBiFunction!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.scan(initialValue, accumulator: { (any1, any2) -> Any in
-            accumulator.apply(withId: any1, withId: any2)
+            try (accumulator as! IOSRxBiFunction).applyWithError(withId: any1, withId: any2)
         }))
     }
     
@@ -154,7 +154,7 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     public func distinctUntilChanged(with comparer: SharedRxBiPredicate!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.distinctUntilChanged({ (any1, any2) -> Bool in
-            comparer.test(withId: any1, withId: any2)
+            try (comparer as! IOSRxBiPredicate).testWithError(withId: any1, withId: any2)
         }))
     }
     
@@ -165,8 +165,8 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func filter(with predicate: SharedRxPredicate!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.filter({ (any) -> Bool in
-            predicate.test(withId: any)
+        return IOSRxObservable.init(observable: observable.filter({ (any) throws -> Bool in
+            try (predicate as! IOSRxPredicate).testWithError(withId: any)
         }))
     }
     
@@ -203,8 +203,8 @@ class IOSRxObservable : NSObject, SharedRxObservable {
             list.append((sources.iterator().next() as! IOSRxObservable).observable)
         }
         
-        return IOSRxObservable.init(observable: Observable<Any>.combineLatest(list, { (any) -> Any in
-            combiner.apply(withId: any)
+        return IOSRxObservable.init(observable: Observable<Any>.combineLatest(list, { (any) throws -> Any in
+            try (combiner as! IOSRxFunction).applyWithError(withId: any)
         }))
     }
     
@@ -230,15 +230,15 @@ class IOSRxObservable : NSObject, SharedRxObservable {
         while sources.iterator().hasNext() {
             list.append((sources.iterator().next() as! IOSRxObservable).observable)
         }
-        return IOSRxObservable.init(observable: Observable<Any>.zip(list, { (any) -> Any in
-            zipper.apply(withId: any)
+        return IOSRxObservable.init(observable: Observable<Any>.zip(list, { (any) throws -> Any in
+            try (zipper as! IOSRxFunction).applyWithError(withId: any)
         }))
     }
     
     
     public func onErrorResumeNext(with resumeFunction: SharedRxFunction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.catchError { (error) -> Observable<Any> in
-            return (resumeFunction.apply(withId: error) as! IOSRxObservable).observable
+        return IOSRxObservable.init(observable: observable.catchError { (error) throws -> Observable<Any> in
+            return try ((resumeFunction as! IOSRxFunction).applyWithError(withId: IOSRxException.init(error: error)) as! IOSRxObservable).observable
         })
     }
     
@@ -261,7 +261,7 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     public func retryWhen(with handler: SharedRxFunction!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.retryWhen { (errorObservable) -> Observable<Any> in
             let iosObservable = IOSRxObservable.init(observable: errorObservable.map({ (error) -> Any in
-                error
+                return IOSRxException.init(error: error)
             }))
             return (handler.apply(withId: iosObservable) as! IOSRxObservable).observable
         })
@@ -287,29 +287,21 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     public func doOnComplete(with onComplete: SharedRxAction!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.do(onCompleted: { 
-            onComplete.run()
+            try (onComplete as! IOSRxAction).runWithError()
         }))
     }
     
     
     public func doOnError(with onError: SharedRxConsumer!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.do(onError: { (error) in
-            onError.accept(withId: error)
+            try (onError as! IOSRxConsumer).acceptWithError(withId: IOSRxException.init(error: error))
         }))
     }
     
     
     public func doOnNext(with onNext: SharedRxConsumer!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.do(onNext: { (any) in
-            do {
-                try ObjCExceptionHandler.catchException {
-                    onNext.accept(withId: any)
-                }
-            }
-            catch let error {
-                throw NSError.init(domain: "IOSRxError", code: 0, userInfo: (error as NSError).userInfo)
-            }
-            
+            try (onNext as! IOSRxConsumer).acceptWithError(withId: any)
         }))
     }
     
@@ -361,7 +353,7 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     public func reduce(withId seed: Any!, with reducer: SharedRxBiFunction!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.reduce(seed, accumulator: { (any1, any2) -> Any in
-            reducer.apply(withId: any1, withId: any2)
+            try (reducer as! IOSRxBiFunction).applyWithError(withId: any1, withId: any2)
         }))
     }
     
@@ -379,11 +371,12 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     public func toList() -> SharedRxListObservable! {
         return IOSRxListObservable.init(observable: observable.toArray())
     }
-    
+
     public func subscribe(with observer: SharedRxObserver!)  {
         let iosObserver = observer as! IOSRxObserver
-        let disposable = observable.subscribe(onNext: iosObserver.onNextFunc, onError: iosObserver.onErrorFunc, onCompleted: iosObserver.onCompleteFunc)
-        iosObserver.onSubscribeFunc(disposable: IOSRxDisposable.init(disposable: disposable))
+        iosObserver.onSubscribeFunc()
+        iosObserver.disposable = IOSRxDisposable.init(disposable: observable.subscribe(onNext: iosObserver.onNextFunc, onError: {(error) -> Void in iosObserver.onErrorFunc(IOSRxException.init(error: error)) }, onCompleted: iosObserver.onCompleteFunc))
+        
     }
     
     private static func iosObjectArrayToArray(_ iosObjectArray: IOSObjectArray) -> [Any] {

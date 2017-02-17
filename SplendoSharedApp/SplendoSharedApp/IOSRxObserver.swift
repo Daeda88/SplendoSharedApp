@@ -12,59 +12,38 @@ import RxSwift
 
 class IOSRxObserver : NSObject, SharedRxObserver {
     
-    func onNextFunc(any: Any) -> Void {
-        do {
-            try ObjCExceptionHandler.catchException {
-                self.internalOnNext(any)
-            }
-        }
-        catch let error {
-            self.onErrorFunc(error)
-        }
-    }
-    private let internalOnNext: (Any) -> Void
-    func onSubscribeFunc(disposable: SharedRxDisposable) -> Void {
-        do {
-            try ObjCExceptionHandler.catchException {
-                self.internalOnSubscribe(disposable)
-            }
-        }
-        catch let error {
-            self.onErrorFunc(error)
-        }
-    }
-    private let internalOnSubscribe: (SharedRxDisposable) -> Void
-    let onErrorFunc: (Error) -> Void
+    let onNextFunc: (Any) -> Void
+    let onSubscribeFunc : () -> Void
+    let onErrorFunc: (SharedRxException) -> Void
     let onCompleteFunc: () -> Void
     
-    public init(onNext internalOnNext: @escaping (Any) -> Void, onSubscribe internalOnSubscribe: @escaping (SharedRxDisposable) -> Void, onError internalOnError: @escaping (Error) -> Void, onComplete internalOnComplete: @escaping () -> Void) {
-        self.internalOnNext = internalOnNext
-        self.internalOnSubscribe = internalOnSubscribe
+    var disposable: SharedRxDisposable!
+    
+    public init(onNext internalOnNext: @escaping (Any) -> Void, onSubscribe internalOnSubscribe: @escaping () -> Void, onError internalOnError: @escaping (SharedRxException) -> Void, onComplete internalOnComplete: @escaping () -> Void) {
+        self.onNextFunc = internalOnNext
+        self.onSubscribeFunc = internalOnSubscribe
         self.onErrorFunc = internalOnError
         self.onCompleteFunc = internalOnComplete
         
         super.init()
     }
     
+    public func getDisposable() -> SharedRxDisposable! {
+        return disposable
+    }
+    
     public func onNext(withId value: Any!) {
-        do {
-            try ObjCExceptionHandler.catchException {
-                self.internalOnNext(value)
-            }
-        }
-        catch let error {
-            self.onErrorFunc(error)
-        }
+        onNextFunc(value)
     }
     
     
-    public func onSubscribe(with d: SharedRxDisposable!) {
-        onSubscribeFunc(disposable: d)
+    public func onSubscribe() {
+        onSubscribeFunc()
     }
     
     
-    public func onError(with e: NSException!) {
-        onErrorFunc(e as! Error)
+    public func onError(with e: SharedRxException!) {
+        onErrorFunc(e)
     }
     
     

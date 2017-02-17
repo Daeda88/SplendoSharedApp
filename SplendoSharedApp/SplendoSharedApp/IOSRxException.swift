@@ -11,8 +11,30 @@ import SharedLibrary
 
 class IOSRxException: NSObject, SharedRxException {
     
-    public func `throw`(with message: String!) {
-        NSException(name:NSExceptionName(rawValue: "IOSRxException"), reason:message, userInfo:[NSLocalizedDescriptionKey: message]).raise()
+    public let exception: NSException
+    
+    public init(message: String) {
+        exception = NSException(name:NSExceptionName(rawValue: "IOSRxException"), reason:message, userInfo:[NSLocalizedDescriptionKey: message])
+    }
+    
+    public init(error: Error) {
+        let nsError = error as NSError
+        exception = NSException(name:NSExceptionName(rawValue: "IOSRxException"), reason: nsError.localizedDescription , userInfo:nsError.userInfo)
+    }
+    
+    public init(exception: NSException) {
+        self.exception = exception
+    }
+    
+    public func `throw`() {
+        exception.raise()
+    }
+    
+    public func getMessage() -> String! {
+        if let userInfo = exception.userInfo, let description = userInfo[NSLocalizedDescriptionKey] as? String {
+            return  description
+        }
+        return ""
     }
     
 }

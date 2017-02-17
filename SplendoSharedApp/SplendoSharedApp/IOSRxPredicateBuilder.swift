@@ -12,7 +12,9 @@ import SharedLibrary
 class IOSRxPredicateBuilder : NSObject, SharedRxPredicateBuilder {
     
     public func buildConcretePredicate(with predicateReference: SharedRxPredicate!) -> SharedRxPredicate! {
-        return predicateReference
+        return IOSRxPredicate.init(test: { (any) -> jboolean in
+            return predicateReference.test(withId: any)
+        })
     }
     
 }

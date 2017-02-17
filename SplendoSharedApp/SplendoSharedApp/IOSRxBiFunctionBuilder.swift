@@ -12,7 +12,9 @@ import SharedLibrary
 class IOSRxBiFunctionBuilder : NSObject, SharedRxBiFunctionBuilder {
     
     public func buildConcreteBiFunction(with bifunctionReference: SharedRxBiFunction!) -> SharedRxBiFunction! {
-        return bifunctionReference
+        return IOSRxBiFunction.init(apply: { (t1, t2) in
+            bifunctionReference.apply(withId: t1, withId: t2)
+        })
     }
     
 }

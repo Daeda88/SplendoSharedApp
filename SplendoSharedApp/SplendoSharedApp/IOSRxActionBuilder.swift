@@ -12,7 +12,9 @@ import SharedLibrary
 class IOSRxActionBuilder : NSObject, SharedRxActionBuilder {
     
     public func buildConcreteRxAction(with actionReference: SharedRxAction!) -> SharedRxAction! {
-        return actionReference
+        return IOSRxAction.init(run: { 
+            actionReference.run()
+        })
     }
     
 }

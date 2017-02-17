@@ -12,6 +12,8 @@ import SharedLibrary
 class IOSRxConsumerBuilder : NSObject, SharedRxConsumerBuilder {
     
     public func getConcreteConsumer(with consumerReference: SharedRxConsumer!) -> SharedRxConsumer! {
-        return consumerReference
+        return IOSRxConsumer.init(accept: { (any) in
+            consumerReference.accept(withId: any)
+        })
     }
 }

@@ -12,7 +12,9 @@ import SharedLibrary
 class IOSRxFunctionBuilder : NSObject, SharedRxFunctionBuilder {
     
     public func buildConcreteFunction(with functionReference: SharedRxFunction!) -> SharedRxFunction! {
-        return functionReference
+        return IOSRxFunction.init(apply: { (any) -> Any! in
+            functionReference.apply(withId: any)
+        })
     }
     
 }

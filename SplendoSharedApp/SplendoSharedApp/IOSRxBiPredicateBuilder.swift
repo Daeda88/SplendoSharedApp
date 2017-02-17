@@ -12,7 +12,9 @@ import SharedLibrary
 class IOSRxBiPredicateBuilder : NSObject, SharedRxBiPredicateBuilder {
     
     public func buildConcreteBiPredicate(with bipredicateReference: SharedRxBiPredicate!) -> SharedRxBiPredicate! {
-        return bipredicateReference
+        return IOSRxBiPredicate.init(test: { (t1, t2) -> jboolean in
+            return bipredicateReference.test(withId: t1, withId: t2)
+        })
     }
     
 }

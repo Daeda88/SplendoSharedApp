@@ -10,37 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82857607-14ca-4b57-b1d5-5b3d21e2aadf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxException.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxExceptionBuilder.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ObjCExceptionHandler.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ObjCExceptionHandler.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxExceptionBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxExceptionBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp.xcworkspace/xcuserdata/gijsvanveen.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSBuilderLibrary.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSBuilderLibrary.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxException.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxException.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxExceptionBuilder.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxExceptionBuilder.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservable.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObservable.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObserver.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObserver.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObserverBuilder.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/IOSRxObserverBuilder.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/SplendoSharedApp-Bridging-Header.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" afterPath="$PROJECT_DIR$/SplendoSharedApp/SplendoSharedApp/ViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/BuilderLibrary.h" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/BuilderLibrary.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/BuilderLibrary.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/BuilderLibrary.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SplendoSharedApp/generated/MainViewModel.m" afterPath="$PROJECT_DIR$/SplendoSharedApp/generated/MainViewModel.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidBuilderLibrary.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/AndroidBuilderLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObservable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserver.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/AndroidRxObserver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxObservableBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observable/AndroidRxObservableBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observer/AndroidRxObserverBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/android/app/splendo/rx/typed/observer/AndroidRxObserverBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/BuilderLibrary.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/BuilderLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObservable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserver.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/sharedrx/SharedRxObserver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" afterPath="$PROJECT_DIR$/shared/src/main/java/shared/app/splendo/viewmodel/MainViewModel.java" />
     </list>
     <ignored path="SplendoSharedApp.iws" />
     <ignored path=".idea/workspace.xml" />
