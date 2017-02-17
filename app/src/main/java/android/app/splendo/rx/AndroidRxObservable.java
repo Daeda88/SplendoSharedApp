@@ -26,6 +26,7 @@ import shared.app.splendo.sharedrx.SharedRxBiPredicate;
 import shared.app.splendo.sharedrx.SharedRxConnectableObservable;
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxFunction;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservable;
 import shared.app.splendo.sharedrx.SharedRxObservable;
@@ -77,8 +78,8 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> error(Throwable error) {
-        return new AndroidRxObservable<T>(Observable.<T>error(error));
+    public SharedRxObservable<T> error(SharedRxException error) {
+        return new AndroidRxObservable<T>(Observable.<T>error(((AndroidRxException)error).exception));
     }
 
     @Override
@@ -283,11 +284,11 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> onErrorResumeNext(final SharedRxFunction<? super Throwable, ? extends SharedRxObservable<? extends T>> resumeFunction) {
+    public SharedRxObservable<T> onErrorResumeNext(final SharedRxFunction<? super SharedRxException, ? extends SharedRxObservable<? extends T>> resumeFunction) {
         Function<? super Throwable, ObservableSource<? extends T>> function = new Function<Throwable, ObservableSource<? extends T>>() {
             @Override
             public ObservableSource<? extends T> apply(Throwable throwable) throws Exception {
-                return ((AndroidRxObservable<? extends T>) resumeFunction.apply(throwable)).observable;
+                return ((AndroidRxObservable<? extends T>) resumeFunction.apply(new AndroidRxException(throwable))).observable;
             }
         };
         return new AndroidRxObservable<T>(observable.onErrorResumeNext(function));
@@ -309,11 +310,16 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> retryWhen(final SharedRxFunction<? super SharedRxObservable<Throwable>, ? extends SharedRxObservable<?>> handler) {
+    public SharedRxObservable<T> retryWhen(final SharedRxFunction<? super SharedRxObservable<SharedRxException>, ? extends SharedRxObservable<?>> handler) {
         Function<Observable<Throwable>, ObservableSource<?>> function = new Function<Observable<Throwable>, ObservableSource<?>>() {
             @Override
             public ObservableSource<?> apply(Observable<Throwable> throwableObservable) throws Exception {
-                return ((AndroidRxObservable<?>) handler.apply(new AndroidRxObservable<Throwable>(throwableObservable))).observable;
+                return ((AndroidRxObservable<?>) handler.apply(new AndroidRxObservable<Throwable>(throwableObservable).map(new SharedRxFunction<Throwable, SharedRxException>() {
+                    @Override
+                    public SharedRxException apply(Throwable throwable) throws Exception {
+                        return new AndroidRxException(throwable);
+                    }
+                }))).observable;
             }
         };
         return new AndroidRxObservable<T>(observable.retryWhen(function));
@@ -340,8 +346,14 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> doOnError(SharedRxConsumer<? super Throwable> onError) {
-        return new AndroidRxObservable<T>(observable.doOnError(((AndroidRxConsumer<? super Throwable>) onError).consumer));
+    public SharedRxObservable<T> doOnError(final SharedRxConsumer<? super SharedRxException> onError) {
+        Consumer<Throwable> consumer = new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                onError.accept(new AndroidRxException(throwable));
+            }
+        };
+        return new AndroidRxObservable<T>(observable.doOnError(consumer));
     }
 
     @Override

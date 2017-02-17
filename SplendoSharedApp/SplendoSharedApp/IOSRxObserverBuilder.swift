@@ -12,13 +12,19 @@ import SharedLibrary
 class IOSRxObserverBuilder : NSObject, SharedRxObserverBuilder {
     
     public func getConcreteObserver(with observerReference: SharedRxObserver!) -> SharedRxObserver! {
-        return IOSRxObserver.init(onNextFunc: { (any) in
+        return IOSRxObserver.init(onNext: { (any) in
             observerReference.onNext(withId: any)
-        }, onSubscribeFunc: { (disposable) in
+        }, onSubscribe: { (disposable) in
             observerReference.onSubscribe(with: disposable)
-        }, onErrorFunc: { (error) in
-            observerReference.onError(with: error as! NSException)
-        }, onCompleteFunc: { 
+        }, onError: { (error) in
+            let nsError = error as! NSError
+            print(nsError.localizedDescription)
+            print("\(nsError.userInfo)")
+            let exception = NSException.init(name: NSExceptionName(rawValue: "IOSObserverException"), reason: error.localizedDescription, userInfo: nsError.userInfo)
+            print("\(exception.getLocalizedMessage())")
+            print("\(exception.userInfo)")
+            observerReference.onError(with: exception   )
+        }, onComplete: { 
             observerReference.onComplete()
         })
         

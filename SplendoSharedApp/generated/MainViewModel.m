@@ -10,6 +10,8 @@
 #include "SharedRxConsumer.h"
 #include "SharedRxConsumerBuilder.h"
 #include "SharedRxDisposable.h"
+#include "SharedRxException.h"
+#include "SharedRxExceptionBuilder.h"
 #include "SharedRxIntegerObservable.h"
 #include "SharedRxObservable.h"
 #include "SharedRxObservableBuilder.h"
@@ -17,7 +19,6 @@
 #include "SharedRxObserverBuilder.h"
 #include "SharedStringBindingObservable.h"
 #include "java/lang/Integer.h"
-#include "java/lang/RuntimeException.h"
 #include "java/util/ArrayList.h"
 #include "java/util/Arrays.h"
 #include "java/util/List.h"
@@ -48,14 +49,15 @@ __attribute__((unused)) static void MainViewModel_testSharedObserver(MainViewMod
 @interface MainViewModel_$1 : NSObject < SharedRxObserver > {
  @public
   MainViewModel *this$0_;
-  id<SharedRxDisposable> disposable_;
 }
 
-- (void)onSubscribeWithSharedRxDisposable:(id<SharedRxDisposable>)d;
+- (id<SharedRxDisposable>)getDisposable;
+
+- (void)onSubscribe;
 
 - (void)onNextWithId:(JavaLangInteger *)value;
 
-- (void)onErrorWithNSException:(NSException *)e;
+- (void)onErrorWithSharedRxException:(id<SharedRxException>)e;
 
 - (void)onComplete;
 
@@ -66,7 +68,6 @@ __attribute__((unused)) static void MainViewModel_testSharedObserver(MainViewMod
 J2OBJC_EMPTY_STATIC_INIT(MainViewModel_$1)
 
 J2OBJC_FIELD_SETTER(MainViewModel_$1, this$0_, MainViewModel *)
-J2OBJC_FIELD_SETTER(MainViewModel_$1, disposable_, id<SharedRxDisposable>)
 
 __attribute__((unused)) static void MainViewModel_$1_initWithMainViewModel_(MainViewModel_$1 *self, MainViewModel *outer$);
 
@@ -74,21 +75,26 @@ __attribute__((unused)) static MainViewModel_$1 *new_MainViewModel_$1_initWithMa
 
 __attribute__((unused)) static MainViewModel_$1 *create_MainViewModel_$1_initWithMainViewModel_(MainViewModel *outer$);
 
-@interface MainViewModel_$2 : NSObject < SharedRxConsumer >
+@interface MainViewModel_$2 : NSObject < SharedRxConsumer > {
+ @public
+  MainViewModel *this$0_;
+}
 
 - (void)acceptWithId:(JavaLangInteger *)item;
 
-- (instancetype)init;
+- (instancetype)initWithMainViewModel:(MainViewModel *)outer$;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(MainViewModel_$2)
 
-__attribute__((unused)) static void MainViewModel_$2_init(MainViewModel_$2 *self);
+J2OBJC_FIELD_SETTER(MainViewModel_$2, this$0_, MainViewModel *)
 
-__attribute__((unused)) static MainViewModel_$2 *new_MainViewModel_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static void MainViewModel_$2_initWithMainViewModel_(MainViewModel_$2 *self, MainViewModel *outer$);
 
-__attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_init();
+__attribute__((unused)) static MainViewModel_$2 *new_MainViewModel_$2_initWithMainViewModel_(MainViewModel *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static MainViewModel_$2 *create_MainViewModel_$2_initWithMainViewModel_(MainViewModel *outer$);
 
 @implementation MainViewModel
 
@@ -177,7 +183,7 @@ void MainViewModel_updateLabelText(MainViewModel *self) {
 void MainViewModel_testSharedObserver(MainViewModel *self) {
   NSString *tag = @"SHARED_OBSERVER";
   id<SharedRxObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObserverBuilder])) getConcreteObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
-  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxIntegerObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
+  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxIntegerObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteConsumerWithSharedRxConsumer:create_MainViewModel_$2_initWithMainViewModel_(self)]];
   [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
 }
 
@@ -185,17 +191,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(MainViewModel)
 
 @implementation MainViewModel_$1
 
-- (void)onSubscribeWithSharedRxDisposable:(id<SharedRxDisposable>)d {
+- (id<SharedRxDisposable>)getDisposable {
+  return nil;
+}
+
+- (void)onSubscribe {
   [((id<SharedLogger>) nil_chk(this$0_->logger_)) logWithNSString:@"SHARED_OBSERVER" withNSString:@"OnSubscribe"];
-  JreStrongAssign(&disposable_, d);
 }
 
 - (void)onNextWithId:(JavaLangInteger *)value {
   [((id<SharedLogger>) nil_chk(this$0_->logger_)) logWithNSString:@"SHARED_OBSERVER" withNSString:JreStrcat("$@", @"OnNext: ", value)];
 }
 
-- (void)onErrorWithNSException:(NSException *)e {
-  [((id<SharedLogger>) nil_chk(this$0_->logger_)) logWithNSString:@"SHARED_OBSERVER" withNSString:JreStrcat("$$", @"OnError: ", [((NSException *) nil_chk(e)) getLocalizedMessage])];
+- (void)onErrorWithSharedRxException:(id<SharedRxException>)e {
+  [((id<SharedLogger>) nil_chk(this$0_->logger_)) logWithNSString:@"SHARED_OBSERVER" withNSString:JreStrcat("$$", @"OnError: ", [((id<SharedRxException>) nil_chk(e)) getMessage])];
 }
 
 - (void)onComplete {
@@ -209,32 +218,32 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(MainViewModel)
 
 - (void)dealloc {
   RELEASE_(this$0_);
-  RELEASE_(disposable_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, "LSharedRxDisposable;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 6, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithSharedRxDisposable:);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onComplete);
-  methods[4].selector = @selector(initWithMainViewModel:);
+  methods[0].selector = @selector(getDisposable);
+  methods[1].selector = @selector(onSubscribe);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onErrorWithSharedRxException:);
+  methods[4].selector = @selector(onComplete);
+  methods[5].selector = @selector(initWithMainViewModel:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LMainViewModel;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "disposable_", "LSharedRxDisposable;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onSubscribe", "LSharedRxDisposable;", "onNext", "LJavaLangInteger;", "onError", "LNSException;", "LMainViewModel;", "testSharedObserver", "Ljava/lang/Object;Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Integer;>;" };
-  static const J2ObjcClassInfo _MainViewModel_$1 = { "", "shared.app.splendo.viewmodel", ptrTable, methods, fields, 7, 0x8008, 5, 2, 6, -1, 7, 8, -1 };
+  static const void *ptrTable[] = { "onNext", "LJavaLangInteger;", "onError", "LSharedRxException;", "LMainViewModel;", "testSharedObserver", "Ljava/lang/Object;Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Integer;>;" };
+  static const J2ObjcClassInfo _MainViewModel_$1 = { "", "shared.app.splendo.viewmodel", ptrTable, methods, fields, 7, 0x8008, 6, 1, 4, -1, 5, 6, -1 };
   return &_MainViewModel_$1;
 }
 
@@ -257,42 +266,49 @@ MainViewModel_$1 *create_MainViewModel_$1_initWithMainViewModel_(MainViewModel *
 
 - (void)acceptWithId:(JavaLangInteger *)item {
   if ([((JavaLangInteger *) nil_chk(item)) intValue] > 2) {
-    @throw create_JavaLangRuntimeException_initWithNSString_(@"Item exceeds maximum value");
+    [((id<SharedRxException>) nil_chk([((id<SharedRxExceptionBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(this$0_->builderLibrary_)) getRxExceptionBuilder])) buildExceptionWithNSString:@"Item exceeds maximum value"])) throwException];
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  MainViewModel_$2_init(self);
+- (instancetype)initWithMainViewModel:(MainViewModel *)outer$ {
+  MainViewModel_$2_initWithMainViewModel_(self, outer$);
   return self;
 }
-J2OBJC_IGNORE_DESIGNATED_END
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(acceptWithId:);
-  methods[1].selector = @selector(init);
+  methods[1].selector = @selector(initWithMainViewModel:);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LMainViewModel;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { "accept", "LJavaLangInteger;", "LMainViewModel;", "testSharedObserver", "Ljava/lang/Object;Lshared/app/splendo/sharedrx/SharedRxConsumer<Ljava/lang/Integer;>;" };
-  static const J2ObjcClassInfo _MainViewModel_$2 = { "", "shared.app.splendo.viewmodel", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  static const J2ObjcClassInfo _MainViewModel_$2 = { "", "shared.app.splendo.viewmodel", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
   return &_MainViewModel_$2;
 }
 
 @end
 
-void MainViewModel_$2_init(MainViewModel_$2 *self) {
+void MainViewModel_$2_initWithMainViewModel_(MainViewModel_$2 *self, MainViewModel *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-MainViewModel_$2 *new_MainViewModel_$2_init() {
-  J2OBJC_NEW_IMPL(MainViewModel_$2, init)
+MainViewModel_$2 *new_MainViewModel_$2_initWithMainViewModel_(MainViewModel *outer$) {
+  J2OBJC_NEW_IMPL(MainViewModel_$2, initWithMainViewModel_, outer$)
 }
 
-MainViewModel_$2 *create_MainViewModel_$2_init() {
-  J2OBJC_CREATE_IMPL(MainViewModel_$2, init)
+MainViewModel_$2 *create_MainViewModel_$2_initWithMainViewModel_(MainViewModel *outer$) {
+  J2OBJC_CREATE_IMPL(MainViewModel_$2, initWithMainViewModel_, outer$)
 }

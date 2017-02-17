@@ -23,6 +23,7 @@
 @protocol SharedRxConnectableObservable;
 @protocol SharedRxConsumer;
 @protocol SharedRxDoubleObservable;
+@protocol SharedRxException;
 @protocol SharedRxFunction;
 @protocol SharedRxGroupedObservableObservable;
 @protocol SharedRxIntegerObservable;
@@ -43,7 +44,7 @@
 
 - (id<SharedRxObservable>)never;
 
-- (id<SharedRxObservable>)errorWithNSException:(NSException *)error;
+- (id<SharedRxObservable>)errorWithSharedRxException:(id<SharedRxException>)error;
 
 - (id<SharedRxObservable>)fromArrayWithNSObjectArray:(IOSObjectArray *)items;
 

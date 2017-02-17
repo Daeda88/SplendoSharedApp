@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     private class IOSLogger : NSObject, SharedLogger {
         public func log(with tag: String!, with message: String!) {
-            print("\(tag): \(message)")
+            print("\(tag!): \(message!)")
         }
     }
 

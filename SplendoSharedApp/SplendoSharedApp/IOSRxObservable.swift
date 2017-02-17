@@ -301,7 +301,15 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     public func doOnNext(with onNext: SharedRxConsumer!) -> SharedRxObservable! {
         return IOSRxObservable.init(observable: observable.do(onNext: { (any) in
-            onNext.accept(withId: any)
+            do {
+                try ObjCExceptionHandler.catchException {
+                    onNext.accept(withId: any)
+                }
+            }
+            catch let error {
+                throw NSError.init(domain: "IOSRxError", code: 0, userInfo: (error as NSError).userInfo)
+            }
+            
         }))
     }
     
@@ -375,7 +383,7 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     public func subscribe(with observer: SharedRxObserver!)  {
         let iosObserver = observer as! IOSRxObserver
         let disposable = observable.subscribe(onNext: iosObserver.onNextFunc, onError: iosObserver.onErrorFunc, onCompleted: iosObserver.onCompleteFunc)
-        iosObserver.onSubscribeFunc(IOSRxDisposable.init(disposable: disposable))
+        iosObserver.onSubscribeFunc(disposable: IOSRxDisposable.init(disposable: disposable))
     }
     
     private static func iosObjectArrayToArray(_ iosObjectArray: IOSObjectArray) -> [Any] {

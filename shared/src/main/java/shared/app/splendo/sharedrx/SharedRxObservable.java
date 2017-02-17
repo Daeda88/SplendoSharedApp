@@ -21,7 +21,7 @@ public interface SharedRxObservable<T> {
     public SharedRxObservable<T> defer(Callable<? extends SharedRxObservable<? extends T>> supplier);
     public SharedRxObservable<T> empty();
     public SharedRxObservable<T> never();
-    public SharedRxObservable<T> error(Throwable error);
+    public SharedRxObservable<T> error(SharedRxException error);
     public SharedRxObservable<T> fromArray(T... items);
     public SharedRxDoubleObservable interval(Double period, SharedRxScheduler scheduler);
     public SharedRxObservable<T> just(List<T> items);
@@ -62,11 +62,11 @@ public interface SharedRxObservable<T> {
 
     // Catch
 
-    public SharedRxObservable<T> onErrorResumeNext(SharedRxFunction<? super Throwable, ? extends SharedRxObservable<? extends T>> resumeFunction);
+    public SharedRxObservable<T> onErrorResumeNext(SharedRxFunction<? super SharedRxException, ? extends SharedRxObservable<? extends T>> resumeFunction);
     public SharedRxObservable<T> onErrorReturnItem(T item);
     public SharedRxObservable<T> retry();
     public SharedRxObservable<T> retry(long times);
-    public SharedRxObservable<T> retryWhen(SharedRxFunction<? super SharedRxObservable<Throwable>, ? extends SharedRxObservable<?>> handler);
+    public SharedRxObservable<T> retryWhen(SharedRxFunction<? super SharedRxObservable<SharedRxException>, ? extends SharedRxObservable<?>> handler);
 
     // Utility
 
@@ -74,7 +74,7 @@ public interface SharedRxObservable<T> {
     public SharedRxObservable<T> delaySubscription(Double delay, SharedRxScheduler scheduler);
     public SharedRxObservable<T> doOnDispose(SharedRxAction onDispose);
     public SharedRxObservable<T> doOnComplete(SharedRxAction onComplete);
-    public SharedRxObservable<T> doOnError(SharedRxConsumer<? super Throwable> onError);
+    public SharedRxObservable<T> doOnError(SharedRxConsumer<? super SharedRxException> onError);
     public SharedRxObservable<T> doOnNext(SharedRxConsumer<? super T> onNext);
     public SharedRxObservable<T> doOnSubscribe(SharedRxConsumer<? super SharedRxDisposable> onSubscribe);
     public SharedRxObservable<T> subscribeOn(SharedRxScheduler scheduler);

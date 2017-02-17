@@ -4,6 +4,7 @@ import android.app.splendo.rx.AndroidRxObserver;
 import android.util.Log;
 
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxIntegerObserver;
@@ -17,8 +18,8 @@ public class AndroidRxObserverBuilder implements SharedRxObserverBuilder {
     public <T> SharedRxObserver<T> getConcreteObserver(final SharedRxObserver<T> observerReference) {
         return new AndroidRxObserver<T>() {
             @Override
-            public void onSubscribe(SharedRxDisposable d) {
-                observerReference.onSubscribe(d);
+            public void onSubscribe() {
+                observerReference.onSubscribe();
             }
 
             @Override
@@ -27,7 +28,7 @@ public class AndroidRxObserverBuilder implements SharedRxObserverBuilder {
             }
 
             @Override
-            public void onError(Throwable e) {
+            public void onError(SharedRxException e) {
                 observerReference.onError(e);
             }
 

@@ -12,26 +12,54 @@ import RxSwift
 
 class IOSRxObserver : NSObject, SharedRxObserver {
     
-    let onNextFunc: (Any) -> Void
-    let onSubscribeFunc: (SharedRxDisposable) -> Void
+    func onNextFunc(any: Any) -> Void {
+        do {
+            try ObjCExceptionHandler.catchException {
+                self.internalOnNext(any)
+            }
+        }
+        catch let error {
+            self.onErrorFunc(error)
+        }
+    }
+    private let internalOnNext: (Any) -> Void
+    func onSubscribeFunc(disposable: SharedRxDisposable) -> Void {
+        do {
+            try ObjCExceptionHandler.catchException {
+                self.internalOnSubscribe(disposable)
+            }
+        }
+        catch let error {
+            self.onErrorFunc(error)
+        }
+    }
+    private let internalOnSubscribe: (SharedRxDisposable) -> Void
     let onErrorFunc: (Error) -> Void
     let onCompleteFunc: () -> Void
     
-    public init(onNextFunc: @escaping (Any) -> Void, onSubscribeFunc: @escaping (SharedRxDisposable) -> Void, onErrorFunc: @escaping (Error) -> Void, onCompleteFunc: @escaping () -> Void) {
-        self.onNextFunc = onNextFunc
-        self.onSubscribeFunc = onSubscribeFunc
-        self.onErrorFunc = onErrorFunc
-        self.onCompleteFunc = onCompleteFunc
+    public init(onNext internalOnNext: @escaping (Any) -> Void, onSubscribe internalOnSubscribe: @escaping (SharedRxDisposable) -> Void, onError internalOnError: @escaping (Error) -> Void, onComplete internalOnComplete: @escaping () -> Void) {
+        self.internalOnNext = internalOnNext
+        self.internalOnSubscribe = internalOnSubscribe
+        self.onErrorFunc = internalOnError
+        self.onCompleteFunc = internalOnComplete
+        
         super.init()
     }
     
     public func onNext(withId value: Any!) {
-        onNextFunc(value)
+        do {
+            try ObjCExceptionHandler.catchException {
+                self.internalOnNext(value)
+            }
+        }
+        catch let error {
+            self.onErrorFunc(error)
+        }
     }
     
     
     public func onSubscribe(with d: SharedRxDisposable!) {
-        onSubscribeFunc(d)
+        onSubscribeFunc(disposable: d)
     }
     
     

@@ -19,6 +19,7 @@
 @protocol SharedRxConnectableObservableBuilder;
 @protocol SharedRxConsumerBuilder;
 @protocol SharedRxDisposableBuilder;
+@protocol SharedRxExceptionBuilder;
 @protocol SharedRxFunctionBuilder;
 @protocol SharedRxGroupedObservableBuilder;
 @protocol SharedRxObservableBuilder;
@@ -42,6 +43,8 @@
 - (id<SharedRxConsumerBuilder>)getRxConsumerBuilder;
 
 - (id<SharedRxDisposableBuilder>)getRxDisposableBuilder;
+
+- (id<SharedRxExceptionBuilder>)getRxExceptionBuilder;
 
 - (id<SharedRxFunctionBuilder>)getRxFunctionBuilder;
 

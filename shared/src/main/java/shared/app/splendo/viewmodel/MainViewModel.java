@@ -11,6 +11,7 @@ import shared.app.splendo.binding.typed.SharedStringBindingObservable;
 import shared.app.splendo.model.MainModel;
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
@@ -54,12 +55,13 @@ public class MainViewModel {
         final String tag = "SHARED_OBSERVER";
         SharedRxObserver<Integer> sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteObserver(new SharedRxObserver<Integer>() {
 
-            private SharedRxDisposable disposable;
+            public SharedRxDisposable getDisposable() {
+                return null;
+            }
 
             @Override
-            public void onSubscribe(SharedRxDisposable d) {
+            public void onSubscribe() {
                 logger.log(tag, "OnSubscribe");
-                disposable = d;
             }
 
             @Override
@@ -68,8 +70,8 @@ public class MainViewModel {
             }
 
             @Override
-            public void onError(Throwable e) {
-                logger.log(tag, "OnError: " + e.getLocalizedMessage());
+            public void onError(SharedRxException e) {
+                logger.log(tag, "OnError: " + e.getMessage());
             }
 
             @Override
@@ -84,7 +86,7 @@ public class MainViewModel {
             @Override
             public void accept(Integer item) {
                 if( item > 2 ) {
-                    throw new RuntimeException( "Item exceeds maximum value" );
+                    builderLibrary.getRxExceptionBuilder().buildException("Item exceeds maximum value").throwException();
                 }
             }
         }));

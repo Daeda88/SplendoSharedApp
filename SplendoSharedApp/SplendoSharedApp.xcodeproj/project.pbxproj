@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203AA2B61E5733E000DC55A6 /* IOSRxException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2B51E5733E000DC55A6 /* IOSRxException.swift */; };
+		203AA2B81E5734DA00DC55A6 /* IOSRxExceptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2B71E5734DA00DC55A6 /* IOSRxExceptionBuilder.swift */; };
+		203AA2BB1E573B6800DC55A6 /* ObjCExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2BA1E573B6800DC55A6 /* ObjCExceptionHandler.m */; };
 		206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */; };
 		206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59251E53672D00F4865B /* IOSRxObservable.swift */; };
 		206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */; };
@@ -61,6 +64,10 @@
 
 /* Begin PBXFileReference section */
 		0F68AE99CB33CFE2B7704AD6 /* Pods-SplendoSharedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig"; sourceTree = "<group>"; };
+		203AA2B51E5733E000DC55A6 /* IOSRxException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxException.swift; sourceTree = "<group>"; };
+		203AA2B71E5734DA00DC55A6 /* IOSRxExceptionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxExceptionBuilder.swift; sourceTree = "<group>"; };
+		203AA2B91E573B3300DC55A6 /* ObjCExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCExceptionHandler.h; sourceTree = "<group>"; };
+		203AA2BA1E573B6800DC55A6 /* ObjCExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCExceptionHandler.m; sourceTree = "<group>"; };
 		206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSBuilderLibrary.swift; sourceTree = "<group>"; };
 		206E59251E53672D00F4865B /* IOSRxObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservable.swift; sourceTree = "<group>"; };
 		206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservableOnSubscribe.swift; sourceTree = "<group>"; };
@@ -168,6 +175,8 @@
 				20F09DF11E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift */,
 				20F09DF31E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift */,
 				20F09DF51E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift */,
+				203AA2B51E5733E000DC55A6 /* IOSRxException.swift */,
+				203AA2B71E5734DA00DC55A6 /* IOSRxExceptionBuilder.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -207,6 +216,8 @@
 				207233591E3B8B25000AEF23 /* Info.plist */,
 				2072337C1E3B9354000AEF23 /* SplendoSharedApp-Bridging-Header.h */,
 				206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */,
+				203AA2B91E573B3300DC55A6 /* ObjCExceptionHandler.h */,
+				203AA2BA1E573B6800DC55A6 /* ObjCExceptionHandler.m */,
 			);
 			path = SplendoSharedApp;
 			sourceTree = "<group>";
@@ -539,6 +550,7 @@
 				206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */,
 				20F09DF01E570E9700E37CF6 /* IOSRxPredicateBuilder.swift in Sources */,
 				206E593C1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift in Sources */,
+				203AA2B61E5733E000DC55A6 /* IOSRxException.swift in Sources */,
 				206E59341E55F39300F4865B /* IOSRxConnectableObservable.swift in Sources */,
 				207233861E3F678D000AEF23 /* IOSBindingObservableBuilder.swift in Sources */,
 				207233501E3B8B24000AEF23 /* ViewController.swift in Sources */,
@@ -549,8 +561,10 @@
 				206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */,
 				20F09DEE1E570C6000E37CF6 /* IOSRxObserverBuilder.swift in Sources */,
 				20F09DEC1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift in Sources */,
+				203AA2BB1E573B6800DC55A6 /* ObjCExceptionHandler.m in Sources */,
 				206E592C1E54711400F4865B /* IOSRxScheduler.swift in Sources */,
 				20F09DE41E57015500E37CF6 /* IOSRxDisposableBuilder.swift in Sources */,
+				203AA2B81E5734DA00DC55A6 /* IOSRxExceptionBuilder.swift in Sources */,
 				206E59381E56142C00F4865B /* IOSRxDisposable.swift in Sources */,
 				206E59321E55ABF600F4865B /* IOSRxGroupedObservable.swift in Sources */,
 				207233841E3F5F42000AEF23 /* IOSBindingObservable.swift in Sources */,

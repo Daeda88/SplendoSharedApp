@@ -17,6 +17,7 @@
     { NULL, "LSharedRxConnectableObservableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxConsumerBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxDisposableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LSharedRxExceptionBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxFunctionBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxGroupedObservableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxObservableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
@@ -34,15 +35,16 @@
   methods[4].selector = @selector(getRxConnectableObservableBuilder);
   methods[5].selector = @selector(getRxConsumerBuilder);
   methods[6].selector = @selector(getRxDisposableBuilder);
-  methods[7].selector = @selector(getRxFunctionBuilder);
-  methods[8].selector = @selector(getRxGroupedObservableBuilder);
-  methods[9].selector = @selector(getRxObservableBuilder);
-  methods[10].selector = @selector(getRxObservableOnSubscribeBuilder);
-  methods[11].selector = @selector(getRxObserverBuilder);
-  methods[12].selector = @selector(getRxPredicateBuilder);
-  methods[13].selector = @selector(getRxSchedulerBuilder);
+  methods[7].selector = @selector(getRxExceptionBuilder);
+  methods[8].selector = @selector(getRxFunctionBuilder);
+  methods[9].selector = @selector(getRxGroupedObservableBuilder);
+  methods[10].selector = @selector(getRxObservableBuilder);
+  methods[11].selector = @selector(getRxObservableOnSubscribeBuilder);
+  methods[12].selector = @selector(getRxObserverBuilder);
+  methods[13].selector = @selector(getRxPredicateBuilder);
+  methods[14].selector = @selector(getRxSchedulerBuilder);
   #pragma clang diagnostic pop
-  static const J2ObjcClassInfo _BuilderLibrary = { "BuilderLibrary", "shared.app.splendo", NULL, methods, NULL, 7, 0x609, 14, 0, -1, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _BuilderLibrary = { "BuilderLibrary", "shared.app.splendo", NULL, methods, NULL, 7, 0x609, 15, 0, -1, -1, -1, -1, -1 };
   return &_BuilderLibrary;
 }
 

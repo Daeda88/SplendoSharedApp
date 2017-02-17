@@ -5,6 +5,7 @@ import shared.app.splendo.sharedrx.SharedRxActionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxConnectableObservableBuilder;
+import shared.app.splendo.sharedrx.SharedRxExceptionBuilder;
 import shared.app.splendo.sharedrx.typed.consumer.SharedRxConsumerBuilder;
 import shared.app.splendo.sharedrx.SharedRxDisposableBuilder;
 import shared.app.splendo.sharedrx.SharedRxFunctionBuilder;
@@ -32,6 +33,7 @@ public interface BuilderLibrary {
     public SharedRxConnectableObservableBuilder getRxConnectableObservableBuilder();
     public SharedRxConsumerBuilder getRxConsumerBuilder();
     public SharedRxDisposableBuilder getRxDisposableBuilder();
+    public SharedRxExceptionBuilder getRxExceptionBuilder();
     public SharedRxFunctionBuilder getRxFunctionBuilder();
     public SharedRxGroupedObservableBuilder getRxGroupedObservableBuilder();
     public SharedRxObservableBuilder getRxObservableBuilder();

@@ -19,6 +19,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import shared.app.splendo.SharedLogger;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.viewmodel.MainViewModel;
@@ -86,12 +87,15 @@ public class MainActivity extends AppCompatActivity {
         final String tag = "ANDROID_OBSERVER";
         SharedRxObserver<Integer> androidObserver = new AndroidRxObserver<Integer>() {
 
-            private SharedRxDisposable disposable;
 
             @Override
-            public void onSubscribe(SharedRxDisposable d) {
+            public SharedRxDisposable getDisposable() {
+                return null;
+            }
+
+            @Override
+            public void onSubscribe() {
                 Log.e(tag, "OnSubscribe");
-                disposable = d;
             }
 
             @Override
@@ -100,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onError(Throwable e) {
-                Log.e(tag, "OnError: " + e.getLocalizedMessage());
+            public void onError(SharedRxException e) {
+                Log.e(tag, "OnError: " + e.getMessage());
             }
 
             @Override

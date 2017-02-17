@@ -3,3 +3,4 @@
 //
 
 #include "J2ObjC_header.h"
+#import "ObjCExceptionHandler.h"

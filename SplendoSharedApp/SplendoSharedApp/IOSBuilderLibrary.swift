@@ -51,6 +51,10 @@ class IOBuilderLibrary : NSObject, BuilderLibrary {
         return IOSRxFunctionBuilder()
     }
     
+    public func getRxExceptionBuilder() -> SharedRxExceptionBuilder! {
+        return IOSRxExceptionBuilder()
+    }
+    
     
     public func getRxGroupedObservableBuilder() -> SharedRxGroupedObservableBuilder! {
         return IOSRxGroupedObservableBuilder()

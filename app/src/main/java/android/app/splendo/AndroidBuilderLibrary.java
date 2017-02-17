@@ -5,6 +5,7 @@ import android.app.splendo.rx.AndroidBiPredicateBuilder;
 import android.app.splendo.rx.AndroidRxActionBuilder;
 import android.app.splendo.rx.AndroidRxBiFunctionBuilder;
 import android.app.splendo.rx.AndroidRxConnectableObservableBuilder;
+import android.app.splendo.rx.AndroidRxExceptionBuilder;
 import android.app.splendo.rx.typed.consumer.AndroidRxConsumerBuilder;
 import android.app.splendo.rx.AndroidRxDisposableBuilder;
 import android.app.splendo.rx.AndroidRxFunctionBuilder;
@@ -21,6 +22,8 @@ import shared.app.splendo.sharedrx.SharedRxActionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxBiPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxConnectableObservableBuilder;
+import shared.app.splendo.sharedrx.SharedRxException;
+import shared.app.splendo.sharedrx.SharedRxExceptionBuilder;
 import shared.app.splendo.sharedrx.typed.consumer.SharedRxConsumerBuilder;
 import shared.app.splendo.sharedrx.SharedRxDisposableBuilder;
 import shared.app.splendo.sharedrx.SharedRxFunctionBuilder;
@@ -71,6 +74,11 @@ public class AndroidBuilderLibrary implements BuilderLibrary {
     @Override
     public SharedRxDisposableBuilder getRxDisposableBuilder() {
         return new AndroidRxDisposableBuilder();
+    }
+
+    @Override
+    public SharedRxExceptionBuilder getRxExceptionBuilder() {
+        return new AndroidRxExceptionBuilder();
     }
 
     @Override

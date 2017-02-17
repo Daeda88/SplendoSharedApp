@@ -10,10 +10,13 @@ import shared.app.splendo.sharedrx.SharedRxObserver;
  */
 public abstract class AndroidRxObserver<T> implements SharedRxObserver<T> {
 
+    private SharedRxDisposable disposable;
+
     public final Observer<T> observer = new Observer<T>() {
         @Override
         public void onSubscribe(Disposable d) {
-            AndroidRxObserver.this.onSubscribe(new AndroidRxDisposable(d));
+            disposable = new AndroidRxDisposable(d);
+            AndroidRxObserver.this.onSubscribe();
         }
 
         @Override
@@ -23,7 +26,7 @@ public abstract class AndroidRxObserver<T> implements SharedRxObserver<T> {
 
         @Override
         public void onError(Throwable e) {
-            AndroidRxObserver.this.onError(e);
+            AndroidRxObserver.this.onError(new AndroidRxException(e));
         }
 
         @Override
@@ -31,4 +34,9 @@ public abstract class AndroidRxObserver<T> implements SharedRxObserver<T> {
             AndroidRxObserver.this.onComplete();
         }
     };
+
+    @Override
+    public SharedRxDisposable getDisposable() {
+        return disposable;
+    }
 }

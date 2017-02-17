@@ -13,14 +13,17 @@
 #define SharedRxObserver_
 
 @protocol SharedRxDisposable;
+@protocol SharedRxException;
 
 @protocol SharedRxObserver < JavaObject >
 
-- (void)onSubscribeWithSharedRxDisposable:(id<SharedRxDisposable>)d;
+- (id<SharedRxDisposable>)getDisposable;
+
+- (void)onSubscribe;
 
 - (void)onNextWithId:(id)value;
 
-- (void)onErrorWithNSException:(NSException *)e;
+- (void)onErrorWithSharedRxException:(id<SharedRxException>)e;
 
 - (void)onComplete;
 
