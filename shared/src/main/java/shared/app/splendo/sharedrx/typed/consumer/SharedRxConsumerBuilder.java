@@ -9,12 +9,6 @@ import shared.app.splendo.sharedrx.typed.consumer.SharedRxIntegerConsumer;
  */
 public interface SharedRxConsumerBuilder {
 
-    // Extend for non-primary types
-
-    public SharedRxConsumer<String> getConcreteStringConsumer(SharedRxConsumer<String> consumerReference);
-    public SharedRxIntegerConsumer getConcreteIntegerConsumer(SharedRxConsumer<Integer> consumerReference);
-    public SharedRxConsumer<Float> getConcreteFloatConsumer(SharedRxConsumer<Float> consumerReference);
-    public SharedRxConsumer<Double> getConcreteDoubleConsumer(SharedRxConsumer<Double> consumerReference);
-    public SharedRxConsumer<Boolean> getConcreteBooleanConsumer(SharedRxConsumer<Boolean> consumerReference);
+    public <T> SharedRxConsumer<T> getConcreteConsumer(SharedRxConsumer<T> consumerReference);
 
 }

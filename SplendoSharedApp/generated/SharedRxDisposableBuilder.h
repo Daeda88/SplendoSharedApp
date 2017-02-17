@@ -12,11 +12,12 @@
 #if !defined (SharedRxDisposableBuilder_) && (INCLUDE_ALL_SharedRxDisposableBuilder || defined(INCLUDE_SharedRxDisposableBuilder))
 #define SharedRxDisposableBuilder_
 
+@protocol SharedRxAction;
 @protocol SharedRxDisposable;
 
 @protocol SharedRxDisposableBuilder < JavaObject >
 
-- (id<SharedRxDisposable>)getConcreteDisposable;
+- (id<SharedRxDisposable>)getConcreteActionDisposableWithSharedRxAction:(id<SharedRxAction>)action;
 
 @end
 

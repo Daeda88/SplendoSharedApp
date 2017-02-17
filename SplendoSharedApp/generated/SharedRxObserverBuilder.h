@@ -12,20 +12,11 @@
 #if !defined (SharedRxObserverBuilder_) && (INCLUDE_ALL_SharedRxObserverBuilder || defined(INCLUDE_SharedRxObserverBuilder))
 #define SharedRxObserverBuilder_
 
-@protocol SharedRxIntegerObserver;
 @protocol SharedRxObserver;
 
 @protocol SharedRxObserverBuilder < JavaObject >
 
-- (id<SharedRxObserver>)getConcreteStringObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
-
-- (id<SharedRxIntegerObserver>)getConcreteIntegerObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
-
-- (id<SharedRxObserver>)getConcreteFloatObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
-
-- (id<SharedRxObserver>)getConcreteDoubleObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
-
-- (id<SharedRxObserver>)getConcreteBooleanObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
+- (id<SharedRxObserver>)getConcreteObserverWithSharedRxObserver:(id<SharedRxObserver>)observerReference;
 
 @end
 

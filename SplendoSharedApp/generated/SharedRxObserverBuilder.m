@@ -11,21 +11,13 @@
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LSharedRxObserver;", 0x401, 0, 1, -1, 2, -1, -1 },
-    { NULL, "LSharedRxIntegerObserver;", 0x401, 3, 1, -1, 4, -1, -1 },
-    { NULL, "LSharedRxObserver;", 0x401, 5, 1, -1, 6, -1, -1 },
-    { NULL, "LSharedRxObserver;", 0x401, 7, 1, -1, 8, -1, -1 },
-    { NULL, "LSharedRxObserver;", 0x401, 9, 1, -1, 10, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getConcreteStringObserverWithSharedRxObserver:);
-  methods[1].selector = @selector(getConcreteIntegerObserverWithSharedRxObserver:);
-  methods[2].selector = @selector(getConcreteFloatObserverWithSharedRxObserver:);
-  methods[3].selector = @selector(getConcreteDoubleObserverWithSharedRxObserver:);
-  methods[4].selector = @selector(getConcreteBooleanObserverWithSharedRxObserver:);
+  methods[0].selector = @selector(getConcreteObserverWithSharedRxObserver:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "getConcreteStringObserver", "LSharedRxObserver;", "(Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/String;>;)Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/String;>;", "getConcreteIntegerObserver", "(Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Integer;>;)Lshared/app/splendo/sharedrx/typed/observer/SharedRxIntegerObserver;", "getConcreteFloatObserver", "(Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Float;>;)Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Float;>;", "getConcreteDoubleObserver", "(Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Double;>;)Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Double;>;", "getConcreteBooleanObserver", "(Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Boolean;>;)Lshared/app/splendo/sharedrx/SharedRxObserver<Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _SharedRxObserverBuilder = { "SharedRxObserverBuilder", "shared.app.splendo.sharedrx.typed.observer", ptrTable, methods, NULL, 7, 0x609, 5, 0, -1, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "getConcreteObserver", "LSharedRxObserver;", "<T:Ljava/lang/Object;>(Lshared/app/splendo/sharedrx/SharedRxObserver<TT;>;)Lshared/app/splendo/sharedrx/SharedRxObserver<TT;>;" };
+  static const J2ObjcClassInfo _SharedRxObserverBuilder = { "SharedRxObserverBuilder", "shared.app.splendo.sharedrx.typed.observer", ptrTable, methods, NULL, 7, 0x609, 1, 0, -1, -1, -1, -1, -1 };
   return &_SharedRxObserverBuilder;
 }
 

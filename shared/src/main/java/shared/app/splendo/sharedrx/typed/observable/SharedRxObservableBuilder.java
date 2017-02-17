@@ -9,6 +9,7 @@ import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
  */
 public interface SharedRxObservableBuilder {
 
+    public <T> SharedRxObservable<T> getConcreteObservable();
     public SharedRxObservable<String> getConcreteStringObservable();
     public SharedRxIntegerObservable getConcreteIntegerObservable();
     public SharedRxObservable<Float> getConcreteFloatObservable();

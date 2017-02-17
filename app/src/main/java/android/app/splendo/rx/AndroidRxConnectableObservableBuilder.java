@@ -11,6 +11,12 @@ import shared.app.splendo.sharedrx.SharedRxConnectableObservableBuilder;
  * Created by gijsvanveen on 14/02/2017.
  */
 public class AndroidRxConnectableObservableBuilder implements SharedRxConnectableObservableBuilder {
+
+    @Override
+    public <T> SharedRxConnectableObservable<T> getConcreteConnectableObservable() {
+        return new AndroidRxConnectableObservable<T>(null);
+    }
+
     @Override
     public SharedRxConnectableObservable<String> getStringConnectableObservable() {
         return new AndroidRxConnectableObservable<String>(null);

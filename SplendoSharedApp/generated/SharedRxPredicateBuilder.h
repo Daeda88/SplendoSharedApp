@@ -16,15 +16,7 @@
 
 @protocol SharedRxPredicateBuilder < JavaObject >
 
-- (id<SharedRxPredicate>)buildStringPredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
-
-- (id<SharedRxPredicate>)buildIntegerPredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
-
-- (id<SharedRxPredicate>)buildFloatPredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
-
-- (id<SharedRxPredicate>)buildDoublePredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
-
-- (id<SharedRxPredicate>)buildBooleanPredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
+- (id<SharedRxPredicate>)buildConcretePredicateWithSharedRxPredicate:(id<SharedRxPredicate>)predicateReference;
 
 @end
 

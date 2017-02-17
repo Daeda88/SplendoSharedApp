@@ -16,6 +16,8 @@
 
 @protocol SharedRxConnectableObservableBuilder < JavaObject >
 
+- (id<SharedRxConnectableObservable>)getConcreteConnectableObservable;
+
 - (id<SharedRxConnectableObservable>)getStringConnectableObservable;
 
 - (id<SharedRxConnectableObservable>)getIntegerConnectableObservable;

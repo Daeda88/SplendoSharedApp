@@ -10,6 +10,15 @@ import shared.app.splendo.sharedrx.SharedRxGroupedObservableBuilder;
  */
 public class AndroidRxGroupedObservableBuilder implements SharedRxGroupedObservableBuilder {
 
+    @Override
+    public <T> SharedRxGroupedObservable<String, T> buildConcreteStringGroupedObservable() {
+        return new AndroidRxGroupedObservable<String, T>(null);
+    }
+
+    @Override
+    public <T> SharedRxGroupedObservable<Integer, T> buildConcreteIntegerGroupedObservable() {
+        return new AndroidRxGroupedObservable<Integer, T>(null);
+    }
 
     @Override
     public SharedRxGroupedObservable<String, String> buildStringStringGroupedObservable() {
@@ -18,21 +27,6 @@ public class AndroidRxGroupedObservableBuilder implements SharedRxGroupedObserva
 
     @Override
     public SharedRxGroupedObservable<Integer, String> buildIntegerStringGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Float, String> buildFloatStringGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Double, String> buildDoubleStringGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Boolean, String> buildBooleanStringGroupedObservable() {
         return null;
     }
 
@@ -47,42 +41,12 @@ public class AndroidRxGroupedObservableBuilder implements SharedRxGroupedObserva
     }
 
     @Override
-    public SharedRxGroupedObservable<Float, Integer> buildFloatIntegerGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Double, Integer> buildDoubleIntegerGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Boolean, Integer> buildBooleanIntegerGroupedObservable() {
-        return null;
-    }
-
-    @Override
     public SharedRxGroupedObservable<String, Float> buildStringFloatGroupedObservable() {
         return null;
     }
 
     @Override
     public SharedRxGroupedObservable<Integer, Float> buildIntegerFloatGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Float, Float> buildFloatFloatGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Double, Float> buildDoubleFloatGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Boolean, Float> buildBooleanFloatGroupedObservable() {
         return null;
     }
 
@@ -97,21 +61,6 @@ public class AndroidRxGroupedObservableBuilder implements SharedRxGroupedObserva
     }
 
     @Override
-    public SharedRxGroupedObservable<Float, Double> buildFloatDoubleGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Double, Double> buildDoubleDoubleGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Boolean, Double> buildBooleanDoubleGroupedObservable() {
-        return null;
-    }
-
-    @Override
     public SharedRxGroupedObservable<String, Boolean> buildStringBooleanGroupedObservable() {
         return null;
     }
@@ -121,18 +70,4 @@ public class AndroidRxGroupedObservableBuilder implements SharedRxGroupedObserva
         return null;
     }
 
-    @Override
-    public SharedRxGroupedObservable<Float, Boolean> buildFloatBooleanGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Double, Boolean> buildDoubleBooleanGroupedObservable() {
-        return null;
-    }
-
-    @Override
-    public SharedRxGroupedObservable<Boolean, Boolean> buildBooleanBooleanGroupedObservable() {
-        return null;
-    }
 }

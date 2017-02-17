@@ -18,67 +18,67 @@ class IOBuilderLibrary : NSObject, BuilderLibrary {
     
     
     public func getRxActionBuilder() -> SharedRxActionBuilder! {
-        return nil
+        return IOSRxActionBuilder()
     }
     
     
     public func getRxBiFunctionBuilder() -> SharedRxBiFunctionBuilder! {
-        return nil
+        return IOSRxBiFunctionBuilder()
     }
     
     
     public func getRxBiPredicateBuilder() -> SharedRxBiPredicateBuilder! {
-        return nil
+        return IOSRxBiPredicateBuilder()
     }
     
     
     public func getRxConnectableObservableBuilder() -> SharedRxConnectableObservableBuilder! {
-        return nil
+        return IOSRxConnectableObservableBuilder()
     }
     
     
     public func getRxConsumerBuilder() -> SharedRxConsumerBuilder! {
-        return nil
+        return IOSRxConsumerBuilder()
     }
     
     
     public func getRxDisposableBuilder() -> SharedRxDisposableBuilder! {
-        return nil
+        return IOSRxDisposableBuilder()
     }
     
     
     public func getRxFunctionBuilder() -> SharedRxFunctionBuilder! {
-        return nil
+        return IOSRxFunctionBuilder()
     }
     
     
     public func getRxGroupedObservableBuilder() -> SharedRxGroupedObservableBuilder! {
-        return nil
+        return IOSRxGroupedObservableBuilder()
     }
     
     
     public func getRxObservableBuilder() -> SharedRxObservableBuilder! {
-        return nil
+        return IOSRxObservableBuilder()
     }
     
     
     public func getRxObservableOnSubscribeBuilder() -> SharedRxObservableOnSubscribeBuilder! {
-        return nil
+        return IOSRxObservableOnSubscribeBuilder()
     }
     
     
     public func getRxObserverBuilder() -> SharedRxObserverBuilder! {
-        return nil
+        return IOSRxObserverBuilder()
     }
     
     
     public func getRxPredicateBuilder() -> SharedRxPredicateBuilder! {
-        return nil
+        return IOSRxPredicateBuilder()
     }
     
     
     public func getRxSchedulerBuilder() -> SharedRxSchedulerBuilder! {
-        return nil
+        return IOSRxSchedulerBuilder()
     }
     
 }

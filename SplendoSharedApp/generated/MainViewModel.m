@@ -10,9 +10,7 @@
 #include "SharedRxConsumer.h"
 #include "SharedRxConsumerBuilder.h"
 #include "SharedRxDisposable.h"
-#include "SharedRxIntegerConsumer.h"
 #include "SharedRxIntegerObservable.h"
-#include "SharedRxIntegerObserver.h"
 #include "SharedRxObservable.h"
 #include "SharedRxObservableBuilder.h"
 #include "SharedRxObserver.h"
@@ -178,8 +176,8 @@ void MainViewModel_updateLabelText(MainViewModel *self) {
 
 void MainViewModel_testSharedObserver(MainViewModel *self) {
   NSString *tag = @"SHARED_OBSERVER";
-  id<SharedRxIntegerObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObserverBuilder])) getConcreteIntegerObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
-  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxIntegerObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteIntegerConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
+  id<SharedRxObserver> sharedObserver = [((id<SharedRxObserverBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObserverBuilder])) getConcreteObserverWithSharedRxObserver:create_MainViewModel_$1_initWithMainViewModel_(self)];
+  id<SharedRxObservable> sharedObservable = [((id<SharedRxObservable>) nil_chk([((id<SharedRxIntegerObservable>) nil_chk([((id<SharedRxObservableBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxObservableBuilder])) getConcreteIntegerObservable])) justWithJavaUtilList:create_JavaUtilArrayList_initWithJavaUtilCollection_(JavaUtilArrays_asListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(1), JavaLangInteger_valueOfWithInt_(2), JavaLangInteger_valueOfWithInt_(3) } count:3 type:JavaLangInteger_class_()]))])) doOnNextWithSharedRxConsumer:[((id<SharedRxConsumerBuilder>) nil_chk([((id<BuilderLibrary>) nil_chk(self->builderLibrary_)) getRxConsumerBuilder])) getConcreteConsumerWithSharedRxConsumer:create_MainViewModel_$2_init()]];
   [((id<SharedRxObservable>) nil_chk(sharedObservable)) subscribeWithSharedRxObserver:sharedObserver];
 }
 

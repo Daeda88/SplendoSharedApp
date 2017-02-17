@@ -16,55 +16,29 @@
 
 @protocol SharedRxGroupedObservableBuilder < JavaObject >
 
+- (id<SharedRxGroupedObservable>)buildConcreteStringGroupedObservable;
+
+- (id<SharedRxGroupedObservable>)buildConcreteIntegerGroupedObservable;
+
 - (id<SharedRxGroupedObservable>)buildStringStringGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildIntegerStringGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildFloatStringGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildDoubleStringGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildBooleanStringGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildStringIntegerGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildIntegerIntegerGroupedObservable;
 
-- (id<SharedRxGroupedObservable>)buildFloatIntegerGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildDoubleIntegerGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildBooleanIntegerGroupedObservable;
-
 - (id<SharedRxGroupedObservable>)buildStringFloatGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildIntegerFloatGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildFloatFloatGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildDoubleFloatGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildBooleanFloatGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildStringDoubleGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildIntegerDoubleGroupedObservable;
 
-- (id<SharedRxGroupedObservable>)buildFloatDoubleGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildDoubleDoubleGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildBooleanDoubleGroupedObservable;
-
 - (id<SharedRxGroupedObservable>)buildStringBooleanGroupedObservable;
 
 - (id<SharedRxGroupedObservable>)buildIntegerBooleanGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildFloatBooleanGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildDoubleBooleanGroupedObservable;
-
-- (id<SharedRxGroupedObservable>)buildBooleanBooleanGroupedObservable;
 
 @end
 

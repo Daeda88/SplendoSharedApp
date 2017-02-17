@@ -16,55 +16,7 @@
 
 @protocol SharedRxBiPredicateBuilder < JavaObject >
 
-- (id<SharedRxBiPredicate>)buildStringStringBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildIntegerStringBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildFloatStringBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildDoubleStringBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildBooleanStringBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildStringIntegerBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildIntegerIntegerBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildFloatIntegerBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildDoubleIntegerBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildBooleanIntegerBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildStringFloatBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildIntegerFloatBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildFloatFloatBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildDoubleFloatBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildBooleanFloatBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildStringDoubleBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildIntegerDoubleBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildFloatDoubleBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildDoubleDoubleBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildBooleanDoubleBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildStringBooleanBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildIntegerBooleanBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildFloatBooleanBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildDoubleBooleanBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
-
-- (id<SharedRxBiPredicate>)buildBooleanBooleanBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
+- (id<SharedRxBiPredicate>)buildConcreteBiPredicateWithSharedRxBiPredicate:(id<SharedRxBiPredicate>)bipredicateReference;
 
 @end
 

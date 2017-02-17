@@ -18,6 +18,8 @@
 
 @protocol SharedRxObservableBuilder < JavaObject >
 
+- (id<SharedRxObservable>)getConcreteObservable;
+
 - (id<SharedRxObservable>)getConcreteStringObservable;
 
 - (id<SharedRxIntegerObservable>)getConcreteIntegerObservable;

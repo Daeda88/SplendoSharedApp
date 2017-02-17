@@ -15,17 +15,19 @@
     { NULL, "LSharedRxConnectableObservable;", 0x401, -1, -1, -1, 2, -1, -1 },
     { NULL, "LSharedRxConnectableObservable;", 0x401, -1, -1, -1, 3, -1, -1 },
     { NULL, "LSharedRxConnectableObservable;", 0x401, -1, -1, -1, 4, -1, -1 },
+    { NULL, "LSharedRxConnectableObservable;", 0x401, -1, -1, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getStringConnectableObservable);
-  methods[1].selector = @selector(getIntegerConnectableObservable);
-  methods[2].selector = @selector(getFloatConnectableObservable);
-  methods[3].selector = @selector(getDoubleConnectableObservable);
-  methods[4].selector = @selector(getBooleanConnectableObservable);
+  methods[0].selector = @selector(getConcreteConnectableObservable);
+  methods[1].selector = @selector(getStringConnectableObservable);
+  methods[2].selector = @selector(getIntegerConnectableObservable);
+  methods[3].selector = @selector(getFloatConnectableObservable);
+  methods[4].selector = @selector(getDoubleConnectableObservable);
+  methods[5].selector = @selector(getBooleanConnectableObservable);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/String;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Integer;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Float;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Double;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _SharedRxConnectableObservableBuilder = { "SharedRxConnectableObservableBuilder", "shared.app.splendo.sharedrx", ptrTable, methods, NULL, 7, 0x609, 5, 0, -1, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<TT;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/String;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Integer;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Float;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Double;>;", "()Lshared/app/splendo/sharedrx/SharedRxConnectableObservable<Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _SharedRxConnectableObservableBuilder = { "SharedRxConnectableObservableBuilder", "shared.app.splendo.sharedrx", ptrTable, methods, NULL, 7, 0x609, 6, 0, -1, -1, -1, -1, -1 };
   return &_SharedRxConnectableObservableBuilder;
 }
 

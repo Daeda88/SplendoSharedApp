@@ -10,10 +10,6 @@ public interface SharedRxObserverBuilder {
 
 // Extend for non-primary types
 
-    public SharedRxObserver<String> getConcreteStringObserver(SharedRxObserver<String> observerReference);
-    public SharedRxIntegerObserver getConcreteIntegerObserver(SharedRxObserver<Integer> observerReference);
-    public SharedRxObserver<Float> getConcreteFloatObserver(SharedRxObserver<Float> observerReference);
-    public SharedRxObserver<Double> getConcreteDoubleObserver(SharedRxObserver<Double> observerReference);
-    public SharedRxObserver<Boolean> getConcreteBooleanObserver(SharedRxObserver<Boolean> observerReference);
+    public <T> SharedRxObserver<T> getConcreteObserver(SharedRxObserver<T> observerReference);
 
 }

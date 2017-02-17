@@ -3,6 +3,7 @@ package android.app.splendo.rx.typed.observable;
 import android.app.splendo.rx.AndroidRxObservable;
 
 import shared.app.splendo.sharedrx.SharedRxObservable;
+import shared.app.splendo.sharedrx.typed.observable.SharedRxDoubleObservable;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableBuilder;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
 
@@ -27,8 +28,8 @@ public class AndroidRxObservableBuilder implements SharedRxObservableBuilder {
     }
 
     @Override
-    public SharedRxObservable<Double> getConcreteDoubleObservable() {
-        return new AndroidRxObservable<Double>(null);
+    public SharedRxDoubleObservable getConcreteDoubleObservable() {
+        return new AndroidRxDoubleObservable(null);
     }
 
     @Override

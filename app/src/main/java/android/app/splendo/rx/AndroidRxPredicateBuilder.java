@@ -9,32 +9,13 @@ import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 public class AndroidRxPredicateBuilder implements SharedRxPredicateBuilder {
 
     @Override
-    public SharedRxPredicate<String> buildStringPredicate(final SharedRxPredicate<String> predicateReference) {
-        return new AndroidRxPredicate<String>() {
+    public <T> SharedRxPredicate<T> buildConcretePredicate(final SharedRxPredicate<T> predicateReference) {
+        return new AndroidRxPredicate<T>() {
             @Override
-            public boolean test(String s) throws Exception {
-                return predicateReference.test(s);
+            public boolean test(T t) throws Exception {
+                return predicateReference.test(t);
             }
         };
     }
 
-    @Override
-    public SharedRxPredicate<Integer> buildIntegerPredicate(SharedRxPredicate<Integer> predicateReference) {
-        return null;
-    }
-
-    @Override
-    public SharedRxPredicate<Float> buildFloatPredicate(SharedRxPredicate<Float> predicateReference) {
-        return null;
-    }
-
-    @Override
-    public SharedRxPredicate<Double> buildDoublePredicate(SharedRxPredicate<Double> predicateReference) {
-        return null;
-    }
-
-    @Override
-    public SharedRxPredicate<Boolean> buildBooleanPredicate(SharedRxPredicate<Boolean> predicateReference) {
-        return null;
-    }
 }

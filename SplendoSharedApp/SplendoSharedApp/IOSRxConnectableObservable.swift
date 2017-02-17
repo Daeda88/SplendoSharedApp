@@ -12,8 +12,8 @@ import RxSwift
 
 class IOSRxConnectableObservable : IOSRxObservable, SharedRxConnectableObservable {
     
-    public init(connectableObservable: ConnectableObservable<Any>) {
-        super.init(observable: connectableObservable)
+    public init(connectableObservable: ConnectableObservable<Any>?) {
+        super.init(observable: connectableObservable ?? Observable<Any>.empty())
     }
     
     public var connectableObservable: ConnectableObservable<Any> {

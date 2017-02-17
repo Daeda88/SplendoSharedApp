@@ -16,55 +16,7 @@
 
 @protocol SharedRxFunctionBuilder < JavaObject >
 
-- (id<SharedRxFunction>)buildStringToStringFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildIntegerToStringFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildFloatToStringFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildDoubleToStringFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildBooleanToStringFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildStringToIntegerFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildIntegerToIntegerFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildFloatToIntegerFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildDoubleToIntegerFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildBooleanToIntegerFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildStringToFloatFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildIntegerToFloatFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildFloatToFloatFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildDoubleToFloatFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildBooleanToFloatFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildStringToDoubleFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildIntegerToDoubleFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildFloatToDoubleFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildDoubleToDoubleFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildBooleanToDoubleFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildStringToBooleanFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildIntegerToBooleanFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildFloatToBooleanFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildDoubleToBooleanFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
-
-- (id<SharedRxFunction>)buildBooleanToBooleanFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
+- (id<SharedRxFunction>)buildConcreteFunctionWithSharedRxFunction:(id<SharedRxFunction>)functionReference;
 
 @end
 

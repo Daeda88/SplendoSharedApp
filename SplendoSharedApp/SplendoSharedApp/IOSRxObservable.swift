@@ -13,18 +13,15 @@ import RxSwift
 class IOSRxObservable : NSObject, SharedRxObservable {
     
     
-    public let observable: Observable<Any>
+    public let observable: Observable<Any>!
     
-    public init(observable: Observable<Any>) {
+    public init(observable: Observable<Any>!) {
         self.observable = observable
         super.init()
     }
     
     public func createWithSharedRxObservable(_ source: SharedRxObservableOnSubscribe!) -> SharedRxObservable! {
-        guard let subscribeFunction = source as? IOSRxObservableOnSubscribe else {
-            fatalError("Wrong Type")
-        }
-        return IOSRxObservable.init(observable: Observable<Any>.create(subscribeFunction.subscribeFunction))
+        return IOSRxObservable.init(observable: Observable<Any>.create((source as! IOSRxObservableOnSubscribe).subscribeFunction))
     }
     
     
@@ -126,11 +123,15 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     }
     
     public func map(with mapper: SharedRxFunction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.map(mapper.apply))
+        return IOSRxObservable.init(observable: observable.map({ (any) -> Any in
+            mapper.apply(withId: any)
+        }))
     }
     
     public func scan(withId initialValue: Any!, with accumulator: SharedRxBiFunction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.scan(initialValue, accumulator: accumulator.apply))
+        return IOSRxObservable.init(observable: observable.scan(initialValue, accumulator: { (any1, any2) -> Any in
+            accumulator.apply(withId: any1, withId: any2)
+        }))
     }
     
     
@@ -152,7 +153,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func distinctUntilChanged(with comparer: SharedRxBiPredicate!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.distinctUntilChanged(comparer.test))
+        return IOSRxObservable.init(observable: observable.distinctUntilChanged({ (any1, any2) -> Bool in
+            comparer.test(withId: any1, withId: any2)
+        }))
     }
     
     
@@ -162,7 +165,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func filter(with predicate: SharedRxPredicate!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.filter(predicate.test))
+        return IOSRxObservable.init(observable: observable.filter({ (any) -> Bool in
+            predicate.test(withId: any)
+        }))
     }
     
     
@@ -198,7 +203,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
             list.append((sources.iterator().next() as! IOSRxObservable).observable)
         }
         
-        return IOSRxObservable.init(observable: Observable<Any>.combineLatest(list, combiner.apply))
+        return IOSRxObservable.init(observable: Observable<Any>.combineLatest(list, { (any) -> Any in
+            combiner.apply(withId: any)
+        }))
     }
     
     
@@ -223,7 +230,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
         while sources.iterator().hasNext() {
             list.append((sources.iterator().next() as! IOSRxObservable).observable)
         }
-        return IOSRxObservable.init(observable: Observable<Any>.zip(list, zipper.apply))
+        return IOSRxObservable.init(observable: Observable<Any>.zip(list, { (any) -> Any in
+            zipper.apply(withId: any)
+        }))
     }
     
     
@@ -270,12 +279,16 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func doOnDispose(with onDispose: SharedRxAction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.do(onDispose: onDispose.run))
+        return IOSRxObservable.init(observable: observable.do(onDispose: { 
+            onDispose.run()
+        }))
     }
     
     
     public func doOnComplete(with onComplete: SharedRxAction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.do(onCompleted: onComplete.run))
+        return IOSRxObservable.init(observable: observable.do(onCompleted: { 
+            onComplete.run()
+        }))
     }
     
     
@@ -339,7 +352,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     
     
     public func reduce(withId seed: Any!, with reducer: SharedRxBiFunction!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: observable.reduce(seed, accumulator: reducer.apply) )
+        return IOSRxObservable.init(observable: observable.reduce(seed, accumulator: { (any1, any2) -> Any in
+            reducer.apply(withId: any1, withId: any2)
+        }))
     }
     
     

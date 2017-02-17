@@ -12,9 +12,9 @@ import RxSwift
 
 class IOSRxObservableOnSubscribe : NSObject, SharedRxObservableOnSubscribe {
     
-    public let subscribeFunction: (AnyObserver<Any>) -> Disposable
+    public let subscribeFunction: ((AnyObserver<Any>) -> Disposable)!
     
-    public init(subscribeFunction: @escaping (AnyObserver<Any>) -> Disposable) {
+    public init(subscribeFunction: ((AnyObserver<Any>) -> Disposable)!) {
         self.subscribeFunction = subscribeFunction
         super.init()
     }

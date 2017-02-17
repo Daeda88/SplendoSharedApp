@@ -52,7 +52,7 @@ public class MainViewModel {
 
     private void testSharedObserver() {
         final String tag = "SHARED_OBSERVER";
-        SharedRxIntegerObserver sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteIntegerObserver(new SharedRxObserver<Integer>() {
+        SharedRxObserver<Integer> sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteObserver(new SharedRxObserver<Integer>() {
 
             private SharedRxDisposable disposable;
 
@@ -80,7 +80,7 @@ public class MainViewModel {
 
         SharedRxObservable<Integer> sharedObservable = builderLibrary.getRxObservableBuilder().getConcreteIntegerObservable()
                 .just(new ArrayList<Integer>(Arrays.asList(1,2,3)))
-                .doOnNext(builderLibrary.getRxConsumerBuilder().getConcreteIntegerConsumer(new SharedRxConsumer<Integer>() {
+                .doOnNext(builderLibrary.getRxConsumerBuilder().getConcreteConsumer(new SharedRxConsumer<Integer>() {
             @Override
             public void accept(Integer item) {
                 if( item > 2 ) {

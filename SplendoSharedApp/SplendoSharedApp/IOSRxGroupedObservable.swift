@@ -12,10 +12,10 @@ import RxSwift
 
 class IOSRxGroupedObservable<H:Hashable> : IOSRxObservable, SharedRxGroupedObservable {
     
-    public init(observable: GroupedObservable<H,Any>) {
-        super.init(observable: observable.map({ (groupedObservable) -> Any in
+    public init(observable: GroupedObservable<H,Any>!) {
+        super.init(observable: observable != nil ? observable.map({ (groupedObservable) -> Any in
             return groupedObservable
-        }))
+            }) : Observable<Any>.empty())
     }
     
 }

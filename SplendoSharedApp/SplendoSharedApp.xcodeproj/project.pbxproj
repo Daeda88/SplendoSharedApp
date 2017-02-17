@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */; };
 		206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59251E53672D00F4865B /* IOSRxObservable.swift */; };
-		206E59281E536C0100F4865B /* IOSRxBiFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59271E536C0100F4865B /* IOSRxBiFunction.swift */; };
 		206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */; };
 		206E592C1E54711400F4865B /* IOSRxScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E592B1E54711400F4865B /* IOSRxScheduler.swift */; };
 		206E59321E55ABF600F4865B /* IOSRxGroupedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */; };
 		206E59341E55F39300F4865B /* IOSRxConnectableObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */; };
 		206E59361E55F8E400F4865B /* IOSRxObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59351E55F8E400F4865B /* IOSRxObserver.swift */; };
 		206E59381E56142C00F4865B /* IOSRxDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59371E56142C00F4865B /* IOSRxDisposable.swift */; };
+		206E593A1E56E46600F4865B /* IOSRxActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59391E56E46600F4865B /* IOSRxActionBuilder.swift */; };
+		206E593C1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E593B1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift */; };
+		206E593E1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E593D1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift */; };
 		2072334E1E3B8B24000AEF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072334D1E3B8B24000AEF23 /* AppDelegate.swift */; };
 		207233501E3B8B24000AEF23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072334F1E3B8B24000AEF23 /* ViewController.swift */; };
 		207233531E3B8B25000AEF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207233511E3B8B25000AEF23 /* Main.storyboard */; };
@@ -25,6 +27,16 @@
 		2072336E1E3B8B25000AEF23 /* SplendoSharedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072336D1E3B8B25000AEF23 /* SplendoSharedAppUITests.swift */; };
 		207233841E3F5F42000AEF23 /* IOSBindingObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207233831E3F5F42000AEF23 /* IOSBindingObservable.swift */; };
 		207233861E3F678D000AEF23 /* IOSBindingObservableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207233851E3F678D000AEF23 /* IOSBindingObservableBuilder.swift */; };
+		20F09DE21E57005800E37CF6 /* IOSRxConsumerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DE11E57005800E37CF6 /* IOSRxConsumerBuilder.swift */; };
+		20F09DE41E57015500E37CF6 /* IOSRxDisposableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DE31E57015500E37CF6 /* IOSRxDisposableBuilder.swift */; };
+		20F09DE61E57055500E37CF6 /* IOSRxFunctionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DE51E57055500E37CF6 /* IOSRxFunctionBuilder.swift */; };
+		20F09DEA1E570ABD00E37CF6 /* IOSRxObservableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DE91E570ABD00E37CF6 /* IOSRxObservableBuilder.swift */; };
+		20F09DEC1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DEB1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift */; };
+		20F09DEE1E570C6000E37CF6 /* IOSRxObserverBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DED1E570C6000E37CF6 /* IOSRxObserverBuilder.swift */; };
+		20F09DF01E570E9700E37CF6 /* IOSRxPredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DEF1E570E9700E37CF6 /* IOSRxPredicateBuilder.swift */; };
+		20F09DF21E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DF11E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift */; };
+		20F09DF41E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DF31E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift */; };
+		20F09DF61E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F09DF51E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift */; };
 		30806761F5B57E54163E3C03 /* Pods_SplendoSharedAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D978F3803D30376ABF4BEE /* Pods_SplendoSharedAppUITests.framework */; };
 		73CD56521A27353BE46F7E47 /* Pods_SplendoSharedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF0DBC838FD8E409C846AD2 /* Pods_SplendoSharedApp.framework */; };
 		AE724777ACEB6A3AE8765D41 /* Pods_SplendoSharedAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1C2D24D0A1C592AC10BD7E /* Pods_SplendoSharedAppTests.framework */; };
@@ -51,13 +63,15 @@
 		0F68AE99CB33CFE2B7704AD6 /* Pods-SplendoSharedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.debug.xcconfig"; sourceTree = "<group>"; };
 		206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSBuilderLibrary.swift; sourceTree = "<group>"; };
 		206E59251E53672D00F4865B /* IOSRxObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservable.swift; sourceTree = "<group>"; };
-		206E59271E536C0100F4865B /* IOSRxBiFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxBiFunction.swift; sourceTree = "<group>"; };
 		206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservableOnSubscribe.swift; sourceTree = "<group>"; };
 		206E592B1E54711400F4865B /* IOSRxScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxScheduler.swift; sourceTree = "<group>"; };
 		206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxGroupedObservable.swift; sourceTree = "<group>"; };
 		206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxConnectableObservable.swift; sourceTree = "<group>"; };
 		206E59351E55F8E400F4865B /* IOSRxObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObserver.swift; sourceTree = "<group>"; };
 		206E59371E56142C00F4865B /* IOSRxDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxDisposable.swift; sourceTree = "<group>"; };
+		206E59391E56E46600F4865B /* IOSRxActionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxActionBuilder.swift; sourceTree = "<group>"; };
+		206E593B1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxBiFunctionBuilder.swift; sourceTree = "<group>"; };
+		206E593D1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxBiPredicateBuilder.swift; sourceTree = "<group>"; };
 		2072334A1E3B8B24000AEF23 /* SplendoSharedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplendoSharedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2072334D1E3B8B24000AEF23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2072334F1E3B8B24000AEF23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +88,16 @@
 		2072337C1E3B9354000AEF23 /* SplendoSharedApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplendoSharedApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		207233831E3F5F42000AEF23 /* IOSBindingObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSBindingObservable.swift; sourceTree = "<group>"; };
 		207233851E3F678D000AEF23 /* IOSBindingObservableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSBindingObservableBuilder.swift; sourceTree = "<group>"; };
+		20F09DE11E57005800E37CF6 /* IOSRxConsumerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxConsumerBuilder.swift; sourceTree = "<group>"; };
+		20F09DE31E57015500E37CF6 /* IOSRxDisposableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxDisposableBuilder.swift; sourceTree = "<group>"; };
+		20F09DE51E57055500E37CF6 /* IOSRxFunctionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxFunctionBuilder.swift; sourceTree = "<group>"; };
+		20F09DE91E570ABD00E37CF6 /* IOSRxObservableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservableBuilder.swift; sourceTree = "<group>"; };
+		20F09DEB1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservableOnSubscribeBuilder.swift; sourceTree = "<group>"; };
+		20F09DED1E570C6000E37CF6 /* IOSRxObserverBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObserverBuilder.swift; sourceTree = "<group>"; };
+		20F09DEF1E570E9700E37CF6 /* IOSRxPredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxPredicateBuilder.swift; sourceTree = "<group>"; };
+		20F09DF11E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxSchedulerBuilder.swift; sourceTree = "<group>"; };
+		20F09DF31E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxConnectableObservableBuilder.swift; sourceTree = "<group>"; };
+		20F09DF51E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxGroupedObservableBuilder.swift; sourceTree = "<group>"; };
 		24075B72D4909466CA31F77F /* Pods-SplendoSharedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedAppTests/Pods-SplendoSharedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A37ACDD31C9389EFF48174C /* Pods-SplendoSharedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplendoSharedApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplendoSharedApp/Pods-SplendoSharedApp.release.xcconfig"; sourceTree = "<group>"; };
 		45D978F3803D30376ABF4BEE /* Pods_SplendoSharedAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplendoSharedAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,13 +149,25 @@
 			isa = PBXGroup;
 			children = (
 				206E59251E53672D00F4865B /* IOSRxObservable.swift */,
-				206E59271E536C0100F4865B /* IOSRxBiFunction.swift */,
 				206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */,
 				206E592B1E54711400F4865B /* IOSRxScheduler.swift */,
 				206E59311E55ABF600F4865B /* IOSRxGroupedObservable.swift */,
 				206E59331E55F39300F4865B /* IOSRxConnectableObservable.swift */,
 				206E59351E55F8E400F4865B /* IOSRxObserver.swift */,
 				206E59371E56142C00F4865B /* IOSRxDisposable.swift */,
+				206E59391E56E46600F4865B /* IOSRxActionBuilder.swift */,
+				206E593B1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift */,
+				206E593D1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift */,
+				20F09DE11E57005800E37CF6 /* IOSRxConsumerBuilder.swift */,
+				20F09DE31E57015500E37CF6 /* IOSRxDisposableBuilder.swift */,
+				20F09DE51E57055500E37CF6 /* IOSRxFunctionBuilder.swift */,
+				20F09DE91E570ABD00E37CF6 /* IOSRxObservableBuilder.swift */,
+				20F09DEB1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift */,
+				20F09DED1E570C6000E37CF6 /* IOSRxObserverBuilder.swift */,
+				20F09DEF1E570E9700E37CF6 /* IOSRxPredicateBuilder.swift */,
+				20F09DF11E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift */,
+				20F09DF31E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift */,
+				20F09DF51E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -498,19 +534,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F09DF61E571CA500E37CF6 /* IOSRxGroupedObservableBuilder.swift in Sources */,
+				206E593E1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift in Sources */,
 				206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */,
+				20F09DF01E570E9700E37CF6 /* IOSRxPredicateBuilder.swift in Sources */,
+				206E593C1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift in Sources */,
 				206E59341E55F39300F4865B /* IOSRxConnectableObservable.swift in Sources */,
 				207233861E3F678D000AEF23 /* IOSBindingObservableBuilder.swift in Sources */,
 				207233501E3B8B24000AEF23 /* ViewController.swift in Sources */,
+				20F09DE61E57055500E37CF6 /* IOSRxFunctionBuilder.swift in Sources */,
 				2072334E1E3B8B24000AEF23 /* AppDelegate.swift in Sources */,
 				206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */,
+				20F09DF21E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift in Sources */,
 				206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */,
+				20F09DEE1E570C6000E37CF6 /* IOSRxObserverBuilder.swift in Sources */,
+				20F09DEC1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift in Sources */,
 				206E592C1E54711400F4865B /* IOSRxScheduler.swift in Sources */,
+				20F09DE41E57015500E37CF6 /* IOSRxDisposableBuilder.swift in Sources */,
 				206E59381E56142C00F4865B /* IOSRxDisposable.swift in Sources */,
 				206E59321E55ABF600F4865B /* IOSRxGroupedObservable.swift in Sources */,
 				207233841E3F5F42000AEF23 /* IOSBindingObservable.swift in Sources */,
-				206E59281E536C0100F4865B /* IOSRxBiFunction.swift in Sources */,
+				20F09DE21E57005800E37CF6 /* IOSRxConsumerBuilder.swift in Sources */,
+				20F09DEA1E570ABD00E37CF6 /* IOSRxObservableBuilder.swift in Sources */,
+				20F09DF41E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift in Sources */,
 				206E59361E55F8E400F4865B /* IOSRxObserver.swift in Sources */,
+				206E593A1E56E46600F4865B /* IOSRxActionBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

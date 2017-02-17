@@ -6,6 +6,7 @@ package shared.app.splendo.sharedrx;
  */
 public interface SharedRxConnectableObservableBuilder {
 
+    public <T> SharedRxConnectableObservable<T> getConcreteConnectableObservable();
     public SharedRxConnectableObservable<String> getStringConnectableObservable();
     public SharedRxConnectableObservable<Integer> getIntegerConnectableObservable();
     public SharedRxConnectableObservable<Float> getFloatConnectableObservable();

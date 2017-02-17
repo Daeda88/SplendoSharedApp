@@ -13,19 +13,10 @@
 #define SharedRxConsumerBuilder_
 
 @protocol SharedRxConsumer;
-@protocol SharedRxIntegerConsumer;
 
 @protocol SharedRxConsumerBuilder < JavaObject >
 
-- (id<SharedRxConsumer>)getConcreteStringConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
-
-- (id<SharedRxIntegerConsumer>)getConcreteIntegerConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
-
-- (id<SharedRxConsumer>)getConcreteFloatConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
-
-- (id<SharedRxConsumer>)getConcreteDoubleConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
-
-- (id<SharedRxConsumer>)getConcreteBooleanConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
+- (id<SharedRxConsumer>)getConcreteConsumerWithSharedRxConsumer:(id<SharedRxConsumer>)consumerReference;
 
 @end
 
