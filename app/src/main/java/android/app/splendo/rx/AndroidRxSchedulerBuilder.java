@@ -1,5 +1,6 @@
 package android.app.splendo.rx;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.internal.schedulers.ImmediateThinScheduler;
 import io.reactivex.schedulers.Schedulers;
 import shared.app.splendo.sharedrx.SharedRxScheduler;
@@ -13,6 +14,6 @@ public class AndroidRxSchedulerBuilder implements SharedRxSchedulerBuilder {
 
     @Override
     public SharedRxScheduler buildScheduler() {
-        return new AndroidRxScheduler(Schedulers.trampoline());
+        return new AndroidRxScheduler(AndroidSchedulers.mainThread());
     }
 }

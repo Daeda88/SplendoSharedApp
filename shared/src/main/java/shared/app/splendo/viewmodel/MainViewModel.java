@@ -14,6 +14,7 @@ import shared.app.splendo.sharedrx.SharedRxDisposable;
 import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxObservable;
 import shared.app.splendo.sharedrx.SharedRxObserver;
+import shared.app.splendo.sharedrx.SharedRxSubject;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxIntegerObserver;
 
@@ -36,6 +37,7 @@ public class MainViewModel {
 
         updateLabelText();
         testSharedObserver();
+        testSubject();
     }
 
     public SharedStringBindingObservable getLabelText() {
@@ -91,6 +93,75 @@ public class MainViewModel {
             }
         }));
         sharedObservable.subscribe(sharedObserver);
+    }
+
+    private void testSubject() {
+        SharedRxSubject<String> subject = builderLibrary.getRxSubjectBuilder().<String>buildPublishSubject();
+        subject.subscribe(builderLibrary.getRxObserverBuilder().getConcreteObserver(new SharedRxObserver<String>() {
+
+            final String tag = "SHARED_SUBJECT_OBSERVER_1";
+
+            @Override
+            public SharedRxDisposable getDisposable() {
+                return null;
+            }
+
+            @Override
+            public void onSubscribe() {
+                logger.log(tag, "OnSubscribe");
+            }
+
+            @Override
+            public void onNext(String value) {
+                logger.log(tag, "OnNext: " + value);
+            }
+
+            @Override
+            public void onError(SharedRxException e) {
+                logger.log(tag, "OnError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                logger.log(tag, "OnComplete");
+            }
+        }));
+        subject.onNext("ONE");
+        subject.onNext("TWO");
+        subject.subscribe(builderLibrary.getRxObserverBuilder().getConcreteObserver(new SharedRxObserver<String>() {
+
+            final String tag = "SHARED_SUBJECT_OBSERVER_2";
+
+            @Override
+            public SharedRxDisposable getDisposable() {
+                return null;
+            }
+
+            @Override
+            public void onSubscribe() {
+                logger.log(tag, "OnSubscribe");
+            }
+
+            @Override
+            public void onNext(String value) {
+                logger.log(tag, "OnNext: " + value);
+            }
+
+            @Override
+            public void onError(SharedRxException e) {
+                logger.log(tag, "OnError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                logger.log(tag, "OnComplete");
+            }
+        }));
+        subject.onNext("THREE");
+        logger.log("SHARED_SUBJECT", subject.isCompleteOrHadError() ? "Completed" : "Running");
+        subject.onComplete();
+        logger.log("SHARED_SUBJECT", subject.isCompleteOrHadError() ? "Completed" : "Running");
+
     }
 
 }

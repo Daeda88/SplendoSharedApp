@@ -15,6 +15,7 @@ import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribeBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxSchedulerBuilder;
+import shared.app.splendo.sharedrx.typed.subject.SharedRxSubjectBuilder;
 
 /**
  * Created by gijsvanveen on 14/02/2017.
@@ -41,5 +42,6 @@ public interface BuilderLibrary {
     public SharedRxObserverBuilder getRxObserverBuilder();
     public SharedRxPredicateBuilder getRxPredicateBuilder();
     public SharedRxSchedulerBuilder getRxSchedulerBuilder();
+    public SharedRxSubjectBuilder getRxSubjectBuilder();
 
 }

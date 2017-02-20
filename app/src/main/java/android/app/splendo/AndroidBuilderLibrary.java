@@ -15,6 +15,7 @@ import android.app.splendo.rx.AndroidRxObservableOnSubscribeBuilder;
 import android.app.splendo.rx.typed.observer.AndroidRxObserverBuilder;
 import android.app.splendo.rx.AndroidRxPredicateBuilder;
 import android.app.splendo.rx.AndroidRxSchedulerBuilder;
+import android.app.splendo.rx.typed.subject.AndroidRxSubjectBuilder;
 
 import shared.app.splendo.BuilderLibrary;
 import shared.app.splendo.binding.SharedBindingObservableBuilder;
@@ -33,6 +34,7 @@ import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribeBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxSchedulerBuilder;
+import shared.app.splendo.sharedrx.typed.subject.SharedRxSubjectBuilder;
 
 /**
  * Created by gijsvanveen on 14/02/2017.
@@ -114,5 +116,10 @@ public class AndroidBuilderLibrary implements BuilderLibrary {
     @Override
     public SharedRxSchedulerBuilder getRxSchedulerBuilder() {
         return new AndroidRxSchedulerBuilder();
+    }
+
+    @Override
+    public SharedRxSubjectBuilder getRxSubjectBuilder() {
+        return new AndroidRxSubjectBuilder();
     }
 }
