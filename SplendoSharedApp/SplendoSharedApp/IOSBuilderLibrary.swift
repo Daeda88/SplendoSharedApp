@@ -85,4 +85,9 @@ class IOBuilderLibrary : NSObject, BuilderLibrary {
         return IOSRxSchedulerBuilder()
     }
     
+    
+    public func getRxSubjectBuilder() -> SharedRxSubjectBuilder! {
+        return IOSRxSubjectBuilder()
+    }
+    
 }

@@ -51,21 +51,6 @@ public class AndroidRxSubject<T> extends AndroidRxObservable<T> implements Share
     }
 
     @Override
-    public boolean isCompleteOrHadError() {
-        return asSubject().hasComplete() || asSubject().hasThrowable();
-    }
-
-    @Override
-    public final SharedRxDisposable getDisposable() {
-        return null; // Not Used
-    }
-
-    @Override
-    public final void onSubscribe() {
-        // Not Used
-    }
-
-    @Override
     public void onNext(T value) {
         asSubject().onNext(value);
     }

@@ -27,6 +27,7 @@
 @protocol SharedRxObserverBuilder;
 @protocol SharedRxPredicateBuilder;
 @protocol SharedRxSchedulerBuilder;
+@protocol SharedRxSubjectBuilder;
 
 @protocol BuilderLibrary < JavaObject >
 
@@ -59,6 +60,8 @@
 - (id<SharedRxPredicateBuilder>)getRxPredicateBuilder;
 
 - (id<SharedRxSchedulerBuilder>)getRxSchedulerBuilder;
+
+- (id<SharedRxSubjectBuilder>)getRxSubjectBuilder;
 
 @end
 

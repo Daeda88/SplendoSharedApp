@@ -21,8 +21,8 @@ public class AndroidRxSubjectBuilder implements SharedRxSubjectBuilder {
     }
 
     @Override
-    public <T> SharedRxBehaviourSubject<T> buildBehaviourSubject() {
-        return new AndroidRxBehaviourSubject<T>(BehaviorSubject.<T>create());
+    public <T> SharedRxBehaviourSubject<T> buildBehaviourSubject(T defaultValue) {
+        return new AndroidRxBehaviourSubject<T>(BehaviorSubject.<T>createDefault(defaultValue));
     }
 
     @Override

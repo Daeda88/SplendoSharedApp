@@ -158,9 +158,7 @@ public class MainViewModel {
             }
         }));
         subject.onNext("THREE");
-        logger.log("SHARED_SUBJECT", subject.isCompleteOrHadError() ? "Completed" : "Running");
         subject.onComplete();
-        logger.log("SHARED_SUBJECT", subject.isCompleteOrHadError() ? "Completed" : "Running");
 
     }
 

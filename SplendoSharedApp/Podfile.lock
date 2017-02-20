@@ -1,5 +1,5 @@
 PODS:
-  - Bond (6.0.2):
+  - Bond (6.0.3):
     - Diff (~> 0.4)
     - ReactiveKit (~> 3.3)
   - Diff (0.5.0)
@@ -33,7 +33,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Daeda88/J2ObjC-Framework.git
 
 SPEC CHECKSUMS:
-  Bond: f4a49ab1bd7e84ffc5178364219f689551e18a01
+  Bond: d186b6353d926ffc84caac7a698297669d532009
   Diff: eceb93a3adf508574ba9b8560da185ace83de055
   J2ObjC-Framework: 12869e55feacf403d6d79aef1cdfae3fb46aa8d2
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6

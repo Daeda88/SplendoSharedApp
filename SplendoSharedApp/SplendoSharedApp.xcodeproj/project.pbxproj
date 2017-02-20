@@ -16,6 +16,11 @@
 		203AA2C31E57BD9900DC55A6 /* IOSRxConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2C21E57BD9900DC55A6 /* IOSRxConsumer.swift */; };
 		203AA2C51E57BEF400DC55A6 /* IOSRxFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2C41E57BEF400DC55A6 /* IOSRxFunction.swift */; };
 		203AA2C71E57BF8A00DC55A6 /* IOSRxPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2C61E57BF8A00DC55A6 /* IOSRxPredicate.swift */; };
+		203AA2C91E5B248A00DC55A6 /* IOSRxAsyncSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2C81E5B248A00DC55A6 /* IOSRxAsyncSubject.swift */; };
+		203AA2CB1E5B2B7100DC55A6 /* IOSRxBehaviourSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2CA1E5B2B7100DC55A6 /* IOSRxBehaviourSubject.swift */; };
+		203AA2CD1E5B2E9300DC55A6 /* IOSRxPublishSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2CC1E5B2E9300DC55A6 /* IOSRxPublishSubject.swift */; };
+		203AA2CF1E5B2EE900DC55A6 /* IOSRxReplaySubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2CE1E5B2EE900DC55A6 /* IOSRxReplaySubject.swift */; };
+		203AA2D11E5B2FFB00DC55A6 /* IOSRxSubjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203AA2D01E5B2FFB00DC55A6 /* IOSRxSubjectBuilder.swift */; };
 		206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */; };
 		206E59261E53672D00F4865B /* IOSRxObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59251E53672D00F4865B /* IOSRxObservable.swift */; };
 		206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */; };
@@ -80,6 +85,11 @@
 		203AA2C21E57BD9900DC55A6 /* IOSRxConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxConsumer.swift; sourceTree = "<group>"; };
 		203AA2C41E57BEF400DC55A6 /* IOSRxFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxFunction.swift; sourceTree = "<group>"; };
 		203AA2C61E57BF8A00DC55A6 /* IOSRxPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxPredicate.swift; sourceTree = "<group>"; };
+		203AA2C81E5B248A00DC55A6 /* IOSRxAsyncSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxAsyncSubject.swift; sourceTree = "<group>"; };
+		203AA2CA1E5B2B7100DC55A6 /* IOSRxBehaviourSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxBehaviourSubject.swift; sourceTree = "<group>"; };
+		203AA2CC1E5B2E9300DC55A6 /* IOSRxPublishSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxPublishSubject.swift; sourceTree = "<group>"; };
+		203AA2CE1E5B2EE900DC55A6 /* IOSRxReplaySubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxReplaySubject.swift; sourceTree = "<group>"; };
+		203AA2D01E5B2FFB00DC55A6 /* IOSRxSubjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxSubjectBuilder.swift; sourceTree = "<group>"; };
 		206E59231E5361C800F4865B /* IOSBuilderLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSBuilderLibrary.swift; sourceTree = "<group>"; };
 		206E59251E53672D00F4865B /* IOSRxObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservable.swift; sourceTree = "<group>"; };
 		206E59291E537C2800F4865B /* IOSRxObservableOnSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSRxObservableOnSubscribe.swift; sourceTree = "<group>"; };
@@ -195,6 +205,11 @@
 				203AA2C21E57BD9900DC55A6 /* IOSRxConsumer.swift */,
 				203AA2C41E57BEF400DC55A6 /* IOSRxFunction.swift */,
 				203AA2C61E57BF8A00DC55A6 /* IOSRxPredicate.swift */,
+				203AA2C81E5B248A00DC55A6 /* IOSRxAsyncSubject.swift */,
+				203AA2CA1E5B2B7100DC55A6 /* IOSRxBehaviourSubject.swift */,
+				203AA2CC1E5B2E9300DC55A6 /* IOSRxPublishSubject.swift */,
+				203AA2CE1E5B2EE900DC55A6 /* IOSRxReplaySubject.swift */,
+				203AA2D01E5B2FFB00DC55A6 /* IOSRxSubjectBuilder.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -567,12 +582,14 @@
 				206E593E1E56E64B00F4865B /* IOSRxBiPredicateBuilder.swift in Sources */,
 				206E592A1E537C2800F4865B /* IOSRxObservableOnSubscribe.swift in Sources */,
 				20F09DF01E570E9700E37CF6 /* IOSRxPredicateBuilder.swift in Sources */,
+				203AA2CD1E5B2E9300DC55A6 /* IOSRxPublishSubject.swift in Sources */,
 				206E593C1E56E4D700F4865B /* IOSRxBiFunctionBuilder.swift in Sources */,
 				203AA2B61E5733E000DC55A6 /* IOSRxException.swift in Sources */,
 				206E59341E55F39300F4865B /* IOSRxConnectableObservable.swift in Sources */,
 				207233861E3F678D000AEF23 /* IOSBindingObservableBuilder.swift in Sources */,
 				207233501E3B8B24000AEF23 /* ViewController.swift in Sources */,
 				20F09DE61E57055500E37CF6 /* IOSRxFunctionBuilder.swift in Sources */,
+				203AA2C91E5B248A00DC55A6 /* IOSRxAsyncSubject.swift in Sources */,
 				2072334E1E3B8B24000AEF23 /* AppDelegate.swift in Sources */,
 				206E59241E5361C800F4865B /* IOSBuilderLibrary.swift in Sources */,
 				20F09DF21E570EF600E37CF6 /* IOSRxSchedulerBuilder.swift in Sources */,
@@ -580,6 +597,7 @@
 				20F09DEE1E570C6000E37CF6 /* IOSRxObserverBuilder.swift in Sources */,
 				203AA2C31E57BD9900DC55A6 /* IOSRxConsumer.swift in Sources */,
 				20F09DEC1E570B6C00E37CF6 /* IOSRxObservableOnSubscribeBuilder.swift in Sources */,
+				203AA2D11E5B2FFB00DC55A6 /* IOSRxSubjectBuilder.swift in Sources */,
 				203AA2BF1E57B54A00DC55A6 /* IOSRxBiFunction.swift in Sources */,
 				203AA2BD1E57B1DC00DC55A6 /* IOSRxAction.swift in Sources */,
 				203AA2BB1E573B6800DC55A6 /* ObjCExceptionHandler.m in Sources */,
@@ -592,8 +610,10 @@
 				203AA2C51E57BEF400DC55A6 /* IOSRxFunction.swift in Sources */,
 				20F09DE21E57005800E37CF6 /* IOSRxConsumerBuilder.swift in Sources */,
 				203AA2C11E57B74900DC55A6 /* IOSRxBiPredicate.swift in Sources */,
+				203AA2CF1E5B2EE900DC55A6 /* IOSRxReplaySubject.swift in Sources */,
 				20F09DEA1E570ABD00E37CF6 /* IOSRxObservableBuilder.swift in Sources */,
 				20F09DF41E571C7000E37CF6 /* IOSRxConnectableObservableBuilder.swift in Sources */,
+				203AA2CB1E5B2B7100DC55A6 /* IOSRxBehaviourSubject.swift in Sources */,
 				206E59361E55F8E400F4865B /* IOSRxObserver.swift in Sources */,
 				206E593A1E56E46600F4865B /* IOSRxActionBuilder.swift in Sources */,
 				203AA2C71E57BF8A00DC55A6 /* IOSRxPredicate.swift in Sources */,
