@@ -11,7 +11,6 @@ import shared.app.splendo.sharedrx.SharedRxDisposableBuilder;
 import shared.app.splendo.sharedrx.SharedRxFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservableBuilder;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableBuilder;
-import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribeBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxSchedulerBuilder;
@@ -38,7 +37,6 @@ public interface BuilderLibrary {
     public SharedRxFunctionBuilder getRxFunctionBuilder();
     public SharedRxGroupedObservableBuilder getRxGroupedObservableBuilder();
     public SharedRxObservableBuilder getRxObservableBuilder();
-    public SharedRxObservableOnSubscribeBuilder getRxObservableOnSubscribeBuilder();
     public SharedRxObserverBuilder getRxObserverBuilder();
     public SharedRxPredicateBuilder getRxPredicateBuilder();
     public SharedRxSchedulerBuilder getRxSchedulerBuilder();

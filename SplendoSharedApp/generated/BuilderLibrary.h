@@ -23,7 +23,6 @@
 @protocol SharedRxFunctionBuilder;
 @protocol SharedRxGroupedObservableBuilder;
 @protocol SharedRxObservableBuilder;
-@protocol SharedRxObservableOnSubscribeBuilder;
 @protocol SharedRxObserverBuilder;
 @protocol SharedRxPredicateBuilder;
 @protocol SharedRxSchedulerBuilder;
@@ -52,8 +51,6 @@
 - (id<SharedRxGroupedObservableBuilder>)getRxGroupedObservableBuilder;
 
 - (id<SharedRxObservableBuilder>)getRxObservableBuilder;
-
-- (id<SharedRxObservableOnSubscribeBuilder>)getRxObservableOnSubscribeBuilder;
 
 - (id<SharedRxObserverBuilder>)getRxObserverBuilder;
 

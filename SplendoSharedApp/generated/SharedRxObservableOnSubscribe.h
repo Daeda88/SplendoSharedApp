@@ -12,7 +12,12 @@
 #if !defined (SharedRxObservableOnSubscribe_) && (INCLUDE_ALL_SharedRxObservableOnSubscribe || defined(INCLUDE_SharedRxObservableOnSubscribe))
 #define SharedRxObservableOnSubscribe_
 
+@protocol SharedRxDisposable;
+@protocol SharedRxEmitter;
+
 @protocol SharedRxObservableOnSubscribe < JavaObject >
+
+- (id<SharedRxDisposable>)onSubscribeWithSharedRxEmitter:(id<SharedRxEmitter>)emitter;
 
 @end
 

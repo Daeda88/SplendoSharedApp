@@ -11,7 +11,6 @@ import android.app.splendo.rx.AndroidRxDisposableBuilder;
 import android.app.splendo.rx.AndroidRxFunctionBuilder;
 import android.app.splendo.rx.AndroidRxGroupedObservableBuilder;
 import android.app.splendo.rx.typed.observable.AndroidRxObservableBuilder;
-import android.app.splendo.rx.AndroidRxObservableOnSubscribeBuilder;
 import android.app.splendo.rx.typed.observer.AndroidRxObserverBuilder;
 import android.app.splendo.rx.AndroidRxPredicateBuilder;
 import android.app.splendo.rx.AndroidRxSchedulerBuilder;
@@ -30,7 +29,6 @@ import shared.app.splendo.sharedrx.SharedRxDisposableBuilder;
 import shared.app.splendo.sharedrx.SharedRxFunctionBuilder;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservableBuilder;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxObservableBuilder;
-import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribeBuilder;
 import shared.app.splendo.sharedrx.typed.observer.SharedRxObserverBuilder;
 import shared.app.splendo.sharedrx.SharedRxPredicateBuilder;
 import shared.app.splendo.sharedrx.SharedRxSchedulerBuilder;
@@ -96,11 +94,6 @@ public class AndroidBuilderLibrary implements BuilderLibrary {
     @Override
     public SharedRxObservableBuilder getRxObservableBuilder() {
         return new AndroidRxObservableBuilder();
-    }
-
-    @Override
-    public SharedRxObservableOnSubscribeBuilder getRxObservableOnSubscribeBuilder() {
-        return new AndroidRxObservableOnSubscribeBuilder();
     }
 
     @Override

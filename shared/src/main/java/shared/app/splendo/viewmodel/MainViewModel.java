@@ -11,8 +11,10 @@ import shared.app.splendo.binding.typed.SharedStringBindingObservable;
 import shared.app.splendo.model.MainModel;
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxEmitter;
 import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxObservable;
+import shared.app.splendo.sharedrx.SharedRxObservableOnSubscribe;
 import shared.app.splendo.sharedrx.SharedRxObserver;
 import shared.app.splendo.sharedrx.SharedRxSubject;
 import shared.app.splendo.sharedrx.typed.observable.SharedRxIntegerObservable;
@@ -37,6 +39,7 @@ public class MainViewModel {
 
         updateLabelText();
         testSharedObserver();
+        testCreateObservable();
         testSubject();
     }
 
@@ -93,6 +96,51 @@ public class MainViewModel {
             }
         }));
         sharedObservable.subscribe(sharedObserver);
+    }
+
+    private void testCreateObservable() {
+        final String tag = "CREATE_OBSERVER";
+        SharedRxObserver<Integer> sharedObserver = builderLibrary.getRxObserverBuilder().getConcreteObserver(new SharedRxObserver<Integer>() {
+
+            public SharedRxDisposable getDisposable() {
+                return null;
+            }
+
+            @Override
+            public void onSubscribe() {
+                logger.log(tag, "OnSubscribe");
+            }
+
+            @Override
+            public void onNext(Integer value) {
+                logger.log(tag, "OnNext: " + value);
+            }
+
+            @Override
+            public void onError(SharedRxException e) {
+                logger.log(tag, "OnError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                logger.log(tag, "OnComplete");
+            }
+        });
+
+        SharedRxObservable<Integer> createdObservable = builderLibrary.getRxObservableBuilder().getConcreteIntegerObservable().create(new SharedRxObservableOnSubscribe<Integer>() {
+            @Override
+            public SharedRxDisposable onSubscribe(SharedRxEmitter<Integer> emitter) {
+                for (int i = 1; i <= 5; i++) {
+                    emitter.onNext(i);
+                }
+
+                emitter.onComplete();
+
+                return builderLibrary.getRxDisposableBuilder().getConcreteNopDisposable();
+            }
+        });
+
+        createdObservable.subscribe(sharedObserver);
     }
 
     private void testSubject() {

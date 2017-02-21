@@ -21,7 +21,6 @@
     { NULL, "LSharedRxFunctionBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxGroupedObservableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxObservableBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LSharedRxObservableOnSubscribeBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxObserverBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxPredicateBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LSharedRxSchedulerBuilder;", 0x401, -1, -1, -1, -1, -1, -1 },
@@ -40,13 +39,12 @@
   methods[8].selector = @selector(getRxFunctionBuilder);
   methods[9].selector = @selector(getRxGroupedObservableBuilder);
   methods[10].selector = @selector(getRxObservableBuilder);
-  methods[11].selector = @selector(getRxObservableOnSubscribeBuilder);
-  methods[12].selector = @selector(getRxObserverBuilder);
-  methods[13].selector = @selector(getRxPredicateBuilder);
-  methods[14].selector = @selector(getRxSchedulerBuilder);
-  methods[15].selector = @selector(getRxSubjectBuilder);
+  methods[11].selector = @selector(getRxObserverBuilder);
+  methods[12].selector = @selector(getRxPredicateBuilder);
+  methods[13].selector = @selector(getRxSchedulerBuilder);
+  methods[14].selector = @selector(getRxSubjectBuilder);
   #pragma clang diagnostic pop
-  static const J2ObjcClassInfo _BuilderLibrary = { "BuilderLibrary", "shared.app.splendo", NULL, methods, NULL, 7, 0x609, 16, 0, -1, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _BuilderLibrary = { "BuilderLibrary", "shared.app.splendo", NULL, methods, NULL, 7, 0x609, 15, 0, -1, -1, -1, -1, -1 };
   return &_BuilderLibrary;
 }
 

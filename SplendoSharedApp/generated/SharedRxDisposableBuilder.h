@@ -19,6 +19,8 @@
 
 - (id<SharedRxDisposable>)getConcreteActionDisposableWithSharedRxAction:(id<SharedRxAction>)action;
 
+- (id<SharedRxDisposable>)getConcreteNopDisposable;
+
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(SharedRxDisposableBuilder)

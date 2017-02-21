@@ -8,5 +8,6 @@ public interface SharedRxDisposableBuilder {
     // Probably should be expanded to support specific Disposable types
 
     public SharedRxDisposable getConcreteActionDisposable(SharedRxAction action);
+    public SharedRxDisposable getConcreteNopDisposable();
 
 }

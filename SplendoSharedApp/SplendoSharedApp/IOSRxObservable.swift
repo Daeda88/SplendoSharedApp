@@ -21,7 +21,9 @@ class IOSRxObservable : NSObject, SharedRxObservable {
     }
     
     public func createWithSharedRxObservable(_ source: SharedRxObservableOnSubscribe!) -> SharedRxObservable! {
-        return IOSRxObservable.init(observable: Observable<Any>.create((source as! IOSRxObservableOnSubscribe).subscribeFunction))
+        return IOSRxObservable.init(observable: Observable<Any>.create({ (observer) -> Disposable in
+            return (source.onSubscribe(with: IOSRxEmitter.init(observer: observer)) as! IOSRxDisposable).disposable
+        }))
     }
     
     

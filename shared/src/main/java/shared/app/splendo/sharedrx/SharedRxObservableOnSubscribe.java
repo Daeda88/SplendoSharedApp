@@ -5,4 +5,7 @@ package shared.app.splendo.sharedrx;
  */
 public interface SharedRxObservableOnSubscribe<T> {
 
+    public SharedRxDisposable onSubscribe(SharedRxEmitter<T> emitter);
+
+
 }

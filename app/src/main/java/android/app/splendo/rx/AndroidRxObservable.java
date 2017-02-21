@@ -13,6 +13,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiPredicate;
@@ -26,6 +28,7 @@ import shared.app.splendo.sharedrx.SharedRxBiPredicate;
 import shared.app.splendo.sharedrx.SharedRxConnectableObservable;
 import shared.app.splendo.sharedrx.SharedRxConsumer;
 import shared.app.splendo.sharedrx.SharedRxDisposable;
+import shared.app.splendo.sharedrx.SharedRxEmitter;
 import shared.app.splendo.sharedrx.SharedRxException;
 import shared.app.splendo.sharedrx.SharedRxFunction;
 import shared.app.splendo.sharedrx.SharedRxGroupedObservable;
@@ -52,8 +55,29 @@ public class AndroidRxObservable<T> implements SharedRxObservable<T> {
     }
 
     @Override
-    public SharedRxObservable<T> create(SharedRxObservableOnSubscribe<T> source) {
-        return new AndroidRxObservable<T>(Observable.create(((AndroidRxObservableOnSubscribe<T>) source).observableOnSubscribe));
+    public SharedRxObservable<T> create(final SharedRxObservableOnSubscribe<T> source) {
+        return new AndroidRxObservable<T>(Observable.create(new ObservableOnSubscribe<T>() {
+            @Override
+            public void subscribe(final ObservableEmitter<T> e) throws Exception {
+                SharedRxDisposable d = source.onSubscribe(new SharedRxEmitter<T>() {
+                    @Override
+                    public void onNext(T value) {
+                        e.onNext(value);
+                    }
+
+                    @Override
+                    public void onError(SharedRxException error) {
+                        e.onError(((AndroidRxException) error).exception);
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        e.onComplete();
+                    }
+                });
+                e.setDisposable(((AndroidRxDisposable)d).disposable);
+            }
+        }));
     }
 
     @Override

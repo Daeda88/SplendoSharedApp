@@ -15,4 +15,9 @@ public class AndroidRxDisposableBuilder implements SharedRxDisposableBuilder {
         return new AndroidRxDisposable(Disposables.fromAction(((AndroidRxAction) action).action));
     }
 
+    @Override
+    public SharedRxDisposable getConcreteNopDisposable() {
+        return new AndroidRxDisposable(Disposables.empty());
+    }
+
 }

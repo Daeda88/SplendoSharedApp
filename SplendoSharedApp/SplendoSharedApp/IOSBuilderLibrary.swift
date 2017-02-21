@@ -66,11 +66,6 @@ class IOBuilderLibrary : NSObject, BuilderLibrary {
     }
     
     
-    public func getRxObservableOnSubscribeBuilder() -> SharedRxObservableOnSubscribeBuilder! {
-        return IOSRxObservableOnSubscribeBuilder()
-    }
-    
-    
     public func getRxObserverBuilder() -> SharedRxObserverBuilder! {
         return IOSRxObserverBuilder()
     }

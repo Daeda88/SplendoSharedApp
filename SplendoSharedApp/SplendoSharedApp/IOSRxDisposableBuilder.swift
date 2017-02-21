@@ -18,4 +18,8 @@ class IOSRxDisposableBuilder : NSObject, SharedRxDisposableBuilder {
         }))
     }
     
+    public func getConcreteNopDisposable() -> SharedRxDisposable! {
+        return IOSRxDisposable.init(disposable: Disposables.create())
+    }
+    
 }
